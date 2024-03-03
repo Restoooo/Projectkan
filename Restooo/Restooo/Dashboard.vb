@@ -3,6 +3,20 @@ Imports MySql.Data.MySqlClient
 
 Public Class Dashboard
     Dim nama As String
+
+    Private Sub ButtonStatus_Click(sender As Object, e As EventArgs) Handles ButtonStatus.Click
+        Status.Show()
+        Me.Hide()
+    End Sub
+    Private Sub ButtonReport_Click(sender As Object, e As EventArgs) Handles ButtonReport.Click
+        Report.Show()
+        Me.Hide()
+    End Sub
+    Private Sub ButtonStock_Click(sender As Object, e As EventArgs) Handles ButtonStock.Click
+        Stock.Show()
+        Me.Hide()
+    End Sub
+
     Private Sub ButtonLogout_Click(sender As Object, e As EventArgs) Handles ButtonLogout.Click
         Login.idAkun = -1
         Login.Jabatan = ""
@@ -28,17 +42,17 @@ Public Class Dashboard
         cmd = New MySqlCommand("SELECT * FROM karyawan where id_karyawan=@idakun", conn)
         cmd.Parameters.AddWithValue("idakun", Login.idAkun)
         reader = cmd.ExecuteReader
-        If Reader.HasRows Then
-            Reader.Read()
+        If reader.HasRows Then
+            reader.Read()
             nama = reader.GetString("Nama")
         Else
             MsgBox("Error Username or Password")
         End If
-        Reader.Close()
+        reader.Close()
         conn.Close()
         Label1.Text = "Selamat datang, " + nama
     End Sub
-    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click 
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
         If PanelLeft.Width > 50 Then
             TimerPanelReduce.Enabled = True
         Else
@@ -68,8 +82,5 @@ Public Class Dashboard
         End If
     End Sub
 
-    Private Sub ButtonStatus_Click(sender As Object, e As EventArgs) Handles ButtonStatus.Click
-        Status.Show()
-        Me.Hide()
-    End Sub
+
 End Class

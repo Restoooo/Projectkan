@@ -40,3 +40,24 @@ D:\UKDW\Sem 6\Desktop\ProjectNew\Restooo\Restooo\obj\Debug\Restooo.exe
 D:\UKDW\Sem 6\Desktop\ProjectNew\Restooo\Restooo\obj\Debug\Restooo.xml
 D:\UKDW\Sem 6\Desktop\ProjectNew\Restooo\Restooo\obj\Debug\Restooo.pdb
 D:\UKDW\Sem 6\Desktop\ProjectNew\Restooo\Restooo\obj\Debug\Restooo.Status.resources
+D:\Kuliah\Semester 6\Prog Desk\kelompok\Projectkan\Restooo\Restooo\bin\Debug\Restooo.exe.config
+D:\Kuliah\Semester 6\Prog Desk\kelompok\Projectkan\Restooo\Restooo\bin\Debug\Restooo.exe
+D:\Kuliah\Semester 6\Prog Desk\kelompok\Projectkan\Restooo\Restooo\bin\Debug\Restooo.pdb
+D:\Kuliah\Semester 6\Prog Desk\kelompok\Projectkan\Restooo\Restooo\bin\Debug\Restooo.xml
+D:\Kuliah\Semester 6\Prog Desk\kelompok\Projectkan\Restooo\Restooo\bin\Debug\System.Memory.dll
+D:\Kuliah\Semester 6\Prog Desk\kelompok\Projectkan\Restooo\Restooo\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\Kuliah\Semester 6\Prog Desk\kelompok\Projectkan\Restooo\Restooo\bin\Debug\System.Numerics.Vectors.dll
+D:\Kuliah\Semester 6\Prog Desk\kelompok\Projectkan\Restooo\Restooo\bin\Debug\System.Buffers.dll
+D:\Kuliah\Semester 6\Prog Desk\kelompok\Projectkan\Restooo\Restooo\obj\Debug\Restooo.vbproj.AssemblyReference.cache
+D:\Kuliah\Semester 6\Prog Desk\kelompok\Projectkan\Restooo\Restooo\obj\Debug\Restooo.Dashboard.resources
+D:\Kuliah\Semester 6\Prog Desk\kelompok\Projectkan\Restooo\Restooo\obj\Debug\Restooo.Login.resources
+D:\Kuliah\Semester 6\Prog Desk\kelompok\Projectkan\Restooo\Restooo\obj\Debug\Restooo.Resources.resources
+D:\Kuliah\Semester 6\Prog Desk\kelompok\Projectkan\Restooo\Restooo\obj\Debug\Restooo.Report.resources
+D:\Kuliah\Semester 6\Prog Desk\kelompok\Projectkan\Restooo\Restooo\obj\Debug\Restooo.Status.resources
+D:\Kuliah\Semester 6\Prog Desk\kelompok\Projectkan\Restooo\Restooo\obj\Debug\Restooo.Stock.resources
+D:\Kuliah\Semester 6\Prog Desk\kelompok\Projectkan\Restooo\Restooo\obj\Debug\Restooo.vbproj.GenerateResource.cache
+D:\Kuliah\Semester 6\Prog Desk\kelompok\Projectkan\Restooo\Restooo\obj\Debug\Restooo.vbproj.CoreCompileInputs.cache
+D:\Kuliah\Semester 6\Prog Desk\kelompok\Projectkan\Restooo\Restooo\obj\Debug\Restooo.vbproj.CopyComplete
+D:\Kuliah\Semester 6\Prog Desk\kelompok\Projectkan\Restooo\Restooo\obj\Debug\Restooo.exe
+D:\Kuliah\Semester 6\Prog Desk\kelompok\Projectkan\Restooo\Restooo\obj\Debug\Restooo.xml
+D:\Kuliah\Semester 6\Prog Desk\kelompok\Projectkan\Restooo\Restooo\obj\Debug\Restooo.pdb

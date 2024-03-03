@@ -107,10 +107,22 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Report.Designer.vb">
+      <DependentUpon>Report.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Status.Designer.vb">
       <DependentUpon>Status.vb</DependentUpon>
     </Compile>
     <Compile Include="Status.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stock.Designer.vb">
+      <DependentUpon>Stock.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Stock.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
@@ -127,8 +139,14 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Report.resx">
+      <DependentUpon>Report.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Status.resx">
       <DependentUpon>Status.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stock.resx">
+      <DependentUpon>Stock.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -181,6 +199,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Iconsmind-Outline-Profile.32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4105938-account-card-id-identification-identity-card-profile-user-profile_113929.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

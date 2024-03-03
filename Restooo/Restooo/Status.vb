@@ -6,6 +6,16 @@
         Me.Hide()
     End Sub
 
+    Private Sub ButtonReport_Click(sender As Object, e As EventArgs) Handles ButtonReport.Click
+        Report.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub ButtonStock_Click(sender As Object, e As EventArgs) Handles ButtonStock.Click
+        Stock.Show()
+        Me.Hide()
+    End Sub
+
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
         If PanelLeft.Width > 50 Then
             TimerPanelReduce.Enabled = True

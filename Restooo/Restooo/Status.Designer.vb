@@ -318,6 +318,7 @@ Partial Class Status
         Me.Controls.Add(Me.PanelStatistik)
         Me.Controls.Add(Me.PanelLeft)
         Me.Name = "Status"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Status"
         Me.PanelLeft.ResumeLayout(False)
         Me.PanelTopLeft.ResumeLayout(False)

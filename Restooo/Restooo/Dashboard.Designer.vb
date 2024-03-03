@@ -201,6 +201,7 @@ Partial Class Dashboard
         Me.Controls.Add(Me.pnlWelcome)
         Me.Controls.Add(Me.PanelLeft)
         Me.Name = "Dashboard"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Dashboard"
         Me.PanelLeft.ResumeLayout(False)
         Me.PanelTopLeft.ResumeLayout(False)
