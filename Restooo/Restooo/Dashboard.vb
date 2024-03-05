@@ -17,6 +17,11 @@ Public Class Dashboard
         Me.Hide()
     End Sub
 
+    Private Sub ButtonMenu_Click(sender As Object, e As EventArgs) Handles ButtonMenu.Click
+        MenuMakan.Show()
+        Me.Hide()
+    End Sub
+
     Private Sub ButtonLogout_Click(sender As Object, e As EventArgs) Handles ButtonLogout.Click
         Login.idAkun = -1
         Login.Jabatan = ""

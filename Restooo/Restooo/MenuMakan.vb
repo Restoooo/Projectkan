@@ -1,21 +1,15 @@
-﻿Public Class Report
+﻿Public Class MenuMakan
     Private Sub ButtonDashboard_Click(sender As Object, e As EventArgs) Handles ButtonDashboard.Click
         Dashboard.Show()
         Me.Hide()
     End Sub
 
+    Private Sub ButtonReport_Click(sender As Object, e As EventArgs) Handles ButtonReport.Click
+        Report.Show()
+        Me.Hide()
+    End Sub
     Private Sub ButtonStatus_Click(sender As Object, e As EventArgs) Handles ButtonStatus.Click
         Status.Show()
-        Me.Hide()
-    End Sub
-
-    Private Sub ButtonStock_Click(sender As Object, e As EventArgs) Handles ButtonStock.Click
-        Stock.Show()
-        Me.Hide()
-    End Sub
-
-    Private Sub ButtonMenu_Click(sender As Object, e As EventArgs) Handles ButtonMenu.Click
-        MenuMakan.Show()
         Me.Hide()
     End Sub
 
@@ -27,26 +21,11 @@
         End If
     End Sub
     Private Sub TimerPanelReduce_Tick(sender As Object, e As EventArgs) Handles TimerPanelReduce.Tick
-        If PanelLeft.Width > 50 Then
-            PanelLeft.Width -= 5
-            ButtonDashboard.Text = ""
-            ButtonMenu.Text = ""
-            ButtonStock.Text = ""
-            ButtonReport.Text = ""
-        Else
-            TimerPanelReduce.Enabled = False
-        End If
+
     End Sub
+
     Private Sub TimerPanelIncrease_Tick(sender As Object, e As EventArgs) Handles TimerPanelIncrease.Tick
-        If PanelLeft.Width < 200 Then
-            PanelLeft.Width += 5
-            ButtonDashboard.Text = "Dashboard"
-            ButtonMenu.Text = "Menu"
-            ButtonStock.Text = "Stock"
-            ButtonReport.Text = "Report"
-        Else
-            TimerPanelIncrease.Enabled = False
-        End If
+
     End Sub
 
 
@@ -60,5 +39,4 @@
         Login.Show()
         Me.Hide()
     End Sub
-
 End Class

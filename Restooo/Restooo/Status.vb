@@ -16,6 +16,11 @@
         Me.Hide()
     End Sub
 
+    Private Sub ButtonMenu_Click(sender As Object, e As EventArgs) Handles ButtonMenu.Click
+        MenuMakan.Show()
+        Me.Hide()
+    End Sub
+
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
         If PanelLeft.Width > 50 Then
             TimerPanelReduce.Enabled = True
