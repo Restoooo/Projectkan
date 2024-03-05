@@ -23,11 +23,11 @@ Partial Class MenuMakan
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MenuMakan))
         Dim LabelReport As System.Windows.Forms.Label
         Dim Label1 As System.Windows.Forms.Label
         Dim Label2 As System.Windows.Forms.Label
         Dim Label3 As System.Windows.Forms.Label
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MenuMakan))
         Me.ButtonDashboard = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.ButtonReport = New System.Windows.Forms.Button()
@@ -54,6 +54,46 @@ Partial Class MenuMakan
         Me.PanelMinuman.SuspendLayout()
         Me.PanelList.SuspendLayout()
         Me.SuspendLayout()
+        '
+        'LabelReport
+        '
+        LabelReport.AutoSize = True
+        LabelReport.Font = New System.Drawing.Font("Microsoft Sans Serif", 32.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        LabelReport.Location = New System.Drawing.Point(563, 34)
+        LabelReport.Name = "LabelReport"
+        LabelReport.Size = New System.Drawing.Size(130, 51)
+        LabelReport.TabIndex = 9
+        LabelReport.Text = "Menu"
+        '
+        'Label1
+        '
+        Label1.AutoSize = True
+        Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 32.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Label1.Location = New System.Drawing.Point(50, 10)
+        Label1.Name = "Label1"
+        Label1.Size = New System.Drawing.Size(200, 51)
+        Label1.TabIndex = 10
+        Label1.Text = "Makanan"
+        '
+        'Label2
+        '
+        Label2.AutoSize = True
+        Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 32.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Label2.Location = New System.Drawing.Point(50, 10)
+        Label2.Name = "Label2"
+        Label2.Size = New System.Drawing.Size(200, 51)
+        Label2.TabIndex = 11
+        Label2.Text = "Minuman"
+        '
+        'Label3
+        '
+        Label3.AutoSize = True
+        Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 32.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Label3.Location = New System.Drawing.Point(46, 16)
+        Label3.Name = "Label3"
+        Label3.Size = New System.Drawing.Size(90, 51)
+        Label3.TabIndex = 12
+        Label3.Text = "List"
         '
         'ButtonDashboard
         '
@@ -189,9 +229,9 @@ Partial Class MenuMakan
         'PanelMakanan
         '
         Me.PanelMakanan.Controls.Add(Label1)
-        Me.PanelMakanan.Location = New System.Drawing.Point(300, 120)
+        Me.PanelMakanan.Location = New System.Drawing.Point(292, 120)
         Me.PanelMakanan.Name = "PanelMakanan"
-        Me.PanelMakanan.Size = New System.Drawing.Size(329, 639)
+        Me.PanelMakanan.Size = New System.Drawing.Size(300, 600)
         Me.PanelMakanan.TabIndex = 7
         '
         'PanelMinuman
@@ -199,18 +239,8 @@ Partial Class MenuMakan
         Me.PanelMinuman.Controls.Add(Label2)
         Me.PanelMinuman.Location = New System.Drawing.Point(640, 120)
         Me.PanelMinuman.Name = "PanelMinuman"
-        Me.PanelMinuman.Size = New System.Drawing.Size(329, 639)
+        Me.PanelMinuman.Size = New System.Drawing.Size(300, 600)
         Me.PanelMinuman.TabIndex = 8
-        '
-        'LabelReport
-        '
-        LabelReport.AutoSize = True
-        LabelReport.Font = New System.Drawing.Font("Microsoft Sans Serif", 32.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        LabelReport.Location = New System.Drawing.Point(563, 34)
-        LabelReport.Name = "LabelReport"
-        LabelReport.Size = New System.Drawing.Size(130, 51)
-        LabelReport.TabIndex = 9
-        LabelReport.Text = "Menu"
         '
         'PanelList
         '
@@ -219,36 +249,6 @@ Partial Class MenuMakan
         Me.PanelList.Name = "PanelList"
         Me.PanelList.Size = New System.Drawing.Size(201, 639)
         Me.PanelList.TabIndex = 9
-        '
-        'Label1
-        '
-        Label1.AutoSize = True
-        Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 32.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Label1.Location = New System.Drawing.Point(65, 19)
-        Label1.Name = "Label1"
-        Label1.Size = New System.Drawing.Size(200, 51)
-        Label1.TabIndex = 10
-        Label1.Text = "Makanan"
-        '
-        'Label2
-        '
-        Label2.AutoSize = True
-        Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 32.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Label2.Location = New System.Drawing.Point(67, 19)
-        Label2.Name = "Label2"
-        Label2.Size = New System.Drawing.Size(200, 51)
-        Label2.TabIndex = 11
-        Label2.Text = "Minuman"
-        '
-        'Label3
-        '
-        Label3.AutoSize = True
-        Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 32.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Label3.Location = New System.Drawing.Point(46, 16)
-        Label3.Name = "Label3"
-        Label3.Size = New System.Drawing.Size(90, 51)
-        Label3.TabIndex = 12
-        Label3.Text = "List"
         '
         'Button1
         '
