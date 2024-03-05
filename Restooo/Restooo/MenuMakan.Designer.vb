@@ -50,8 +50,6 @@ Partial Class MenuMakan
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelTopLeft.SuspendLayout()
         Me.PanelLeft.SuspendLayout()
-        Me.PanelMakanan.SuspendLayout()
-        Me.PanelMinuman.SuspendLayout()
         Me.PanelList.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -69,7 +67,7 @@ Partial Class MenuMakan
         '
         Label1.AutoSize = True
         Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 32.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Label1.Location = New System.Drawing.Point(50, 10)
+        Label1.Location = New System.Drawing.Point(346, 120)
         Label1.Name = "Label1"
         Label1.Size = New System.Drawing.Size(200, 51)
         Label1.TabIndex = 10
@@ -79,7 +77,7 @@ Partial Class MenuMakan
         '
         Label2.AutoSize = True
         Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 32.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Label2.Location = New System.Drawing.Point(50, 10)
+        Label2.Location = New System.Drawing.Point(688, 120)
         Label2.Name = "Label2"
         Label2.Size = New System.Drawing.Size(200, 51)
         Label2.TabIndex = 11
@@ -228,18 +226,18 @@ Partial Class MenuMakan
         '
         'PanelMakanan
         '
-        Me.PanelMakanan.Controls.Add(Label1)
-        Me.PanelMakanan.Location = New System.Drawing.Point(292, 120)
+        Me.PanelMakanan.AutoScroll = True
+        Me.PanelMakanan.Location = New System.Drawing.Point(292, 193)
         Me.PanelMakanan.Name = "PanelMakanan"
-        Me.PanelMakanan.Size = New System.Drawing.Size(300, 600)
+        Me.PanelMakanan.Size = New System.Drawing.Size(300, 527)
         Me.PanelMakanan.TabIndex = 7
         '
         'PanelMinuman
         '
-        Me.PanelMinuman.Controls.Add(Label2)
-        Me.PanelMinuman.Location = New System.Drawing.Point(640, 120)
+        Me.PanelMinuman.AutoScroll = True
+        Me.PanelMinuman.Location = New System.Drawing.Point(640, 193)
         Me.PanelMinuman.Name = "PanelMinuman"
-        Me.PanelMinuman.Size = New System.Drawing.Size(300, 600)
+        Me.PanelMinuman.Size = New System.Drawing.Size(300, 527)
         Me.PanelMinuman.TabIndex = 8
         '
         'PanelList
@@ -264,6 +262,8 @@ Partial Class MenuMakan
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1264, 761)
+        Me.Controls.Add(Label2)
+        Me.Controls.Add(Label1)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.PanelList)
         Me.Controls.Add(LabelReport)
@@ -275,10 +275,6 @@ Partial Class MenuMakan
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelTopLeft.ResumeLayout(False)
         Me.PanelLeft.ResumeLayout(False)
-        Me.PanelMakanan.ResumeLayout(False)
-        Me.PanelMakanan.PerformLayout()
-        Me.PanelMinuman.ResumeLayout(False)
-        Me.PanelMinuman.PerformLayout()
         Me.PanelList.ResumeLayout(False)
         Me.PanelList.PerformLayout()
         Me.ResumeLayout(False)

@@ -73,9 +73,9 @@ Public Class MenuMakan
         cmd = New MySqlCommand("SELECT * FROM Menu where jenis = 'makanan'", conn)
         reader = cmd.ExecuteReader
         Dim posXMak As Integer = 25
-        Dim posYMak As Integer = 50
+        Dim posYMak As Integer = 0
         Dim posXMin As Integer = 25
-        Dim posYMin As Integer = 50
+        Dim posYMin As Integer = 0
 
         While reader.Read()
             Dim btn As New Button()
@@ -107,5 +107,4 @@ Public Class MenuMakan
     Private Sub Button_Click(sender As Object, e As EventArgs)
         MessageBox.Show("Anda mengklik tombol!")
     End Sub
-
 End Class
