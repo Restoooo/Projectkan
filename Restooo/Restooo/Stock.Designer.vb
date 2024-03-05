@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Stock
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class Stock
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Stock))
@@ -34,12 +34,12 @@ Partial Class Stock
         Me.ButtonDashboard = New System.Windows.Forms.Button()
         Me.LabelStock = New System.Windows.Forms.Label()
         Me.DataGridViewStock = New System.Windows.Forms.DataGridView()
-        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TimerPanelIncrease = New System.Windows.Forms.Timer(Me.components)
         Me.TimerPanelReduce = New System.Windows.Forms.Timer(Me.components)
         Me.PanelTopLeft = New System.Windows.Forms.Panel()
         Me.PanelLeft = New System.Windows.Forms.Panel()
+        Me.ButtonUpdate = New System.Windows.Forms.Button()
+        Me.ButtonRefresh = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridViewStock, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelTopLeft.SuspendLayout()
@@ -167,24 +167,10 @@ Partial Class Stock
         DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.DataGridViewStock.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
-        Me.DataGridViewStock.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2})
-        Me.DataGridViewStock.Location = New System.Drawing.Point(469, 112)
+        Me.DataGridViewStock.Location = New System.Drawing.Point(368, 112)
         Me.DataGridViewStock.Name = "DataGridViewStock"
-        Me.DataGridViewStock.Size = New System.Drawing.Size(458, 313)
+        Me.DataGridViewStock.Size = New System.Drawing.Size(705, 436)
         Me.DataGridViewStock.TabIndex = 6
-        '
-        'Column1
-        '
-        Me.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.Column1.HeaderText = "Nama Menu"
-        Me.Column1.Name = "Column1"
-        Me.Column1.ReadOnly = True
-        '
-        'Column2
-        '
-        Me.Column2.HeaderText = "Jumlah Stok"
-        Me.Column2.Name = "Column2"
-        Me.Column2.ReadOnly = True
         '
         'TimerPanelIncrease
         '
@@ -218,11 +204,31 @@ Partial Class Stock
         Me.PanelLeft.Size = New System.Drawing.Size(200, 761)
         Me.PanelLeft.TabIndex = 5
         '
+        'ButtonUpdate
+        '
+        Me.ButtonUpdate.Location = New System.Drawing.Point(633, 610)
+        Me.ButtonUpdate.Name = "ButtonUpdate"
+        Me.ButtonUpdate.Size = New System.Drawing.Size(146, 53)
+        Me.ButtonUpdate.TabIndex = 8
+        Me.ButtonUpdate.Text = "Update"
+        Me.ButtonUpdate.UseVisualStyleBackColor = True
+        '
+        'ButtonRefresh
+        '
+        Me.ButtonRefresh.Image = CType(resources.GetObject("ButtonRefresh.Image"), System.Drawing.Image)
+        Me.ButtonRefresh.Location = New System.Drawing.Point(785, 617)
+        Me.ButtonRefresh.Name = "ButtonRefresh"
+        Me.ButtonRefresh.Size = New System.Drawing.Size(49, 38)
+        Me.ButtonRefresh.TabIndex = 9
+        Me.ButtonRefresh.UseVisualStyleBackColor = True
+        '
         'Stock
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1264, 761)
+        Me.Controls.Add(Me.ButtonRefresh)
+        Me.Controls.Add(Me.ButtonUpdate)
         Me.Controls.Add(Me.LabelStock)
         Me.Controls.Add(Me.DataGridViewStock)
         Me.Controls.Add(Me.PanelLeft)
@@ -251,6 +257,6 @@ Partial Class Stock
     Friend WithEvents TimerPanelReduce As Timer
     Friend WithEvents PanelTopLeft As Panel
     Friend WithEvents PanelLeft As Panel
-    Friend WithEvents Column1 As DataGridViewTextBoxColumn
-    Friend WithEvents Column2 As DataGridViewTextBoxColumn
+    Friend WithEvents ButtonUpdate As Button
+    Friend WithEvents ButtonRefresh As Button
 End Class
