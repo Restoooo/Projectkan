@@ -29,7 +29,14 @@ Partial Class MenuMakan
         Dim Label3 As System.Windows.Forms.Label
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MenuMakan))
         Me.PanelTopLeft = New System.Windows.Forms.Panel()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PanelLeft = New System.Windows.Forms.Panel()
+        Me.ButtonStatus = New System.Windows.Forms.Button()
+        Me.ButtonLogout = New System.Windows.Forms.Button()
+        Me.ButtonReport = New System.Windows.Forms.Button()
+        Me.ButtonStock = New System.Windows.Forms.Button()
+        Me.ButtonMenu = New System.Windows.Forms.Button()
+        Me.ButtonDashboard = New System.Windows.Forms.Button()
         Me.TimerPanelIncrease = New System.Windows.Forms.Timer(Me.components)
         Me.TimerPanelReduce = New System.Windows.Forms.Timer(Me.components)
         Me.PanelMakanan = New System.Windows.Forms.Panel()
@@ -40,20 +47,13 @@ Partial Class MenuMakan
         Me.Label4 = New System.Windows.Forms.Label()
         Me.tbHarga = New System.Windows.Forms.TextBox()
         Me.btnResetList = New System.Windows.Forms.Button()
-        Me.ButtonStatus = New System.Windows.Forms.Button()
-        Me.ButtonLogout = New System.Windows.Forms.Button()
-        Me.ButtonReport = New System.Windows.Forms.Button()
-        Me.ButtonStock = New System.Windows.Forms.Button()
-        Me.ButtonMenu = New System.Windows.Forms.Button()
-        Me.ButtonDashboard = New System.Windows.Forms.Button()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         LabelReport = New System.Windows.Forms.Label()
         Label1 = New System.Windows.Forms.Label()
         Label2 = New System.Windows.Forms.Label()
         Label3 = New System.Windows.Forms.Label()
         Me.PanelTopLeft.SuspendLayout()
-        Me.PanelLeft.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PanelLeft.SuspendLayout()
         Me.SuspendLayout()
         '
         'LabelReport
@@ -105,6 +105,17 @@ Partial Class MenuMakan
         Me.PanelTopLeft.Size = New System.Drawing.Size(200, 58)
         Me.PanelTopLeft.TabIndex = 0
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.Dock = System.Windows.Forms.DockStyle.Right
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(151, 0)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(49, 58)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
+        Me.PictureBox1.TabIndex = 2
+        Me.PictureBox1.TabStop = False
+        '
         'PanelLeft
         '
         Me.PanelLeft.Controls.Add(Me.ButtonStatus)
@@ -119,79 +130,6 @@ Partial Class MenuMakan
         Me.PanelLeft.Name = "PanelLeft"
         Me.PanelLeft.Size = New System.Drawing.Size(200, 761)
         Me.PanelLeft.TabIndex = 6
-        '
-        'TimerPanelIncrease
-        '
-        Me.TimerPanelIncrease.Interval = 1
-        '
-        'TimerPanelReduce
-        '
-        Me.TimerPanelReduce.Interval = 1
-        '
-        'PanelMakanan
-        '
-        Me.PanelMakanan.AutoScroll = True
-        Me.PanelMakanan.Location = New System.Drawing.Point(292, 193)
-        Me.PanelMakanan.Name = "PanelMakanan"
-        Me.PanelMakanan.Size = New System.Drawing.Size(300, 527)
-        Me.PanelMakanan.TabIndex = 7
-        '
-        'PanelMinuman
-        '
-        Me.PanelMinuman.AutoScroll = True
-        Me.PanelMinuman.Location = New System.Drawing.Point(640, 193)
-        Me.PanelMinuman.Name = "PanelMinuman"
-        Me.PanelMinuman.Size = New System.Drawing.Size(300, 527)
-        Me.PanelMinuman.TabIndex = 8
-        '
-        'PanelList
-        '
-        Me.PanelList.AutoScroll = True
-        Me.PanelList.Location = New System.Drawing.Point(1028, 120)
-        Me.PanelList.Name = "PanelList"
-        Me.PanelList.Size = New System.Drawing.Size(200, 476)
-        Me.PanelList.TabIndex = 9
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(1053, 679)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(147, 70)
-        Me.Button1.TabIndex = 10
-        Me.Button1.Text = "Next"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'ContextMenuStrip1
-        '
-        Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
-        Me.ContextMenuStrip1.Size = New System.Drawing.Size(61, 4)
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(1111, 609)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(34, 13)
-        Me.Label4.TabIndex = 16
-        Me.Label4.Text = "Total:"
-        '
-        'tbHarga
-        '
-        Me.tbHarga.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbHarga.Location = New System.Drawing.Point(1028, 635)
-        Me.tbHarga.Name = "tbHarga"
-        Me.tbHarga.Size = New System.Drawing.Size(200, 38)
-        Me.tbHarga.TabIndex = 18
-        Me.tbHarga.Text = "0"
-        '
-        'btnResetList
-        '
-        Me.btnResetList.Image = CType(resources.GetObject("btnResetList.Image"), System.Drawing.Image)
-        Me.btnResetList.Location = New System.Drawing.Point(1171, 38)
-        Me.btnResetList.Name = "btnResetList"
-        Me.btnResetList.Size = New System.Drawing.Size(44, 47)
-        Me.btnResetList.TabIndex = 13
-        Me.btnResetList.UseVisualStyleBackColor = True
         '
         'ButtonStatus
         '
@@ -281,16 +219,79 @@ Partial Class MenuMakan
         Me.ButtonDashboard.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.ButtonDashboard.UseVisualStyleBackColor = True
         '
-        'PictureBox1
+        'TimerPanelIncrease
         '
-        Me.PictureBox1.Dock = System.Windows.Forms.DockStyle.Right
-        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(151, 0)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(49, 58)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
-        Me.PictureBox1.TabIndex = 2
-        Me.PictureBox1.TabStop = False
+        Me.TimerPanelIncrease.Interval = 1
+        '
+        'TimerPanelReduce
+        '
+        Me.TimerPanelReduce.Interval = 1
+        '
+        'PanelMakanan
+        '
+        Me.PanelMakanan.AutoScroll = True
+        Me.PanelMakanan.Location = New System.Drawing.Point(292, 193)
+        Me.PanelMakanan.Name = "PanelMakanan"
+        Me.PanelMakanan.Size = New System.Drawing.Size(300, 527)
+        Me.PanelMakanan.TabIndex = 7
+        '
+        'PanelMinuman
+        '
+        Me.PanelMinuman.AutoScroll = True
+        Me.PanelMinuman.Location = New System.Drawing.Point(640, 193)
+        Me.PanelMinuman.Name = "PanelMinuman"
+        Me.PanelMinuman.Size = New System.Drawing.Size(300, 527)
+        Me.PanelMinuman.TabIndex = 8
+        '
+        'PanelList
+        '
+        Me.PanelList.AutoScroll = True
+        Me.PanelList.Location = New System.Drawing.Point(1028, 120)
+        Me.PanelList.Name = "PanelList"
+        Me.PanelList.Size = New System.Drawing.Size(200, 476)
+        Me.PanelList.TabIndex = 9
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(1053, 679)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(147, 70)
+        Me.Button1.TabIndex = 10
+        Me.Button1.Text = "Next"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'ContextMenuStrip1
+        '
+        Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(61, 4)
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(1111, 609)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(34, 13)
+        Me.Label4.TabIndex = 16
+        Me.Label4.Text = "Total:"
+        '
+        'tbHarga
+        '
+        Me.tbHarga.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tbHarga.Location = New System.Drawing.Point(1028, 635)
+        Me.tbHarga.Name = "tbHarga"
+        Me.tbHarga.ReadOnly = True
+        Me.tbHarga.Size = New System.Drawing.Size(200, 38)
+        Me.tbHarga.TabIndex = 18
+        Me.tbHarga.Text = "0"
+        '
+        'btnResetList
+        '
+        Me.btnResetList.Image = CType(resources.GetObject("btnResetList.Image"), System.Drawing.Image)
+        Me.btnResetList.Location = New System.Drawing.Point(1171, 38)
+        Me.btnResetList.Name = "btnResetList"
+        Me.btnResetList.Size = New System.Drawing.Size(44, 47)
+        Me.btnResetList.TabIndex = 13
+        Me.btnResetList.UseVisualStyleBackColor = True
         '
         'MenuMakan
         '
@@ -313,8 +314,8 @@ Partial Class MenuMakan
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Menu"
         Me.PanelTopLeft.ResumeLayout(False)
-        Me.PanelLeft.ResumeLayout(False)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.PanelLeft.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
