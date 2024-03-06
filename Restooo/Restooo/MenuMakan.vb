@@ -136,7 +136,7 @@ Public Class MenuMakan
         conn.Close()
     End Sub
     Private Sub UpdatePanePesanan()
-        PanelList.Controls.Clear()W
+        PanelList.Controls.Clear()
         Dim posYpesanan As Integer = 0
 
 
