@@ -43,6 +43,7 @@ Partial Class MenuMakan
         Me.PanelMinuman = New System.Windows.Forms.Panel()
         Me.PanelList = New System.Windows.Forms.Panel()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnResetList = New System.Windows.Forms.Button()
         LabelReport = New System.Windows.Forms.Label()
         Label1 = New System.Windows.Forms.Label()
         Label2 = New System.Windows.Forms.Label()
@@ -50,7 +51,6 @@ Partial Class MenuMakan
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelTopLeft.SuspendLayout()
         Me.PanelLeft.SuspendLayout()
-        Me.PanelList.SuspendLayout()
         Me.SuspendLayout()
         '
         'LabelReport
@@ -87,7 +87,7 @@ Partial Class MenuMakan
         '
         Label3.AutoSize = True
         Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 32.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Label3.Location = New System.Drawing.Point(46, 16)
+        Label3.Location = New System.Drawing.Point(1075, 34)
         Label3.Name = "Label3"
         Label3.Size = New System.Drawing.Size(90, 51)
         Label3.TabIndex = 12
@@ -242,26 +242,36 @@ Partial Class MenuMakan
         '
         'PanelList
         '
-        Me.PanelList.Controls.Add(Label3)
-        Me.PanelList.Location = New System.Drawing.Point(1028, 34)
+        Me.PanelList.Location = New System.Drawing.Point(1028, 120)
         Me.PanelList.Name = "PanelList"
-        Me.PanelList.Size = New System.Drawing.Size(201, 639)
+        Me.PanelList.Size = New System.Drawing.Size(200, 544)
         Me.PanelList.TabIndex = 9
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(1046, 679)
+        Me.Button1.Location = New System.Drawing.Point(1068, 679)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(173, 70)
+        Me.Button1.Size = New System.Drawing.Size(147, 70)
         Me.Button1.TabIndex = 10
         Me.Button1.Text = "Next"
         Me.Button1.UseVisualStyleBackColor = True
+        '
+        'btnResetList
+        '
+        Me.btnResetList.Image = CType(resources.GetObject("btnResetList.Image"), System.Drawing.Image)
+        Me.btnResetList.Location = New System.Drawing.Point(1171, 38)
+        Me.btnResetList.Name = "btnResetList"
+        Me.btnResetList.Size = New System.Drawing.Size(44, 47)
+        Me.btnResetList.TabIndex = 13
+        Me.btnResetList.UseVisualStyleBackColor = True
         '
         'MenuMakan
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1264, 761)
+        Me.Controls.Add(Me.btnResetList)
+        Me.Controls.Add(Label3)
         Me.Controls.Add(Label2)
         Me.Controls.Add(Label1)
         Me.Controls.Add(Me.Button1)
@@ -275,8 +285,6 @@ Partial Class MenuMakan
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelTopLeft.ResumeLayout(False)
         Me.PanelLeft.ResumeLayout(False)
-        Me.PanelList.ResumeLayout(False)
-        Me.PanelList.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -297,4 +305,5 @@ Partial Class MenuMakan
     Friend WithEvents PanelMinuman As Panel
     Friend WithEvents PanelList As Panel
     Friend WithEvents Button1 As Button
+    Friend WithEvents btnResetList As Button
 End Class

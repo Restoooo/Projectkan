@@ -7,6 +7,11 @@ Public Class MenuMakan
     Dim cmd2 As MySqlCommand
     Dim reader As MySqlDataReader
     Dim reader2 As MySqlDataReader
+
+    Public Shared pesanan As New List(Of String)()
+
+
+
     Private Sub ButtonDashboard_Click(sender As Object, e As EventArgs) Handles ButtonDashboard.Click
         Dashboard.Show()
         Me.Hide()
@@ -105,6 +110,43 @@ Public Class MenuMakan
 
     End Sub
     Private Sub Button_Click(sender As Object, e As EventArgs)
-        MessageBox.Show("Anda mengklik tombol!")
+        Dim btn As Button = DirectCast(sender, Button)
+        Dim namaBtn As String = btn.Name
+        Dim idMenu As String = namaBtn.Substring(3)
+
+        Dim conn As New MySqlConnection("server=localhost;database=restoooo;user=root;password=")
+        conn.Open()
+        Dim cmd As New MySqlCommand("SELECT * FROM Menu WHERE id_menu = @idMenu", conn)
+        cmd.Parameters.AddWithValue("@idMenu", idMenu)
+        Dim reader As MySqlDataReader = cmd.ExecuteReader()
+
+        If reader.Read() Then
+            Dim namaMenu As String = reader("Nama").ToString()
+            Dim hargaMenu As String = reader("harga").ToString()
+            Dim jenisMenu As String = reader("jenis").ToString()
+
+            pesanan.Add(idMenu + " | " + namaMenu + " | " + hargaMenu)
+            UpdatePanePesanan()
+        End If
+
+        conn.Close()
+    End Sub
+    Private Sub UpdatePanePesanan()
+        PanelList.Controls.Clear()
+        Dim posYpesanan As Integer = 0
+
+        For Each item As String In pesanan
+            Dim label As New Label()
+            label.Text = item
+            label.Size = New Size(200, 30)
+            label.Location = New Point(0, posYpesanan)
+            PanelList.Controls.Add(label)
+            posYpesanan += 40
+        Next
+    End Sub
+
+    Private Sub btnResetList_Click(sender As Object, e As EventArgs) Handles btnResetList.Click
+        pesanan.Clear()
+        UpdatePanePesanan()
     End Sub
 End Class
