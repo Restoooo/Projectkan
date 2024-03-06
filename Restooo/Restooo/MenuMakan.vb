@@ -9,6 +9,7 @@ Public Class MenuMakan
     Dim reader2 As MySqlDataReader
 
     Public Shared pesanan As New List(Of String)()
+    Public Shared totalharga As New Integer
 
 
 
@@ -114,6 +115,7 @@ Public Class MenuMakan
         Dim namaBtn As String = btn.Name
         Dim idMenu As String = namaBtn.Substring(3)
 
+
         Dim conn As New MySqlConnection("server=localhost;database=restoooo;user=root;password=")
         conn.Open()
         Dim cmd As New MySqlCommand("SELECT * FROM Menu WHERE id_menu = @idMenu", conn)
@@ -126,14 +128,17 @@ Public Class MenuMakan
             Dim jenisMenu As String = reader("jenis").ToString()
 
             pesanan.Add(idMenu + " | " + namaMenu + " | " + hargaMenu)
+            totalharga += hargaMenu
+            tbHarga.Text = totalharga.ToString
             UpdatePanePesanan()
         End If
 
         conn.Close()
     End Sub
     Private Sub UpdatePanePesanan()
-        PanelList.Controls.Clear()
+        PanelList.Controls.Clear()W
         Dim posYpesanan As Integer = 0
+
 
         For Each item As String In pesanan
             Dim label As New Label()
@@ -143,10 +148,18 @@ Public Class MenuMakan
             PanelList.Controls.Add(label)
             posYpesanan += 40
         Next
+
     End Sub
 
     Private Sub btnResetList_Click(sender As Object, e As EventArgs) Handles btnResetList.Click
         pesanan.Clear()
+        totalharga = 0
+        tbHarga.Text = totalharga.ToString
         UpdatePanePesanan()
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        MenuDuduk.Show()
+        Me.Hide()
     End Sub
 End Class
