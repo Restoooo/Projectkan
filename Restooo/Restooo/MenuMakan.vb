@@ -143,13 +143,54 @@ Public Class MenuMakan
         For Each item As String In pesanan
             Dim label As New Label()
             label.Text = item
-            label.Size = New Size(200, 30)
+            label.Size = New Size(150, 30)
+            label.AutoSize = True
+
             label.Location = New Point(0, posYpesanan)
+
+            Dim btnDelete As New Button()
+            btnDelete.Text = "x"
+            btnDelete.Size = New Size(20, 20)
+            btnDelete.Location = New Point(210, posYpesanan)
+            AddHandler btnDelete.Click, AddressOf HapusPesanan
+            btnDelete.Tag = item
+
             PanelList.Controls.Add(label)
+            PanelList.Controls.Add(btnDelete)
             posYpesanan += 40
         Next
 
     End Sub
+    Private Sub HapusPesanan(sender As Object, e As EventArgs)
+
+        Dim itemToRemove As String = DirectCast(sender, Button).Tag.ToString()
+        pesanan.Remove(itemToRemove)
+        totalharga -= AmbilHargaDariString(itemToRemove)
+        tbHarga.Text = totalharga.ToString
+
+        UpdatePanePesanan()
+    End Sub
+    Private Function AmbilHargaDariString(input As String) As Double
+        ' Pisahkan string menggunakan karakter '|' sebagai pemisah
+        Dim parts() As String = input.Split("|"c)
+
+        ' Jika panjang array tidak sesuai dengan format yang diharapkan, kembalikan 0
+        If parts.Length <> 3 Then
+            Return 0.0
+        End If
+
+        ' Ambil bagian harga dari array hasil pemisahan
+        Dim hargaStr As String = parts(2).Trim()
+
+        ' Coba untuk mengonversi string harga menjadi tipe data Double
+        Dim harga As Integer
+        If Integer.TryParse(hargaStr, harga) Then
+            Return harga
+        Else
+            ' Jika gagal mengonversi, kembalikan 0
+            Return 0.0
+        End If
+    End Function
 
     Private Sub btnResetList_Click(sender As Object, e As EventArgs) Handles btnResetList.Click
         pesanan.Clear()

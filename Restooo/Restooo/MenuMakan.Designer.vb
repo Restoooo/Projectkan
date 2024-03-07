@@ -90,7 +90,7 @@ Partial Class MenuMakan
         '
         Label3.AutoSize = True
         Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 32.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Label3.Location = New System.Drawing.Point(1075, 34)
+        Label3.Location = New System.Drawing.Point(1033, 50)
         Label3.Name = "Label3"
         Label3.Size = New System.Drawing.Size(90, 51)
         Label3.TabIndex = 12
@@ -246,14 +246,14 @@ Partial Class MenuMakan
         'PanelList
         '
         Me.PanelList.AutoScroll = True
-        Me.PanelList.Location = New System.Drawing.Point(1028, 120)
+        Me.PanelList.Location = New System.Drawing.Point(961, 120)
         Me.PanelList.Name = "PanelList"
-        Me.PanelList.Size = New System.Drawing.Size(200, 476)
+        Me.PanelList.Size = New System.Drawing.Size(267, 476)
         Me.PanelList.TabIndex = 9
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(1053, 679)
+        Me.Button1.Location = New System.Drawing.Point(1018, 679)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(147, 70)
         Me.Button1.TabIndex = 10
@@ -268,7 +268,7 @@ Partial Class MenuMakan
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(1111, 609)
+        Me.Label4.Location = New System.Drawing.Point(1072, 610)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(34, 13)
         Me.Label4.TabIndex = 16
@@ -277,17 +277,17 @@ Partial Class MenuMakan
         'tbHarga
         '
         Me.tbHarga.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbHarga.Location = New System.Drawing.Point(1028, 635)
+        Me.tbHarga.Location = New System.Drawing.Point(961, 635)
         Me.tbHarga.Name = "tbHarga"
         Me.tbHarga.ReadOnly = True
-        Me.tbHarga.Size = New System.Drawing.Size(200, 38)
+        Me.tbHarga.Size = New System.Drawing.Size(267, 38)
         Me.tbHarga.TabIndex = 18
         Me.tbHarga.Text = "0"
         '
         'btnResetList
         '
         Me.btnResetList.Image = CType(resources.GetObject("btnResetList.Image"), System.Drawing.Image)
-        Me.btnResetList.Location = New System.Drawing.Point(1171, 38)
+        Me.btnResetList.Location = New System.Drawing.Point(1129, 54)
         Me.btnResetList.Name = "btnResetList"
         Me.btnResetList.Size = New System.Drawing.Size(44, 47)
         Me.btnResetList.TabIndex = 13
