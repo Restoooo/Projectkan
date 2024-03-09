@@ -42,7 +42,7 @@ Partial Class MenuMakan
         Me.PanelMakanan = New System.Windows.Forms.Panel()
         Me.PanelMinuman = New System.Windows.Forms.Panel()
         Me.PanelList = New System.Windows.Forms.Panel()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.ButtonBayar = New System.Windows.Forms.Button()
         Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.Label4 = New System.Windows.Forms.Label()
         Me.tbHarga = New System.Windows.Forms.TextBox()
@@ -239,14 +239,14 @@ Partial Class MenuMakan
         Me.PanelList.Size = New System.Drawing.Size(267, 476)
         Me.PanelList.TabIndex = 9
         '
-        'Button1
+        'ButtonBayar
         '
-        Me.Button1.Location = New System.Drawing.Point(1018, 679)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(147, 70)
-        Me.Button1.TabIndex = 10
-        Me.Button1.Text = "Next"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.ButtonBayar.Location = New System.Drawing.Point(1075, 679)
+        Me.ButtonBayar.Name = "ButtonBayar"
+        Me.ButtonBayar.Size = New System.Drawing.Size(147, 70)
+        Me.ButtonBayar.TabIndex = 10
+        Me.ButtonBayar.Text = "Bayar"
+        Me.ButtonBayar.UseVisualStyleBackColor = True
         '
         'ContextMenuStrip1
         '
@@ -292,7 +292,7 @@ Partial Class MenuMakan
         Me.Controls.Add(Label3)
         Me.Controls.Add(Label2)
         Me.Controls.Add(Label1)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.ButtonBayar)
         Me.Controls.Add(Me.PanelList)
         Me.Controls.Add(LabelReport)
         Me.Controls.Add(Me.PanelMinuman)
@@ -314,7 +314,7 @@ Partial Class MenuMakan
     Friend WithEvents PanelMakanan As Panel
     Friend WithEvents PanelMinuman As Panel
     Friend WithEvents PanelList As Panel
-    Friend WithEvents Button1 As Button
+    Friend WithEvents ButtonBayar As Button
     Friend WithEvents btnResetList As Button
     Friend WithEvents ContextMenuStrip1 As ContextMenuStrip
     Friend WithEvents Label4 As Label

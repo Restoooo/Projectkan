@@ -208,8 +208,14 @@ Public Class MenuMakan
         UpdatePanePesanan()
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs)
         MenuDuduk.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub ButtonBayar_Click(sender As Object, e As EventArgs) Handles ButtonBayar.Click
+        Dim pembayaranForm As New Pembayaran(pesanan, totalharga)
+        pembayaranForm.Show()
         Me.Hide()
     End Sub
 End Class

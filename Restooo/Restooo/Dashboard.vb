@@ -18,7 +18,7 @@ Public Class Dashboard
     End Sub
 
     Private Sub ButtonMenu_Click(sender As Object, e As EventArgs) Handles ButtonMenu.Click
-        MenuMakan.Show()
+        MenuDuduk.Show()
         Me.Hide()
     End Sub
 
@@ -34,9 +34,6 @@ Public Class Dashboard
 
     End Sub
 
-    Private Sub ButtonDashboard_Click(sender As Object, e As EventArgs) Handles ButtonDashboard.Click
-
-    End Sub
 
     Private Sub Dashboard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim conn As MySqlConnection

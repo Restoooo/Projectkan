@@ -88,3 +88,4 @@ D:\UKDW\Sem 6\Desktop\Projectkan\Restooo\Restooo\obj\Debug\Restooo.MenuMakan.res
 D:\UKDW\Sem 6\Desktop\Projectkan\Restooo\Restooo\obj\Debug\Restooo.MenuDuduk.resources
 D:\Kuliah\Semester 6\Prog Desk\kelompok\Projectkan\Restooo\Restooo\obj\Debug\Restooo.MenuDuduk.resources
 D:\Kuliah\Semester 6\Prog Desk\kelompok\Projectkan\Restooo\Restooo\obj\Debug\Restooo.MenuMakan.resources
+D:\Kuliah\Semester 6\Prog Desk\kelompok\Projectkan\Restooo\Restooo\obj\Debug\Restooo.Pembayaran.resources

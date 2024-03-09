@@ -15,7 +15,7 @@
     End Sub
 
     Private Sub ButtonMenu_Click(sender As Object, e As EventArgs) Handles ButtonMenu.Click
-        MenuMakan.Show()
+        MenuDuduk.Show()
         Me.Hide()
     End Sub
 

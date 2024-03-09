@@ -101,9 +101,7 @@
         Me.Hide()
     End Sub
 
-    Private Sub ButtonMenu_Click(sender As Object, e As EventArgs) Handles ButtonMenu.Click
 
-    End Sub
 End Class
 
 
