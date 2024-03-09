@@ -32,15 +32,12 @@ Partial Class Dashboard
         Me.ButtonMenu = New System.Windows.Forms.Button()
         Me.ButtonDashboard = New System.Windows.Forms.Button()
         Me.PanelTopLeft = New System.Windows.Forms.Panel()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.pnlWelcome = New System.Windows.Forms.FlowLayoutPanel()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.ButtonMenuBurger = New System.Windows.Forms.Button()
         Me.TimerPanelReduce = New System.Windows.Forms.Timer(Me.components)
         Me.TimerPanelIncrease = New System.Windows.Forms.Timer(Me.components)
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.PanelLeft.SuspendLayout()
         Me.PanelTopLeft.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.pnlWelcome.SuspendLayout()
         Me.SuspendLayout()
         '
         'PanelLeft
@@ -61,10 +58,9 @@ Partial Class Dashboard
         'ButtonStatus
         '
         Me.ButtonStatus.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.ButtonStatus.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ButtonStatus.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ButtonStatus.Image = Global.Restooo.My.Resources.Resources.Iconsmind_Outline_Profile_32
-        Me.ButtonStatus.Location = New System.Drawing.Point(147, 708)
+        Me.ButtonStatus.Location = New System.Drawing.Point(150, 711)
         Me.ButtonStatus.Name = "ButtonStatus"
         Me.ButtonStatus.Size = New System.Drawing.Size(50, 50)
         Me.ButtonStatus.TabIndex = 5
@@ -73,10 +69,9 @@ Partial Class Dashboard
         'ButtonLogout
         '
         Me.ButtonLogout.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.ButtonLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ButtonLogout.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ButtonLogout.Image = Global.Restooo.My.Resources.Resources.Icons8_Windows_8_User_Interface_Logout_32
-        Me.ButtonLogout.Location = New System.Drawing.Point(0, 707)
+        Me.ButtonLogout.Location = New System.Drawing.Point(0, 711)
         Me.ButtonLogout.Name = "ButtonLogout"
         Me.ButtonLogout.Size = New System.Drawing.Size(50, 50)
         Me.ButtonLogout.TabIndex = 4
@@ -85,12 +80,10 @@ Partial Class Dashboard
         'ButtonReport
         '
         Me.ButtonReport.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.ButtonReport.Dock = System.Windows.Forms.DockStyle.Top
-        Me.ButtonReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ButtonReport.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ButtonReport.Image = Global.Restooo.My.Resources.Resources.Icons8_Windows_8_Food_List_Ingredients_32
         Me.ButtonReport.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.ButtonReport.Location = New System.Drawing.Point(0, 220)
+        Me.ButtonReport.Location = New System.Drawing.Point(0, 244)
         Me.ButtonReport.Name = "ButtonReport"
         Me.ButtonReport.Size = New System.Drawing.Size(200, 54)
         Me.ButtonReport.TabIndex = 3
@@ -101,12 +94,10 @@ Partial Class Dashboard
         'ButtonStock
         '
         Me.ButtonStock.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.ButtonStock.Dock = System.Windows.Forms.DockStyle.Top
-        Me.ButtonStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ButtonStock.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ButtonStock.Image = Global.Restooo.My.Resources.Resources.Iconoir_Team_Iconoir_Packages_32
         Me.ButtonStock.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.ButtonStock.Location = New System.Drawing.Point(0, 166)
+        Me.ButtonStock.Location = New System.Drawing.Point(0, 184)
         Me.ButtonStock.Name = "ButtonStock"
         Me.ButtonStock.Size = New System.Drawing.Size(200, 54)
         Me.ButtonStock.TabIndex = 2
@@ -117,12 +108,10 @@ Partial Class Dashboard
         'ButtonMenu
         '
         Me.ButtonMenu.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.ButtonMenu.Dock = System.Windows.Forms.DockStyle.Top
-        Me.ButtonMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ButtonMenu.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ButtonMenu.Image = Global.Restooo.My.Resources.Resources.Aniket_Suvarna_Box_Regular_Bx_food_menu_32
         Me.ButtonMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.ButtonMenu.Location = New System.Drawing.Point(0, 112)
+        Me.ButtonMenu.Location = New System.Drawing.Point(0, 124)
         Me.ButtonMenu.Name = "ButtonMenu"
         Me.ButtonMenu.Size = New System.Drawing.Size(200, 54)
         Me.ButtonMenu.TabIndex = 1
@@ -133,12 +122,10 @@ Partial Class Dashboard
         'ButtonDashboard
         '
         Me.ButtonDashboard.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.ButtonDashboard.Dock = System.Windows.Forms.DockStyle.Top
-        Me.ButtonDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ButtonDashboard.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ButtonDashboard.Image = Global.Restooo.My.Resources.Resources.Amitjakhu_Drip_Home_32
         Me.ButtonDashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.ButtonDashboard.Location = New System.Drawing.Point(0, 58)
+        Me.ButtonDashboard.Location = New System.Drawing.Point(0, 64)
         Me.ButtonDashboard.Name = "ButtonDashboard"
         Me.ButtonDashboard.Size = New System.Drawing.Size(200, 54)
         Me.ButtonDashboard.TabIndex = 0
@@ -148,42 +135,22 @@ Partial Class Dashboard
         '
         'PanelTopLeft
         '
-        Me.PanelTopLeft.Controls.Add(Me.PictureBox1)
+        Me.PanelTopLeft.Controls.Add(Me.ButtonMenuBurger)
         Me.PanelTopLeft.Dock = System.Windows.Forms.DockStyle.Top
         Me.PanelTopLeft.Location = New System.Drawing.Point(0, 0)
         Me.PanelTopLeft.Name = "PanelTopLeft"
         Me.PanelTopLeft.Size = New System.Drawing.Size(200, 58)
         Me.PanelTopLeft.TabIndex = 0
         '
-        'PictureBox1
+        'ButtonMenuBurger
         '
-        Me.PictureBox1.Dock = System.Windows.Forms.DockStyle.Right
-        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(151, 0)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(49, 58)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
-        Me.PictureBox1.TabIndex = 2
-        Me.PictureBox1.TabStop = False
-        '
-        'pnlWelcome
-        '
-        Me.pnlWelcome.Controls.Add(Me.Label1)
-        Me.pnlWelcome.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.pnlWelcome.Location = New System.Drawing.Point(200, 0)
-        Me.pnlWelcome.Name = "pnlWelcome"
-        Me.pnlWelcome.Size = New System.Drawing.Size(1064, 761)
-        Me.pnlWelcome.TabIndex = 1
-        '
-        'Label1
-        '
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(3, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(1061, 761)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Selamat datang, XXXX!!"
-        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.ButtonMenuBurger.Dock = System.Windows.Forms.DockStyle.Right
+        Me.ButtonMenuBurger.Image = CType(resources.GetObject("ButtonMenuBurger.Image"), System.Drawing.Image)
+        Me.ButtonMenuBurger.Location = New System.Drawing.Point(147, 0)
+        Me.ButtonMenuBurger.Name = "ButtonMenuBurger"
+        Me.ButtonMenuBurger.Size = New System.Drawing.Size(53, 58)
+        Me.ButtonMenuBurger.TabIndex = 0
+        Me.ButtonMenuBurger.UseVisualStyleBackColor = True
         '
         'TimerPanelReduce
         '
@@ -193,26 +160,34 @@ Partial Class Dashboard
         '
         Me.TimerPanelIncrease.Interval = 1
         '
+        'Label1
+        '
+        Me.Label1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(200, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(1064, 761)
+        Me.Label1.TabIndex = 1
+        Me.Label1.Text = "Selamat datang, XXXX!!"
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
         'Dashboard
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1264, 761)
-        Me.Controls.Add(Me.pnlWelcome)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.PanelLeft)
         Me.Name = "Dashboard"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Dashboard"
         Me.PanelLeft.ResumeLayout(False)
         Me.PanelTopLeft.ResumeLayout(False)
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.pnlWelcome.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents PanelLeft As Panel
-    Friend WithEvents pnlWelcome As FlowLayoutPanel
     Friend WithEvents PanelTopLeft As Panel
     Friend WithEvents ButtonDashboard As Button
     Friend WithEvents ButtonStatus As Button
@@ -220,8 +195,8 @@ Partial Class Dashboard
     Friend WithEvents ButtonReport As Button
     Friend WithEvents ButtonStock As Button
     Friend WithEvents ButtonMenu As Button
-    Friend WithEvents Label1 As Label
     Friend WithEvents TimerPanelReduce As Timer
     Friend WithEvents TimerPanelIncrease As Timer
-    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents ButtonMenuBurger As Button
+    Friend WithEvents Label1 As Label
 End Class

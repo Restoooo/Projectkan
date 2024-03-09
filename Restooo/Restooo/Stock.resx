@@ -117,27 +117,26 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="PictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
-        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAA68AAAOvAGVvHJJAAAAB3RJ
-        TUUH5wIPCTUNNmdHKAAAAJ5JREFUWEftls0JwmAQRL8WYikB8aoY0VYswu78SQkRgwQb0TeBD0LIeQy6
-        D95hTzOXXTYFwa9R4hGX/WRmgw2+8YIF2lD4HRUua1yghXH4E/doYSr8gBYi/P/C1/i1cB2VM+bwF9pW
-        TeioXDEX6LBCK1t8YC7R4g6tKDBKiCiRmW0J+4qOS+hmWD8iMSxxQ9tHNETP6AlX/RQE8yelD6EfUuM5
-        XANBAAAAAElFTkSuQmCC
-</value>
-  </data>
   <metadata name="TimerPanelIncrease.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>633, 17</value>
   </metadata>
   <metadata name="TimerPanelReduce.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>789, 17</value>
   </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="ButtonMenuBurger.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAATrzAAE68wEXCzLMAAAAB3RJ
+        TUUH5ggIDQsVf/yfYgAAAGpJREFUWEftlMEJgDAQBPOxmNShzWjxtqA7cB/Bp8FHZmAeSSAbLsc1EYHe
+        Oy5xjftgySCr0gOLuMUzXoMlg6xKDyxq89cHUBYOjvhWui/kbjKeXyBCQ1RjOAecAzIpNEQ1hnPAOSAy
+        G63dQKKJTHY/bSIAAAAASUVORK5CYII=
+</value>
+  </data>
   <data name="ButtonRefresh.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
-        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAATr0AAE69AFFT5SzAAAB3klE
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAATrzAAE68wEXCzLMAAAB3klE
         QVRYR+3Wz0oVUQDH8WsahAWWPUBrrcCNYIWv4Nql0sKFKKkbWxvpQlRcFLrxzwv4BKKufA4ly60gSSXZ
         93uZA8Nw/8yZOwuD+cEH773O+T8z59SqVPnf8hCvMYVNfEn42d9ewmuyeYIhdNW/FcgDvMM+LvEXdxn+
         9h17GIFlzCOsYK3+rUDs/UfYcLqxK5zhPPmc7pQd+YDnWMItviI6j7GB37Bi/x5iGo7yReINZnCCcO1P

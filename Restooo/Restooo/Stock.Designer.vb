@@ -23,127 +23,27 @@ Partial Class Stock
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Stock))
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.ButtonStatus = New System.Windows.Forms.Button()
-        Me.ButtonLogout = New System.Windows.Forms.Button()
-        Me.ButtonReport = New System.Windows.Forms.Button()
-        Me.ButtonStock = New System.Windows.Forms.Button()
-        Me.ButtonMenu = New System.Windows.Forms.Button()
-        Me.ButtonDashboard = New System.Windows.Forms.Button()
         Me.LabelStock = New System.Windows.Forms.Label()
         Me.DataGridViewStock = New System.Windows.Forms.DataGridView()
         Me.TimerPanelIncrease = New System.Windows.Forms.Timer(Me.components)
         Me.TimerPanelReduce = New System.Windows.Forms.Timer(Me.components)
         Me.PanelTopLeft = New System.Windows.Forms.Panel()
+        Me.ButtonMenuBurger = New System.Windows.Forms.Button()
         Me.PanelLeft = New System.Windows.Forms.Panel()
+        Me.ButtonReport = New System.Windows.Forms.Button()
+        Me.ButtonStock = New System.Windows.Forms.Button()
+        Me.ButtonMenu = New System.Windows.Forms.Button()
+        Me.ButtonDashboard = New System.Windows.Forms.Button()
         Me.ButtonUpdate = New System.Windows.Forms.Button()
         Me.ButtonRefresh = New System.Windows.Forms.Button()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.ButtonStatus = New System.Windows.Forms.Button()
+        Me.ButtonLogout = New System.Windows.Forms.Button()
         CType(Me.DataGridViewStock, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelTopLeft.SuspendLayout()
         Me.PanelLeft.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Dock = System.Windows.Forms.DockStyle.Right
-        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(151, 0)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(49, 58)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
-        Me.PictureBox1.TabIndex = 2
-        Me.PictureBox1.TabStop = False
-        '
-        'ButtonStatus
-        '
-        Me.ButtonStatus.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.ButtonStatus.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ButtonStatus.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonStatus.Image = Global.Restooo.My.Resources.Resources.Iconsmind_Outline_Profile_32
-        Me.ButtonStatus.Location = New System.Drawing.Point(147, 708)
-        Me.ButtonStatus.Name = "ButtonStatus"
-        Me.ButtonStatus.Size = New System.Drawing.Size(50, 50)
-        Me.ButtonStatus.TabIndex = 5
-        Me.ButtonStatus.UseVisualStyleBackColor = True
-        '
-        'ButtonLogout
-        '
-        Me.ButtonLogout.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.ButtonLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ButtonLogout.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonLogout.Image = Global.Restooo.My.Resources.Resources.Icons8_Windows_8_User_Interface_Logout_32
-        Me.ButtonLogout.Location = New System.Drawing.Point(0, 707)
-        Me.ButtonLogout.Name = "ButtonLogout"
-        Me.ButtonLogout.Size = New System.Drawing.Size(50, 50)
-        Me.ButtonLogout.TabIndex = 4
-        Me.ButtonLogout.UseVisualStyleBackColor = True
-        '
-        'ButtonReport
-        '
-        Me.ButtonReport.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.ButtonReport.Dock = System.Windows.Forms.DockStyle.Top
-        Me.ButtonReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ButtonReport.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonReport.Image = Global.Restooo.My.Resources.Resources.Icons8_Windows_8_Food_List_Ingredients_32
-        Me.ButtonReport.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.ButtonReport.Location = New System.Drawing.Point(0, 220)
-        Me.ButtonReport.Name = "ButtonReport"
-        Me.ButtonReport.Size = New System.Drawing.Size(200, 54)
-        Me.ButtonReport.TabIndex = 3
-        Me.ButtonReport.Text = "Report"
-        Me.ButtonReport.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.ButtonReport.UseVisualStyleBackColor = True
-        '
-        'ButtonStock
-        '
-        Me.ButtonStock.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.ButtonStock.Dock = System.Windows.Forms.DockStyle.Top
-        Me.ButtonStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ButtonStock.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonStock.Image = Global.Restooo.My.Resources.Resources.Iconoir_Team_Iconoir_Packages_32
-        Me.ButtonStock.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.ButtonStock.Location = New System.Drawing.Point(0, 166)
-        Me.ButtonStock.Name = "ButtonStock"
-        Me.ButtonStock.Size = New System.Drawing.Size(200, 54)
-        Me.ButtonStock.TabIndex = 2
-        Me.ButtonStock.Text = "Stock"
-        Me.ButtonStock.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.ButtonStock.UseVisualStyleBackColor = True
-        '
-        'ButtonMenu
-        '
-        Me.ButtonMenu.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.ButtonMenu.Dock = System.Windows.Forms.DockStyle.Top
-        Me.ButtonMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ButtonMenu.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonMenu.Image = Global.Restooo.My.Resources.Resources.Aniket_Suvarna_Box_Regular_Bx_food_menu_32
-        Me.ButtonMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.ButtonMenu.Location = New System.Drawing.Point(0, 112)
-        Me.ButtonMenu.Name = "ButtonMenu"
-        Me.ButtonMenu.Size = New System.Drawing.Size(200, 54)
-        Me.ButtonMenu.TabIndex = 1
-        Me.ButtonMenu.Text = "Menu"
-        Me.ButtonMenu.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.ButtonMenu.UseVisualStyleBackColor = True
-        '
-        'ButtonDashboard
-        '
-        Me.ButtonDashboard.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.ButtonDashboard.Dock = System.Windows.Forms.DockStyle.Top
-        Me.ButtonDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ButtonDashboard.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonDashboard.Image = Global.Restooo.My.Resources.Resources.Amitjakhu_Drip_Home_32
-        Me.ButtonDashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.ButtonDashboard.Location = New System.Drawing.Point(0, 58)
-        Me.ButtonDashboard.Name = "ButtonDashboard"
-        Me.ButtonDashboard.Size = New System.Drawing.Size(200, 54)
-        Me.ButtonDashboard.TabIndex = 0
-        Me.ButtonDashboard.Text = "Dashboard"
-        Me.ButtonDashboard.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.ButtonDashboard.UseVisualStyleBackColor = True
         '
         'LabelStock
         '
@@ -159,14 +59,14 @@ Partial Class Stock
         '
         Me.DataGridViewStock.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridViewStock.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridViewStock.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridViewStock.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle4
         Me.DataGridViewStock.Location = New System.Drawing.Point(368, 112)
         Me.DataGridViewStock.Name = "DataGridViewStock"
         Me.DataGridViewStock.Size = New System.Drawing.Size(705, 436)
@@ -182,12 +82,22 @@ Partial Class Stock
         '
         'PanelTopLeft
         '
-        Me.PanelTopLeft.Controls.Add(Me.PictureBox1)
+        Me.PanelTopLeft.Controls.Add(Me.ButtonMenuBurger)
         Me.PanelTopLeft.Dock = System.Windows.Forms.DockStyle.Top
         Me.PanelTopLeft.Location = New System.Drawing.Point(0, 0)
         Me.PanelTopLeft.Name = "PanelTopLeft"
         Me.PanelTopLeft.Size = New System.Drawing.Size(200, 58)
         Me.PanelTopLeft.TabIndex = 0
+        '
+        'ButtonMenuBurger
+        '
+        Me.ButtonMenuBurger.Dock = System.Windows.Forms.DockStyle.Right
+        Me.ButtonMenuBurger.Image = CType(resources.GetObject("ButtonMenuBurger.Image"), System.Drawing.Image)
+        Me.ButtonMenuBurger.Location = New System.Drawing.Point(147, 0)
+        Me.ButtonMenuBurger.Name = "ButtonMenuBurger"
+        Me.ButtonMenuBurger.Size = New System.Drawing.Size(53, 58)
+        Me.ButtonMenuBurger.TabIndex = 3
+        Me.ButtonMenuBurger.UseVisualStyleBackColor = True
         '
         'PanelLeft
         '
@@ -203,6 +113,62 @@ Partial Class Stock
         Me.PanelLeft.Name = "PanelLeft"
         Me.PanelLeft.Size = New System.Drawing.Size(200, 761)
         Me.PanelLeft.TabIndex = 5
+        '
+        'ButtonReport
+        '
+        Me.ButtonReport.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ButtonReport.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ButtonReport.Image = Global.Restooo.My.Resources.Resources.Icons8_Windows_8_Food_List_Ingredients_32
+        Me.ButtonReport.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.ButtonReport.Location = New System.Drawing.Point(0, 244)
+        Me.ButtonReport.Name = "ButtonReport"
+        Me.ButtonReport.Size = New System.Drawing.Size(200, 54)
+        Me.ButtonReport.TabIndex = 9
+        Me.ButtonReport.Text = "Report"
+        Me.ButtonReport.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.ButtonReport.UseVisualStyleBackColor = True
+        '
+        'ButtonStock
+        '
+        Me.ButtonStock.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ButtonStock.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ButtonStock.Image = Global.Restooo.My.Resources.Resources.Iconoir_Team_Iconoir_Packages_32
+        Me.ButtonStock.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.ButtonStock.Location = New System.Drawing.Point(0, 184)
+        Me.ButtonStock.Name = "ButtonStock"
+        Me.ButtonStock.Size = New System.Drawing.Size(200, 54)
+        Me.ButtonStock.TabIndex = 8
+        Me.ButtonStock.Text = "Stock"
+        Me.ButtonStock.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.ButtonStock.UseVisualStyleBackColor = True
+        '
+        'ButtonMenu
+        '
+        Me.ButtonMenu.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ButtonMenu.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ButtonMenu.Image = Global.Restooo.My.Resources.Resources.Aniket_Suvarna_Box_Regular_Bx_food_menu_32
+        Me.ButtonMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.ButtonMenu.Location = New System.Drawing.Point(0, 124)
+        Me.ButtonMenu.Name = "ButtonMenu"
+        Me.ButtonMenu.Size = New System.Drawing.Size(200, 54)
+        Me.ButtonMenu.TabIndex = 7
+        Me.ButtonMenu.Text = "Menu"
+        Me.ButtonMenu.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.ButtonMenu.UseVisualStyleBackColor = True
+        '
+        'ButtonDashboard
+        '
+        Me.ButtonDashboard.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ButtonDashboard.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ButtonDashboard.Image = Global.Restooo.My.Resources.Resources.Amitjakhu_Drip_Home_32
+        Me.ButtonDashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.ButtonDashboard.Location = New System.Drawing.Point(0, 64)
+        Me.ButtonDashboard.Name = "ButtonDashboard"
+        Me.ButtonDashboard.Size = New System.Drawing.Size(200, 54)
+        Me.ButtonDashboard.TabIndex = 6
+        Me.ButtonDashboard.Text = "Dashboard"
+        Me.ButtonDashboard.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.ButtonDashboard.UseVisualStyleBackColor = True
         '
         'ButtonUpdate
         '
@@ -222,6 +188,28 @@ Partial Class Stock
         Me.ButtonRefresh.TabIndex = 9
         Me.ButtonRefresh.UseVisualStyleBackColor = True
         '
+        'ButtonStatus
+        '
+        Me.ButtonStatus.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ButtonStatus.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ButtonStatus.Image = Global.Restooo.My.Resources.Resources.Iconsmind_Outline_Profile_32
+        Me.ButtonStatus.Location = New System.Drawing.Point(150, 711)
+        Me.ButtonStatus.Name = "ButtonStatus"
+        Me.ButtonStatus.Size = New System.Drawing.Size(50, 50)
+        Me.ButtonStatus.TabIndex = 15
+        Me.ButtonStatus.UseVisualStyleBackColor = True
+        '
+        'ButtonLogout
+        '
+        Me.ButtonLogout.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ButtonLogout.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ButtonLogout.Image = Global.Restooo.My.Resources.Resources.Icons8_Windows_8_User_Interface_Logout_32
+        Me.ButtonLogout.Location = New System.Drawing.Point(0, 711)
+        Me.ButtonLogout.Name = "ButtonLogout"
+        Me.ButtonLogout.Size = New System.Drawing.Size(50, 50)
+        Me.ButtonLogout.TabIndex = 14
+        Me.ButtonLogout.UseVisualStyleBackColor = True
+        '
         'Stock
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -235,7 +223,6 @@ Partial Class Stock
         Me.Name = "Stock"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Stock"
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridViewStock, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelTopLeft.ResumeLayout(False)
         Me.PanelLeft.ResumeLayout(False)
@@ -243,14 +230,6 @@ Partial Class Stock
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents ButtonStatus As Button
-    Friend WithEvents ButtonLogout As Button
-    Friend WithEvents ButtonReport As Button
-    Friend WithEvents ButtonStock As Button
-    Friend WithEvents ButtonMenu As Button
-    Friend WithEvents ButtonDashboard As Button
     Friend WithEvents LabelStock As Label
     Friend WithEvents DataGridViewStock As DataGridView
     Friend WithEvents TimerPanelIncrease As Timer
@@ -259,4 +238,11 @@ Partial Class Stock
     Friend WithEvents PanelLeft As Panel
     Friend WithEvents ButtonUpdate As Button
     Friend WithEvents ButtonRefresh As Button
+    Friend WithEvents ButtonMenuBurger As Button
+    Friend WithEvents ButtonReport As Button
+    Friend WithEvents ButtonStock As Button
+    Friend WithEvents ButtonMenu As Button
+    Friend WithEvents ButtonDashboard As Button
+    Friend WithEvents ButtonStatus As Button
+    Friend WithEvents ButtonLogout As Button
 End Class
