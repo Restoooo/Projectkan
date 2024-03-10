@@ -25,6 +25,7 @@ Partial Class Report
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Report))
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.PanelLeft = New System.Windows.Forms.Panel()
         Me.ButtonStatus = New System.Windows.Forms.Button()
         Me.ButtonLogout = New System.Windows.Forms.Button()
@@ -37,14 +38,13 @@ Partial Class Report
         Me.TimerPanelReduce = New System.Windows.Forms.Timer(Me.components)
         Me.TimerPanelIncrease = New System.Windows.Forms.Timer(Me.components)
         Me.DataGridViewReport = New System.Windows.Forms.DataGridView()
-        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.LabelReport = New System.Windows.Forms.Label()
+        Me.ButtonRefresh = New System.Windows.Forms.Button()
+        Me.DataGridViewReportDetail = New System.Windows.Forms.DataGridView()
         Me.PanelLeft.SuspendLayout()
         Me.PanelTopLeft.SuspendLayout()
         CType(Me.DataGridViewReport, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridViewReportDetail, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PanelLeft
@@ -179,35 +179,10 @@ Partial Class Report
         DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.DataGridViewReport.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
-        Me.DataGridViewReport.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column2, Me.Column1, Me.Column3, Me.Column4})
-        Me.DataGridViewReport.Location = New System.Drawing.Point(479, 112)
+        Me.DataGridViewReport.Location = New System.Drawing.Point(321, 112)
         Me.DataGridViewReport.Name = "DataGridViewReport"
-        Me.DataGridViewReport.Size = New System.Drawing.Size(458, 313)
+        Me.DataGridViewReport.Size = New System.Drawing.Size(796, 362)
         Me.DataGridViewReport.TabIndex = 3
-        '
-        'Column2
-        '
-        Me.Column2.HeaderText = "ID Pesanan"
-        Me.Column2.Name = "Column2"
-        Me.Column2.ReadOnly = True
-        '
-        'Column1
-        '
-        Me.Column1.HeaderText = "Nama Karyawan"
-        Me.Column1.Name = "Column1"
-        Me.Column1.ReadOnly = True
-        '
-        'Column3
-        '
-        Me.Column3.HeaderText = "Tanggal Transaksi"
-        Me.Column3.Name = "Column3"
-        Me.Column3.ReadOnly = True
-        '
-        'Column4
-        '
-        Me.Column4.HeaderText = "Total Transaksi"
-        Me.Column4.Name = "Column4"
-        Me.Column4.ReadOnly = True
         '
         'LabelReport
         '
@@ -219,11 +194,39 @@ Partial Class Report
         Me.LabelReport.TabIndex = 4
         Me.LabelReport.Text = "Report"
         '
+        'ButtonRefresh
+        '
+        Me.ButtonRefresh.Image = CType(resources.GetObject("ButtonRefresh.Image"), System.Drawing.Image)
+        Me.ButtonRefresh.Location = New System.Drawing.Point(796, 50)
+        Me.ButtonRefresh.Name = "ButtonRefresh"
+        Me.ButtonRefresh.Size = New System.Drawing.Size(49, 38)
+        Me.ButtonRefresh.TabIndex = 10
+        Me.ButtonRefresh.UseVisualStyleBackColor = True
+        '
+        'DataGridViewReportDetail
+        '
+        Me.DataGridViewReportDetail.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DataGridViewReportDetail.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridViewReportDetail.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        Me.DataGridViewReportDetail.Location = New System.Drawing.Point(321, 494)
+        Me.DataGridViewReportDetail.Name = "DataGridViewReportDetail"
+        Me.DataGridViewReportDetail.Size = New System.Drawing.Size(796, 139)
+        Me.DataGridViewReportDetail.TabIndex = 11
+        '
         'Report
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1264, 761)
+        Me.Controls.Add(Me.DataGridViewReportDetail)
+        Me.Controls.Add(Me.ButtonRefresh)
         Me.Controls.Add(Me.LabelReport)
         Me.Controls.Add(Me.DataGridViewReport)
         Me.Controls.Add(Me.PanelLeft)
@@ -233,6 +236,7 @@ Partial Class Report
         Me.PanelLeft.ResumeLayout(False)
         Me.PanelTopLeft.ResumeLayout(False)
         CType(Me.DataGridViewReport, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridViewReportDetail, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -243,10 +247,6 @@ Partial Class Report
     Friend WithEvents TimerPanelIncrease As Timer
     Friend WithEvents DataGridViewReport As DataGridView
     Friend WithEvents LabelReport As Label
-    Friend WithEvents Column2 As DataGridViewTextBoxColumn
-    Friend WithEvents Column1 As DataGridViewTextBoxColumn
-    Friend WithEvents Column3 As DataGridViewTextBoxColumn
-    Friend WithEvents Column4 As DataGridViewTextBoxColumn
     Friend WithEvents ButtonMenuBurger As Button
     Friend WithEvents ButtonReport As Button
     Friend WithEvents ButtonStock As Button
@@ -254,4 +254,6 @@ Partial Class Report
     Friend WithEvents ButtonDashboard As Button
     Friend WithEvents ButtonStatus As Button
     Friend WithEvents ButtonLogout As Button
+    Friend WithEvents ButtonRefresh As Button
+    Friend WithEvents DataGridViewReportDetail As DataGridView
 End Class

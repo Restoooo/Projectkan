@@ -180,23 +180,15 @@ Public Class MenuMakan
         UpdatePanePesanan()
     End Sub
     Private Function AmbilHargaDariString(input As String) As Double
-        ' Pisahkan string menggunakan karakter '|' sebagai pemisah
         Dim parts() As String = input.Split("|"c)
-
-        ' Jika panjang array tidak sesuai dengan format yang diharapkan, kembalikan 0
         If parts.Length <> 3 Then
             Return 0.0
         End If
-
-        ' Ambil bagian harga dari array hasil pemisahan
         Dim hargaStr As String = parts(2).Trim()
-
-        ' Coba untuk mengonversi string harga menjadi tipe data Double
         Dim harga As Integer
         If Integer.TryParse(hargaStr, harga) Then
             Return harga
         Else
-            ' Jika gagal mengonversi, kembalikan 0
             Return 0.0
         End If
     End Function

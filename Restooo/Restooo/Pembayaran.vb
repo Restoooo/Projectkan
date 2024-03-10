@@ -9,6 +9,8 @@ Public Class Pembayaran
     Dim reader As MySqlDataReader
     Public Shared tanggalnow As DateTime
     Dim countDictionary As New Dictionary(Of String, Integer)()
+    Dim orderedItems As List(Of String)
+    Dim totalharga As Integer
 
     Private Sub ButtonStatus_Click(sender As Object, e As EventArgs) Handles ButtonStatus.Click
         Status.Show()
@@ -77,8 +79,7 @@ Public Class Pembayaran
         End If
     End Sub
 
-    Dim orderedItems As List(Of String)
-        Dim totalharga As Integer
+
 
     Public Sub New(ByVal pesanan As List(Of String), ByVal totalharga As Integer)
         InitializeComponent()
@@ -123,7 +124,7 @@ Public Class Pembayaran
             label.Padding = New Padding(0, 0, 10, 0)
             label.Location = New Point(0, posYpesanan)
 
-            ' Extract menu name and price
+
             Dim parts() As String = kvp.Key.Split("|"c)
             If parts.Length = 3 Then
                 label.Text = $"{parts(1).Trim()} - Rp. {parts(2).Trim()} - QTY. {kvp.Value}"
@@ -133,7 +134,7 @@ Public Class Pembayaran
             posYpesanan += 40
         Next
 
-        ' Add label for total payment
+
         Dim labelTotalHarga As New Label()
         labelTotalHarga.Text = $"Total Harga: Rp. {totalharga.ToString()}"
         labelTotalHarga.Size = New Size(300, 30)
@@ -182,14 +183,28 @@ Public Class Pembayaran
 
             transaction.Commit()
 
-            MessageBox.Show("Data berhasil dimasukkan ke dalam tabel pesanan dan detail_pesanan.")
+            MessageBox.Show("Transaksi Berhasil")
             'pembersihan data 
+            MenuMakan.PanelList.Controls.Clear()
             MenuMakan.pesanan.Clear()
             MenuMakan.totalharga = 0
             tanggalnow = DateTime.MinValue
             If MenuDuduk.meja > 0 Then
                 LockTable(MenuDuduk.meja)
             End If
+            MenuDuduk.LabelNomorMeja.Text = "Nomor Meja : "
+            'For Each ctrl As Control In MenuDuduk.Controls
+            'If TypeOf ctrl Is Panel Then
+            'Dim panel As Panel = DirectCast(ctrl, Panel)
+            'For Each innerCtrl As Control In panel.Controls
+            'If TypeOf innerCtrl Is Button Then
+            'Dim btn As Button = DirectCast(innerCtrl, Button)
+            'btn.BackColor = SystemColors.ButtonHighlight
+            'End If
+            'Next
+            'End If
+            'Next
+            MenuDuduk.selectedButtons.Clear()
             Dashboard.Show()
             Me.Hide()
 

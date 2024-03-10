@@ -1,5 +1,6 @@
 ﻿Imports MySql.Data.MySqlClient
 Imports System.Diagnostics.Eventing
+Imports System.Windows
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel
 
 Public Class Stock
@@ -102,29 +103,34 @@ Public Class Stock
     End Sub
 
     Private Sub ButtonUpdate_Click(sender As Object, e As EventArgs) Handles ButtonUpdate.Click
-        Dim id As Integer = CInt(InputBox("Masukkan Menu Id:", "Input"))
-        Dim stok As Integer = CInt(InputBox("Masukkan berapa banyak stok:", "Input"))
-        conn = New MySqlConnection("server=localhost;database=restoooo;user=root;password=")
-        conn.Open()
-        cmd = New MySqlCommand("Update Menu set stok=@stok where id_menu=@id", conn)
-        cmd.Parameters.AddWithValue("id", id)
-        cmd.Parameters.AddWithValue("stok", stok)
-        Try
-            Dim rowsAffected As Integer = cmd.ExecuteNonQuery()
-            If rowsAffected > 0 Then
-                MessageBox.Show("Data berhasil diperbarui.")
-            Else
-                MessageBox.Show("Data tidak ditemukan.")
-            End If
-        Catch ex As Exception
-            MessageBox.Show("Error: " & ex.Message)
-        End Try
-        conn.Close()
+        Dim id As Integer
+        Dim stok As Integer
+        Dim idInput As String = InputBox("Masukkan Menu Id:", "Input")
+        Dim stokInput As String = InputBox("Masukkan berapa banyak stok:", "Input")
+        If Integer.TryParse(idInput, id) And Integer.TryParse(stokInput, stok) Then
+            conn = New MySqlConnection("server=localhost;database=restoooo;user=root;password=")
+
+            conn.Open()
+            cmd = New MySqlCommand("Update Menu set stok=@stok where id_menu=@id", conn)
+            cmd.Parameters.AddWithValue("id", id)
+            cmd.Parameters.AddWithValue("stok", stok)
+            Try
+                Dim rowsAffected As Integer = cmd.ExecuteNonQuery()
+                If rowsAffected > 0 Then
+                    MessageBox.Show("Data berhasil diperbarui.")
+                Else
+                    MessageBox.Show("Data tidak ditemukan.")
+                End If
+            Catch ex As Exception
+                MessageBox.Show("Error: " & ex.Message)
+            End Try
+            conn.Close()
+        End If
 
     End Sub
 
     Private Sub ButtonRefresh_Click(sender As Object, e As EventArgs) Handles ButtonRefresh.Click
-        LoadData() ' Memanggil metode untuk memperbarui DataGridView
+        LoadData() 
     End Sub
 
 

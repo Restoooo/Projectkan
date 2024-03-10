@@ -1,6 +1,6 @@
 ﻿Public Class MenuDuduk
 
-    Private selectedButtons As New List(Of Button)
+    Public Shared selectedButtons As New List(Of Button)
     Public Shared lockedTables As New Dictionary(Of Integer, Boolean)()
     Private buttonClicked As Boolean = False
     Public Shared meja As Integer
@@ -86,6 +86,7 @@
 
                 If result = DialogResult.Yes Then
                     UnlockTable(tableNumber)
+                    clickedButton.BackColor = SystemColors.ButtonHighlight
                 End If
             Else
                 If selectedButtons.Contains(clickedButton) Then
@@ -114,6 +115,8 @@
     Private Sub MenuDuduk_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         InitializeLockedTables()
 
+
+
     End Sub
 
 
@@ -123,7 +126,6 @@
         If clickedButtonText = "" Then
             meja = 0
         Else
-
             meja = Integer.Parse(clickedButtonText)
         End If
     End Sub
