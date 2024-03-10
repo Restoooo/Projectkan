@@ -115,3 +115,30 @@ D:\UKDW\Sem 6\Desktop\Projectkan\Restooo\Restooo\bin\Debug\System.Memory.xml
 D:\UKDW\Sem 6\Desktop\Projectkan\Restooo\Restooo\bin\Debug\System.Numerics.Vectors.xml
 D:\UKDW\Sem 6\Desktop\Projectkan\Restooo\Restooo\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 D:\UKDW\Sem 6\Desktop\Projectkan\Restooo\Restooo\bin\Debug\System.Threading.Tasks.Extensions.xml
+D:\Kuliah\Semester 6\Prog Desk\kelompok\Projectkan\Restooo\Restooo\bin\Debug\BouncyCastle.Cryptography.dll
+D:\Kuliah\Semester 6\Prog Desk\kelompok\Projectkan\Restooo\Restooo\bin\Debug\Google.Protobuf.dll
+D:\Kuliah\Semester 6\Prog Desk\kelompok\Projectkan\Restooo\Restooo\bin\Debug\K4os.Compression.LZ4.dll
+D:\Kuliah\Semester 6\Prog Desk\kelompok\Projectkan\Restooo\Restooo\bin\Debug\K4os.Compression.LZ4.Streams.dll
+D:\Kuliah\Semester 6\Prog Desk\kelompok\Projectkan\Restooo\Restooo\bin\Debug\K4os.Hash.xxHash.dll
+D:\Kuliah\Semester 6\Prog Desk\kelompok\Projectkan\Restooo\Restooo\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Kuliah\Semester 6\Prog Desk\kelompok\Projectkan\Restooo\Restooo\bin\Debug\MySql.Data.dll
+D:\Kuliah\Semester 6\Prog Desk\kelompok\Projectkan\Restooo\Restooo\bin\Debug\System.Configuration.ConfigurationManager.dll
+D:\Kuliah\Semester 6\Prog Desk\kelompok\Projectkan\Restooo\Restooo\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+D:\Kuliah\Semester 6\Prog Desk\kelompok\Projectkan\Restooo\Restooo\bin\Debug\System.IO.Pipelines.dll
+D:\Kuliah\Semester 6\Prog Desk\kelompok\Projectkan\Restooo\Restooo\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\Kuliah\Semester 6\Prog Desk\kelompok\Projectkan\Restooo\Restooo\bin\Debug\ZstdSharp.dll
+D:\Kuliah\Semester 6\Prog Desk\kelompok\Projectkan\Restooo\Restooo\bin\Debug\BouncyCastle.Cryptography.xml
+D:\Kuliah\Semester 6\Prog Desk\kelompok\Projectkan\Restooo\Restooo\bin\Debug\Google.Protobuf.pdb
+D:\Kuliah\Semester 6\Prog Desk\kelompok\Projectkan\Restooo\Restooo\bin\Debug\Google.Protobuf.xml
+D:\Kuliah\Semester 6\Prog Desk\kelompok\Projectkan\Restooo\Restooo\bin\Debug\K4os.Compression.LZ4.xml
+D:\Kuliah\Semester 6\Prog Desk\kelompok\Projectkan\Restooo\Restooo\bin\Debug\K4os.Compression.LZ4.Streams.xml
+D:\Kuliah\Semester 6\Prog Desk\kelompok\Projectkan\Restooo\Restooo\bin\Debug\K4os.Hash.xxHash.xml
+D:\Kuliah\Semester 6\Prog Desk\kelompok\Projectkan\Restooo\Restooo\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+D:\Kuliah\Semester 6\Prog Desk\kelompok\Projectkan\Restooo\Restooo\bin\Debug\MySql.Data.xml
+D:\Kuliah\Semester 6\Prog Desk\kelompok\Projectkan\Restooo\Restooo\bin\Debug\System.Buffers.xml
+D:\Kuliah\Semester 6\Prog Desk\kelompok\Projectkan\Restooo\Restooo\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+D:\Kuliah\Semester 6\Prog Desk\kelompok\Projectkan\Restooo\Restooo\bin\Debug\System.IO.Pipelines.xml
+D:\Kuliah\Semester 6\Prog Desk\kelompok\Projectkan\Restooo\Restooo\bin\Debug\System.Memory.xml
+D:\Kuliah\Semester 6\Prog Desk\kelompok\Projectkan\Restooo\Restooo\bin\Debug\System.Numerics.Vectors.xml
+D:\Kuliah\Semester 6\Prog Desk\kelompok\Projectkan\Restooo\Restooo\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\Kuliah\Semester 6\Prog Desk\kelompok\Projectkan\Restooo\Restooo\bin\Debug\System.Threading.Tasks.Extensions.xml

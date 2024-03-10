@@ -187,6 +187,9 @@ Public Class Pembayaran
             MenuMakan.pesanan.Clear()
             MenuMakan.totalharga = 0
             tanggalnow = DateTime.MinValue
+            If MenuDuduk.meja > 0 Then
+                LockTable(MenuDuduk.meja)
+            End If
             Dashboard.Show()
             Me.Hide()
 
@@ -202,5 +205,10 @@ Public Class Pembayaran
             ' Tutup koneksi
             conn.Close()
         End Try
+    End Sub
+    Private Sub LockTable(tableNumber As Integer)
+        If MenuDuduk.lockedTables.ContainsKey(tableNumber) Then
+            MenuDuduk.lockedTables(tableNumber) = True
+        End If
     End Sub
 End Class

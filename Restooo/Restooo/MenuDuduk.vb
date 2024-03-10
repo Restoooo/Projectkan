@@ -1,7 +1,7 @@
 ﻿Public Class MenuDuduk
 
     Private selectedButtons As New List(Of Button)
-
+    Public Shared lockedTables As New Dictionary(Of Integer, Boolean)()
     Private buttonClicked As Boolean = False
     Public Shared meja As Integer
     Private Sub ButtonDashboard_Click(sender As Object, e As EventArgs) Handles ButtonDashboard.Click
@@ -71,27 +71,52 @@
         End If
     End Sub
 
-
+    Private Sub InitializeLockedTables()
+        For i As Integer = 1 To 13
+            lockedTables.Add(i, False)
+        Next
+    End Sub
     Private Sub HandleButtonClick(sender As Object, mouse As MouseEventArgs) Handles ButtonMeja1.MouseClick, ButtonMeja2.MouseClick, ButtonMeja3.MouseClick, ButtonMeja4.MouseClick, ButtonMeja5.MouseClick, ButtonMeja6.MouseClick, ButtonMeja7.MouseClick, ButtonMeja8.MouseClick, ButtonMeja9.MouseClick, ButtonMeja10.MouseClick, ButtonMeja11.MouseClick, ButtonMeja12.MouseClick, ButtonMeja13.MouseClick
         Dim clickedButton As Button = DirectCast(sender, Button)
+        Dim tableNumber As Integer = Integer.Parse(clickedButton.Text)
+
         If mouse.Button = MouseButtons.Left Then
-            If selectedButtons.Contains(clickedButton) Then
-                clickedButton.BackColor = SystemColors.ButtonHighlight
-                selectedButtons.Remove(clickedButton)
-                UpdateLabel("") '
+            If lockedTables(tableNumber) Then
+                Dim result As DialogResult = MessageBox.Show($"Meja {tableNumber} sedang terkunci. Apakah Anda yakin ingin membukanya?", "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+
+                If result = DialogResult.Yes Then
+                    UnlockTable(tableNumber)
+                End If
             Else
+                If selectedButtons.Contains(clickedButton) Then
+                    clickedButton.BackColor = SystemColors.ButtonHighlight
+                    selectedButtons.Remove(clickedButton)
+                    UpdateLabel("")
+                Else
+                    For Each btn In selectedButtons
+                        btn.BackColor = SystemColors.ButtonHighlight
+                    Next
+                    selectedButtons.Clear()
 
-                For Each btn In selectedButtons
-                    btn.BackColor = SystemColors.ButtonHighlight
-                Next
-                selectedButtons.Clear()
-
-                clickedButton.BackColor = SystemColors.ActiveCaption
-                selectedButtons.Add(clickedButton)
-                UpdateLabel(clickedButton.Text)
+                    clickedButton.BackColor = SystemColors.ActiveCaption
+                    selectedButtons.Add(clickedButton)
+                    UpdateLabel(clickedButton.Text)
+                End If
             End If
         End If
     End Sub
+
+
+    Private Sub UnlockTable(tableNumber As Integer)
+        lockedTables(tableNumber) = False
+
+    End Sub
+    Private Sub MenuDuduk_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        InitializeLockedTables()
+
+    End Sub
+
+
 
     Private Sub UpdateLabel(clickedButtonText As String)
         LabelNomorMeja.Text = "Nomor Meja : " & clickedButtonText
