@@ -130,6 +130,7 @@
     Private Sub ButtonShowMenu_Click(sender As Object, e As EventArgs) Handles ButtonShowMenu.Click
         Dim menuForm As New MenuMakan()
         menuForm.InitializeMenuMakanMinum()
+        menuForm.UpdatePanePesanan()
         menuForm.Show()
         Me.Hide()
     End Sub

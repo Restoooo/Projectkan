@@ -199,6 +199,7 @@ Public Class Pembayaran
                 LockTable(MenuDuduk.meja)
             End If
             MenuDuduk.LabelNomorMeja.Text = "Nomor Meja : "
+            MenuDuduk.meja = 0
             'For Each ctrl As Control In MenuDuduk.Controls
             'If TypeOf ctrl Is Panel Then
             'Dim panel As Panel = DirectCast(ctrl, Panel)

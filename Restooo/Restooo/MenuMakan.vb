@@ -167,7 +167,7 @@ Public Class MenuMakan
         tbHarga.Text = totalharga.ToString
         UpdatePanePesanan()
     End Sub
-    Private Sub UpdatePanePesanan()
+    Public Sub UpdatePanePesanan()
         PanelList.Controls.Clear()
         If pesanan.Count < 1 Then
             ButtonBayar.Enabled = False

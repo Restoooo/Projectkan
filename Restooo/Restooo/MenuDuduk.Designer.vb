@@ -26,6 +26,8 @@ Partial Class MenuDuduk
         Dim LabelReport As System.Windows.Forms.Label
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MenuDuduk))
         Me.PanelLeft = New System.Windows.Forms.Panel()
+        Me.ButtonStatus = New System.Windows.Forms.Button()
+        Me.ButtonLogout = New System.Windows.Forms.Button()
         Me.ButtonReport = New System.Windows.Forms.Button()
         Me.ButtonStock = New System.Windows.Forms.Button()
         Me.ButtonMenu = New System.Windows.Forms.Button()
@@ -102,8 +104,7 @@ Partial Class MenuDuduk
         Me.PanelMenuDudukBot = New System.Windows.Forms.Panel()
         Me.LabelNomorMeja = New System.Windows.Forms.Label()
         Me.ButtonShowMenu = New System.Windows.Forms.Button()
-        Me.ButtonStatus = New System.Windows.Forms.Button()
-        Me.ButtonLogout = New System.Windows.Forms.Button()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         LabelReport = New System.Windows.Forms.Label()
         Me.PanelLeft.SuspendLayout()
         Me.PanelTopLeft.SuspendLayout()
@@ -137,6 +138,28 @@ Partial Class MenuDuduk
         Me.PanelLeft.Name = "PanelLeft"
         Me.PanelLeft.Size = New System.Drawing.Size(200, 761)
         Me.PanelLeft.TabIndex = 7
+        '
+        'ButtonStatus
+        '
+        Me.ButtonStatus.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ButtonStatus.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ButtonStatus.Image = Global.Restooo.My.Resources.Resources.Iconsmind_Outline_Profile_32
+        Me.ButtonStatus.Location = New System.Drawing.Point(150, 711)
+        Me.ButtonStatus.Name = "ButtonStatus"
+        Me.ButtonStatus.Size = New System.Drawing.Size(50, 50)
+        Me.ButtonStatus.TabIndex = 13
+        Me.ButtonStatus.UseVisualStyleBackColor = True
+        '
+        'ButtonLogout
+        '
+        Me.ButtonLogout.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ButtonLogout.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ButtonLogout.Image = Global.Restooo.My.Resources.Resources.Icons8_Windows_8_User_Interface_Logout_32
+        Me.ButtonLogout.Location = New System.Drawing.Point(0, 711)
+        Me.ButtonLogout.Name = "ButtonLogout"
+        Me.ButtonLogout.Size = New System.Drawing.Size(50, 50)
+        Me.ButtonLogout.TabIndex = 12
+        Me.ButtonLogout.UseVisualStyleBackColor = True
         '
         'ButtonReport
         '
@@ -915,28 +938,6 @@ Partial Class MenuDuduk
         Me.ButtonShowMenu.Text = "Pesan Menu"
         Me.ButtonShowMenu.UseVisualStyleBackColor = True
         '
-        'ButtonStatus
-        '
-        Me.ButtonStatus.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.ButtonStatus.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonStatus.Image = Global.Restooo.My.Resources.Resources.Iconsmind_Outline_Profile_32
-        Me.ButtonStatus.Location = New System.Drawing.Point(150, 711)
-        Me.ButtonStatus.Name = "ButtonStatus"
-        Me.ButtonStatus.Size = New System.Drawing.Size(50, 50)
-        Me.ButtonStatus.TabIndex = 13
-        Me.ButtonStatus.UseVisualStyleBackColor = True
-        '
-        'ButtonLogout
-        '
-        Me.ButtonLogout.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.ButtonLogout.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonLogout.Image = Global.Restooo.My.Resources.Resources.Icons8_Windows_8_User_Interface_Logout_32
-        Me.ButtonLogout.Location = New System.Drawing.Point(0, 711)
-        Me.ButtonLogout.Name = "ButtonLogout"
-        Me.ButtonLogout.Size = New System.Drawing.Size(50, 50)
-        Me.ButtonLogout.TabIndex = 12
-        Me.ButtonLogout.UseVisualStyleBackColor = True
-        '
         'MenuDuduk
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1042,4 +1043,5 @@ Partial Class MenuDuduk
     Friend WithEvents ButtonDashboard As Button
     Friend WithEvents ButtonStatus As Button
     Friend WithEvents ButtonLogout As Button
+    Friend WithEvents Timer1 As Timer
 End Class
