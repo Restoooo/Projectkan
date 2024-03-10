@@ -3,6 +3,9 @@
 Public Class Status
 
 
+    Public Shared WaktuOnline As TimeSpan = TimeSpan.Zero
+
+
     Private Sub ButtonDashboard_Click(sender As Object, e As EventArgs) Handles ButtonDashboard.Click
         Dashboard.Show()
         Me.Hide()
@@ -82,17 +85,7 @@ Public Class Status
     End Sub
 
     Private Sub TimerStatus_Tick(sender As Object, e As EventArgs) Handles TimerStatus.Tick
-        labelTimer.Text = "Waktu sekarang: " & DateTime.Now.ToString("HH:mm:ss")
-    End Sub
-
-    Private Sub StartTimer()
-        ' Atur interval timer (misalnya 1 detik)
-        TimerStatus.Interval = 1000 ' 1000 milidetik = 1 detik
-        ' Aktifkan timer
-        TimerStatus.Enabled = True
-    End Sub
-    Private Sub StopTimer()
-        ' Nonaktifkan timer
-        TimerStatus.Enabled = False
+        WaktuOnline = WaktuOnline.Add(TimeSpan.FromSeconds(1))
+        labelTimer.Text = WaktuOnline.ToString
     End Sub
 End Class

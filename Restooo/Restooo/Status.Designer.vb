@@ -298,6 +298,7 @@ Partial Class Status
         '
         'TimerStatus
         '
+        Me.TimerStatus.Interval = 1000
         '
         'Status
         '

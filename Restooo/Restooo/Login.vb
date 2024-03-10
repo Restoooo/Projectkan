@@ -66,6 +66,7 @@ Public Class Login
             MsgBox("Error Username or Password")
         End If
         reader.Close()
+        Status.TimerStatus.Start()
         conn.Close()
     End Sub
 

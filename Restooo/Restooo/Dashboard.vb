@@ -29,6 +29,7 @@ Public Class Dashboard
         Login.Username = ""
         Login.txtPass.Text = "Password"
         Login.txtUsername.Text = "Username"
+        Status.TimerStatus.Stop()
         Login.Show()
         Me.Hide()
 
