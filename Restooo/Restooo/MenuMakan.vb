@@ -8,8 +8,10 @@ Public Class MenuMakan
     Dim reader As MySqlDataReader
     Dim reader2 As MySqlDataReader
 
+
     Public Shared pesanan As New List(Of String)()
-    Public Shared totalharga As New Integer
+    Public Shared totalharga As Integer = 0
+    Public Shared jumlahMenuChecker As New Dictionary(Of Integer, Integer)()
 
 
 
@@ -81,8 +83,22 @@ Public Class MenuMakan
         Login.Show()
         Me.Hide()
     End Sub
-
-    Private Sub MenuMakan_Load(sender As Object, e As EventArgs) Handles MyBase.Load, ButtonMenu.Click
+    Private Sub InitializeMenu()
+        conn = New MySqlConnection("server=localhost;database=restoooo;user=root;password=")
+        conn.Open()
+        cmd = New MySqlCommand("SELECT id_menu, stok FROM Menu where jenis = 'makanan'", conn)
+        Dim reader As MySqlDataReader = cmd.ExecuteReader()
+        jumlahMenuChecker.Clear()
+        While reader.Read()
+            Dim idMenu As Integer = Convert.ToInt32(reader("id_menu"))
+            Dim stok As Integer = Convert.ToInt32(reader("stok"))
+            jumlahMenuChecker.Add(idMenu, stok)
+        End While
+        conn.Close()
+    End Sub
+    Public Sub InitializeMenuMakanMinum()
+        PanelMinuman.Controls.Clear()
+        PanelMakanan.Controls.Clear()
         conn = New MySqlConnection("server=localhost;database=restoooo;user=root;password=")
         conn.Open()
         cmd = New MySqlCommand("SELECT * FROM Menu where jenis = 'makanan'", conn)
@@ -91,9 +107,15 @@ Public Class MenuMakan
         Dim posYMak As Integer = 0
         Dim posXMin As Integer = 25
         Dim posYMin As Integer = 0
-
         While reader.Read()
             Dim btn As New Button()
+            Dim stok As Integer
+            Dim stokString As String = reader("stok").ToString()
+            If Integer.TryParse(stokString, stok) Then
+                If stok < 1 Then
+                    btn.Enabled = False
+                End If
+            End If
             btn.Text = reader("Nama").ToString() + " Rp. " + reader("harga").ToString
             btn.Name = "btn" & reader("id_menu").ToString()
             btn.Size = New Size(225, 30)
@@ -108,6 +130,13 @@ Public Class MenuMakan
         reader2 = cmd2.ExecuteReader
         While reader2.Read()
             Dim btn As New Button()
+            Dim stok As Integer
+            Dim stokString As String = reader2("stok").ToString()
+            If Integer.TryParse(stokString, stok) Then
+                If stok < 1 Then
+                    btn.Enabled = False
+                End If
+            End If
             btn.Text = reader2("Nama").ToString() + " Rp. " + reader2("harga").ToString
             btn.Name = "btn" & reader2("id_menu").ToString()
             btn.Size = New Size(225, 30)
@@ -117,35 +146,34 @@ Public Class MenuMakan
             posYMin += 40
         End While
         conn.Close()
-
     End Sub
+    Private Sub MenuMakan_Load(sender As Object, e As EventArgs) Handles MyBase.Load, ButtonMenu.Click
+        InitializeMenu()
+        InitializeMenuMakanMinum()
+        UpdatePanePesanan()
+    End Sub
+
     Private Sub Button_Click(sender As Object, e As EventArgs)
         Dim btn As Button = DirectCast(sender, Button)
         Dim namaBtn As String = btn.Name
         Dim idMenu As String = namaBtn.Substring(3)
+        Dim menuparts() As String = btn.Text.Split(New String() {" Rp. "}, StringSplitOptions.RemoveEmptyEntries)
 
+        Dim namaMenu As String = menuParts(0)
+        Dim hargaMenu As String = menuparts(1)
 
-        Dim conn As New MySqlConnection("server=localhost;database=restoooo;user=root;password=")
-        conn.Open()
-        Dim cmd As New MySqlCommand("SELECT * FROM Menu WHERE id_menu = @idMenu", conn)
-        cmd.Parameters.AddWithValue("@idMenu", idMenu)
-        Dim reader As MySqlDataReader = cmd.ExecuteReader()
-
-        If reader.Read() Then
-            Dim namaMenu As String = reader("Nama").ToString()
-            Dim hargaMenu As String = reader("harga").ToString()
-            Dim jenisMenu As String = reader("jenis").ToString()
-
-            pesanan.Add(idMenu + " | " + namaMenu + " | " + hargaMenu)
-            totalharga += hargaMenu
-            tbHarga.Text = totalharga.ToString
-            UpdatePanePesanan()
-        End If
-
-        conn.Close()
+        pesanan.Add(idMenu + " | " + namaMenu + " | " + hargaMenu)
+        totalharga += hargaMenu
+        tbHarga.Text = totalharga.ToString
+        UpdatePanePesanan()
     End Sub
     Private Sub UpdatePanePesanan()
         PanelList.Controls.Clear()
+        If pesanan.Count < 1 Then
+            ButtonBayar.Enabled = False
+        Else
+            ButtonBayar.Enabled = True
+        End If
         Dim posYpesanan As Integer = 0
 
 

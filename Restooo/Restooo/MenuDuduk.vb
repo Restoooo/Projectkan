@@ -114,9 +114,6 @@
     End Sub
     Private Sub MenuDuduk_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         InitializeLockedTables()
-
-
-
     End Sub
 
 
@@ -131,7 +128,9 @@
     End Sub
 
     Private Sub ButtonShowMenu_Click(sender As Object, e As EventArgs) Handles ButtonShowMenu.Click
-        MenuMakan.Show()
+        Dim menuForm As New MenuMakan()
+        menuForm.InitializeMenuMakanMinum()
+        menuForm.Show()
         Me.Hide()
     End Sub
 

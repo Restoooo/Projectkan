@@ -180,14 +180,20 @@ Public Class Pembayaran
 
             Next
 
+            Dim cmdUpdateStok As New MySqlCommand("UPDATE menu INNER JOIN detail_pesanan AS dp ON menu.id_menu = dp.id_menu SET menu.stok = menu.stok - dp.jumlah_pesanan WHERE dp.id_pesanan = @id_pesanan", conn)
+            cmdUpdateStok.Parameters.AddWithValue("@id_pesanan", idPesanan)
+            cmdUpdateStok.Transaction = transaction
+            cmdUpdateStok.ExecuteNonQuery()
 
             transaction.Commit()
+
 
             MessageBox.Show("Transaksi Berhasil")
             'pembersihan data 
             MenuMakan.PanelList.Controls.Clear()
             MenuMakan.pesanan.Clear()
             MenuMakan.totalharga = 0
+            MenuMakan.tbHarga.Text = totalharga.ToString
             tanggalnow = DateTime.MinValue
             If MenuDuduk.meja > 0 Then
                 LockTable(MenuDuduk.meja)
