@@ -155,9 +155,8 @@ Public Class Pembayaran
                 MsgBox("Kesalahan saat memulai transaksi: " & ex.Message)
             End Try
 
-            Dim cmdPesanan As New MySqlCommand("INSERT INTO pesanan (id_karyawan, nama_pemesan, tanggal_pesanan, nomor_meja, harga) VALUES (@id_karyawan, @nama_pemesan, @tanggal_pesanan, @nomor_meja, @harga)", conn)
+            Dim cmdPesanan As New MySqlCommand("INSERT INTO pesanan (id_karyawan, tanggal_pesanan, nomor_meja, harga) VALUES (@id_karyawan, @tanggal_pesanan, @nomor_meja, @harga)", conn)
             cmdPesanan.Parameters.AddWithValue("@id_karyawan", Login.idAkun)
-            cmdPesanan.Parameters.AddWithValue("@nama_pemesan", "Nama Pemesan")
             cmdPesanan.Parameters.AddWithValue("@tanggal_pesanan", tanggalnow)
             cmdPesanan.Parameters.AddWithValue("@nomor_meja", MenuDuduk.meja)
             cmdPesanan.Parameters.AddWithValue("@harga", MenuMakan.totalharga)
