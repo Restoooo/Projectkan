@@ -3,6 +3,7 @@
     Private selectedButtons As New List(Of Button)
 
     Private buttonClicked As Boolean = False
+    Public Shared meja As Integer
     Private Sub ButtonDashboard_Click(sender As Object, e As EventArgs) Handles ButtonDashboard.Click
         Dashboard.Show()
         Me.Hide()
@@ -94,6 +95,12 @@
 
     Private Sub UpdateLabel(clickedButtonText As String)
         LabelNomorMeja.Text = "Nomor Meja : " & clickedButtonText
+        If clickedButtonText = "" Then
+            meja = 0
+        Else
+
+            meja = Integer.Parse(clickedButtonText)
+        End If
     End Sub
 
     Private Sub ButtonShowMenu_Click(sender As Object, e As EventArgs) Handles ButtonShowMenu.Click

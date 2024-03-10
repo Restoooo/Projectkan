@@ -45,6 +45,7 @@ Partial Class Pembayaran
         Me.LabelTanggal = New System.Windows.Forms.Label()
         Me.LabelNamaPelayan = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.btnDone = New System.Windows.Forms.Button()
         Me.PanelTopLeft.SuspendLayout()
         Me.PanelLeft.SuspendLayout()
         Me.PanelNota.SuspendLayout()
@@ -182,11 +183,12 @@ Partial Class Pembayaran
         '
         'PanelPembayaran
         '
+        Me.PanelPembayaran.AutoScroll = True
         Me.PanelPembayaran.AutoSize = True
         Me.PanelPembayaran.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.PanelPembayaran.Location = New System.Drawing.Point(64, 111)
+        Me.PanelPembayaran.Location = New System.Drawing.Point(63, 111)
         Me.PanelPembayaran.Name = "PanelPembayaran"
-        Me.PanelPembayaran.Size = New System.Drawing.Size(236, 348)
+        Me.PanelPembayaran.Size = New System.Drawing.Size(258, 348)
         Me.PanelPembayaran.TabIndex = 20
         '
         'PanelNota
@@ -270,15 +272,26 @@ Partial Class Pembayaran
         Me.Label1.TabIndex = 22
         Me.Label1.Text = "Restoooo"
         '
+        'btnDone
+        '
+        Me.btnDone.Location = New System.Drawing.Point(927, 91)
+        Me.btnDone.Name = "btnDone"
+        Me.btnDone.Size = New System.Drawing.Size(126, 38)
+        Me.btnDone.TabIndex = 22
+        Me.btnDone.Text = "Selesai"
+        Me.btnDone.UseVisualStyleBackColor = True
+        '
         'Pembayaran
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1264, 761)
+        Me.Controls.Add(Me.btnDone)
         Me.Controls.Add(Me.PanelNota)
         Me.Controls.Add(Me.LabelStock)
         Me.Controls.Add(Me.PanelLeft)
         Me.Name = "Pembayaran"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Pembayaran"
         Me.PanelTopLeft.ResumeLayout(False)
         Me.PanelLeft.ResumeLayout(False)
@@ -310,4 +323,5 @@ Partial Class Pembayaran
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
+    Friend WithEvents btnDone As Button
 End Class
