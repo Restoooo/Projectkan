@@ -11,7 +11,7 @@ Public Class MenuMakan
 
     Public Shared pesanan As New List(Of String)()
     Public Shared totalharga As Integer = 0
-    Public Shared jumlahMenuChecker As New Dictionary(Of Integer, Integer)()
+
 
 
 
@@ -84,25 +84,25 @@ Public Class MenuMakan
         Login.Show()
         Me.Hide()
     End Sub
-    Private Sub InitializeMenu()
-        conn = New MySqlConnection("server=localhost;database=restoooo;user=root;password=")
-        conn.Open()
-        cmd = New MySqlCommand("SELECT id_menu, stok FROM Menu where jenis = 'makanan'", conn)
-        Dim reader As MySqlDataReader = cmd.ExecuteReader()
-        jumlahMenuChecker.Clear()
-        While reader.Read()
-            Dim idMenu As Integer = Convert.ToInt32(reader("id_menu"))
-            Dim stok As Integer = Convert.ToInt32(reader("stok"))
-            jumlahMenuChecker.Add(idMenu, stok)
-        End While
-        conn.Close()
-    End Sub
+    'Private Sub InitializeMenu()
+    '   conn = New MySqlConnection("server=localhost;database=restoooo;user=root;password=")
+    '  conn.Open()
+    ' cmd = New MySqlCommand("SELECT id_menu, stok FROM Menu where jenis = 'makanan'", conn)
+    'Dim reader As MySqlDataReader = cmd.ExecuteReader()
+    '  jumlahMenuChecker.Clear()
+    '   While reader.Read()
+    'Dim idMenu As Integer = Convert.ToInt32(reader("id_menu"))
+    'Dim stok As Integer = Convert.ToInt32(reader("stok"))
+    '        jumlahMenuChecker.Add(idMenu, stok)
+    'End While
+    '    conn.Close()
+    'End Sub
     Public Sub InitializeMenuMakanMinum()
         PanelMinuman.Controls.Clear()
         PanelMakanan.Controls.Clear()
         conn = New MySqlConnection("server=localhost;database=restoooo;user=root;password=")
         conn.Open()
-        cmd = New MySqlCommand("SELECT * FROM Menu where jenis = 'makanan'", conn)
+        cmd = New MySqlCommand("SELECT m.id_menu, m.Nama, m.harga, stok - COALESCE((SELECT SUM(jumlah_pesanan) FROM detail_pesanan WHERE id_menu = m.id_menu), 0) AS remaining_stock FROM Menu m WHERE m.jenis = 'makanan';", conn)
         reader = cmd.ExecuteReader
         Dim posXMak As Integer = 25
         Dim posYMak As Integer = 0
@@ -110,12 +110,12 @@ Public Class MenuMakan
         Dim posYMin As Integer = 0
         While reader.Read()
             Dim btn As New Button()
-            Dim stok As Integer
-            Dim stokString As String = reader("stok").ToString()
-            If Integer.TryParse(stokString, stok) Then
-                If stok < 1 Then
-                    btn.Enabled = False
-                End If
+
+
+            Dim idMenu As Integer = Convert.ToInt32(reader("id_menu"))
+            Dim remainingStock As Integer = Convert.ToInt32(reader("remaining_stock"))
+            If remainingStock < 0 Then
+                btn.Enabled = False
             End If
             btn.Text = reader("Nama").ToString() + " Rp. " + reader("harga").ToString
             btn.Name = "btn" & reader("id_menu").ToString()
@@ -123,20 +123,22 @@ Public Class MenuMakan
             btn.Location = New Point(posXMak, posYMak)
             AddHandler btn.Click, AddressOf Button_Click
             PanelMakanan.Controls.Add(btn)
+            'StokModule.jumlahMenuChecker(idMenu) = remainingStock
+
             posYMak += 40
         End While
         conn.Close()
         conn.Open()
-        cmd2 = New MySqlCommand("SELECT * FROM Menu where jenis = 'minuman'", conn)
+        cmd2 = New MySqlCommand("SELECT m.id_menu, m.Nama, m.harga, stok - COALESCE((SELECT SUM(jumlah_pesanan) FROM detail_pesanan WHERE id_menu = m.id_menu), 0) AS remaining_stock FROM Menu m WHERE m.jenis = 'minuman';", conn)
         reader2 = cmd2.ExecuteReader
         While reader2.Read()
             Dim btn As New Button()
-            Dim stok As Integer
-            Dim stokString As String = reader2("stok").ToString()
-            If Integer.TryParse(stokString, stok) Then
-                If stok < 1 Then
-                    btn.Enabled = False
-                End If
+
+
+            Dim idMenu As Integer = Convert.ToInt32(reader2("id_menu"))
+            Dim remainingStock As Integer = Convert.ToInt32(reader2("remaining_stock"))
+            If remainingStock < 0 Then
+                btn.Enabled = False
             End If
             btn.Text = reader2("Nama").ToString() + " Rp. " + reader2("harga").ToString
             btn.Name = "btn" & reader2("id_menu").ToString()
@@ -144,12 +146,13 @@ Public Class MenuMakan
             btn.Location = New Point(posXMin, posYMin)
             AddHandler btn.Click, AddressOf Button_Click
             PanelMinuman.Controls.Add(btn)
+            'StokModule.jumlahMenuChecker(idMenu) = remainingStock
             posYMin += 40
         End While
         conn.Close()
     End Sub
     Private Sub MenuMakan_Load(sender As Object, e As EventArgs) Handles MyBase.Load, ButtonMenu.Click
-        InitializeMenu()
+        'InitializeMenu()
         InitializeMenuMakanMinum()
         UpdatePanePesanan()
     End Sub
@@ -160,14 +163,27 @@ Public Class MenuMakan
         Dim idMenu As String = namaBtn.Substring(3)
         Dim menuparts() As String = btn.Text.Split(New String() {" Rp. "}, StringSplitOptions.RemoveEmptyEntries)
 
-        Dim namaMenu As String = menuParts(0)
+        Dim namaMenu As String = menuparts(0)
         Dim hargaMenu As String = menuparts(1)
-
-        pesanan.Add(idMenu + " | " + namaMenu + " | " + hargaMenu)
-        totalharga += hargaMenu
-        tbHarga.Text = totalharga.ToString
-        UpdatePanePesanan()
+        Dim remainingStock As Integer
+        If StokModule.jumlahMenuChecker.TryGetValue(Convert.ToInt32(idMenu), remainingStock) Then
+            If remainingStock > 0 Then
+                pesanan.Add(idMenu + " | " + namaMenu + " | " + hargaMenu)
+                totalharga += Convert.ToInt32(hargaMenu)
+                tbHarga.Text = totalharga.ToString()
+                StokModule.jumlahMenuChecker(Convert.ToInt32(idMenu)) -= 1
+                UpdatePanePesanan()
+                If StokModule.jumlahMenuChecker((Convert.ToInt32(idMenu))) = 0 Then
+                    btn.Enabled = False
+                End If
+            Else
+                MessageBox.Show("This menu item is out of stock!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            End If
+        Else
+            MessageBox.Show("An error occurred. Please try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End If
     End Sub
+
     Public Sub UpdatePanePesanan()
         PanelList.Controls.Clear()
         If pesanan.Count < 1 Then
@@ -201,11 +217,14 @@ Public Class MenuMakan
     End Sub
     Private Sub HapusPesanan(sender As Object, e As EventArgs)
 
-        Dim itemToRemove As String = DirectCast(sender, Button).Tag.ToString()
+        Dim btn As Button = DirectCast(sender, Button)
+        Dim itemToRemove As String = btn.Tag.ToString()
+        Dim parts() As String = itemToRemove.Split("|"c)
         pesanan.Remove(itemToRemove)
-        totalharga -= AmbilHargaDariString(itemToRemove)
+        totalharga -= parts(2)
         tbHarga.Text = totalharga.ToString
-
+        StokModule.jumlahMenuChecker(parts(0)) += 1
+        MsgBox(StokModule.jumlahMenuChecker(parts(0)).ToString + "   " + parts(0).ToString)
         UpdatePanePesanan()
     End Sub
     Private Function AmbilHargaDariString(input As String) As Double

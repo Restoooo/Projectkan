@@ -191,6 +191,7 @@
     <Compile Include="Stock.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="StokModule.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Dashboard.resx">
