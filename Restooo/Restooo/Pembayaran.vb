@@ -201,21 +201,10 @@ Public Class Pembayaran
             End If
             MenuDuduk.LabelNomorMeja.Text = "Nomor Meja : "
             MenuDuduk.meja = 0
-            'For Each ctrl As Control In MenuDuduk.Controls
-            'If TypeOf ctrl Is Panel Then
-            'Dim panel As Panel = DirectCast(ctrl, Panel)
-            'For Each innerCtrl As Control In panel.Controls
-            'If TypeOf innerCtrl Is Button Then
-            'Dim btn As Button = DirectCast(innerCtrl, Button)
-            'btn.BackColor = SystemColors.ButtonHighlight
-            'End If
-            'Next
-            'End If
-            'Next
             MenuDuduk.selectedButtons.Clear()
-            Dashboard.Show()
+            Dim formLoading As New Loading()
+            formLoading.Show()
             Me.Hide()
-
         Catch ex As Exception
 
             If transaction IsNot Nothing Then

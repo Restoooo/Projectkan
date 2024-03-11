@@ -60,13 +60,15 @@ Public Class Login
             NamaKaryawan = reader.GetString("Nama")
             Jabatan = reader.GetString("Jabatan")
             Username = reader.GetString("Username")
-            Dashboard.Show()
+
+            Dim formLoading As New Loading()
+            formLoading.Show()
             Me.Hide()
         Else
             MsgBox("Error Username or Password")
         End If
         reader.Close()
-        Status.TimerStatus.Start()
+
         conn.Close()
     End Sub
 

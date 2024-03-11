@@ -37,8 +37,6 @@ Public Class Dashboard
 
 
     Private Sub Dashboard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim stokModul As New StokModule()
-        stokModul.InitializeMenu()
         Dim conn As MySqlConnection
         Dim cmd As MySqlCommand
         Dim reader As MySqlDataReader

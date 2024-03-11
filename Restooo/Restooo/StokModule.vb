@@ -17,6 +17,7 @@ Public Class StokModule
             Dim stok As Integer = Convert.ToInt32(reader("stok"))
             jumlahMenuChecker.Add(idMenu, stok)
         End While
+        reader.Close()
         conn.Close()
     End Sub
 End Class

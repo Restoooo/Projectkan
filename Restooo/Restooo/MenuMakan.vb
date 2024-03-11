@@ -127,6 +127,7 @@ Public Class MenuMakan
 
             posYMak += 40
         End While
+        reader.Close()
         conn.Close()
         conn.Open()
         cmd2 = New MySqlCommand("SELECT m.id_menu, m.Nama, m.harga, stok - COALESCE((SELECT SUM(jumlah_pesanan) FROM detail_pesanan WHERE id_menu = m.id_menu), 0) AS remaining_stock FROM Menu m WHERE m.jenis = 'minuman';", conn)
@@ -149,6 +150,7 @@ Public Class MenuMakan
             'StokModule.jumlahMenuChecker(idMenu) = remainingStock
             posYMin += 40
         End While
+        reader2.Close()
         conn.Close()
     End Sub
     Private Sub MenuMakan_Load(sender As Object, e As EventArgs) Handles MyBase.Load, ButtonMenu.Click
