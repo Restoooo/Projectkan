@@ -218,7 +218,6 @@ Public Class MenuMakan
 
     End Sub
     Private Sub HapusPesanan(sender As Object, e As EventArgs)
-
         Dim btn As Button = DirectCast(sender, Button)
         Dim itemToRemove As String = btn.Tag.ToString()
         Dim parts() As String = itemToRemove.Split("|"c)
@@ -226,7 +225,7 @@ Public Class MenuMakan
         totalharga -= parts(2)
         tbHarga.Text = totalharga.ToString
         StokModule.jumlahMenuChecker(parts(0)) += 1
-        MsgBox(StokModule.jumlahMenuChecker(parts(0)).ToString + "   " + parts(0).ToString)
+        'MsgBox(StokModule.jumlahMenuChecker(parts(0)).ToString + "   " + parts(0).ToString)
         UpdatePanePesanan()
     End Sub
     Private Function AmbilHargaDariString(input As String) As Double

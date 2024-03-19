@@ -119,6 +119,9 @@ Public Class Stock
                 Dim rowsAffected As Integer = cmd.ExecuteNonQuery()
                 If rowsAffected > 0 Then
                     MessageBox.Show("Data berhasil diperbarui.")
+                    Dim formLoading As New Loading()
+                    formLoading.Show()
+                    Me.Hide()
                 Else
                     MessageBox.Show("Data tidak ditemukan.")
                 End If
