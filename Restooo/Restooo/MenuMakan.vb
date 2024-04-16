@@ -8,12 +8,8 @@ Public Class MenuMakan
     Dim reader As MySqlDataReader
     Dim reader2 As MySqlDataReader
 
-
     Public Shared pesanan As New List(Of String)()
     Public Shared totalharga As Integer = 0
-
-
-
 
     Private Sub ButtonDashboard_Click(sender As Object, e As EventArgs) Handles ButtonDashboard.Click
         Dashboard.Show()
@@ -167,7 +163,7 @@ Public Class MenuMakan
 
         Dim remainingStock As Integer
         If StokModule.jumlahMenuChecker.TryGetValue(Convert.ToInt32(idMenu), remainingStock) Then
-            MsgBox(namaMenu & " " & hargaMenu)
+            ''MsgBox(namaMenu & " " & hargaMenu)
             If remainingStock > 0 Then
                 pesanan.Add(idMenu + " | " + namaMenu + " | " + hargaMenu)
                 totalharga += Convert.ToInt32(hargaMenu)
