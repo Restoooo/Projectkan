@@ -6,10 +6,11 @@ Public Class StokModule
     Dim reader As MySqlDataReader
     Public Shared jumlahMenuChecker As New Dictionary(Of Integer, Integer)()
 
+
     Public Sub InitializeMenu()
         conn = New MySqlConnection("server=localhost;database=restoooo;user=root;password=")
         conn.Open()
-        cmd = New MySqlCommand("SELECT id_menu, stok FROM Menu where jenis = 'makanan'", conn)
+        cmd = New MySqlCommand("SELECT id_menu, stok FROM Menu", conn)
         Dim reader As MySqlDataReader = cmd.ExecuteReader()
         jumlahMenuChecker.Clear()
         While reader.Read()

@@ -110,8 +110,6 @@ Public Class MenuMakan
         Dim posYMin As Integer = 0
         While reader.Read()
             Dim btn As New Button()
-
-
             Dim idMenu As Integer = Convert.ToInt32(reader("id_menu"))
             Dim remainingStock As Integer = Convert.ToInt32(reader("remaining_stock"))
             If remainingStock < 0 Then
@@ -124,7 +122,6 @@ Public Class MenuMakan
             AddHandler btn.Click, AddressOf Button_Click
             PanelMakanan.Controls.Add(btn)
             'StokModule.jumlahMenuChecker(idMenu) = remainingStock
-
             posYMak += 40
         End While
         reader.Close()
@@ -167,8 +164,10 @@ Public Class MenuMakan
 
         Dim namaMenu As String = menuparts(0)
         Dim hargaMenu As String = menuparts(1)
+
         Dim remainingStock As Integer
         If StokModule.jumlahMenuChecker.TryGetValue(Convert.ToInt32(idMenu), remainingStock) Then
+            MsgBox(namaMenu & " " & hargaMenu)
             If remainingStock > 0 Then
                 pesanan.Add(idMenu + " | " + namaMenu + " | " + hargaMenu)
                 totalharga += Convert.ToInt32(hargaMenu)
@@ -182,7 +181,8 @@ Public Class MenuMakan
                 MessageBox.Show("This menu item is out of stock!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End If
         Else
-            MessageBox.Show("An error occurred. Please try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            ''MsgBox(namaMenu & " " & hargaMenu)
+            MessageBox.Show("Error dia", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End If
     End Sub
 
