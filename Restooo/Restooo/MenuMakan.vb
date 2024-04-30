@@ -259,7 +259,7 @@ Public Class MenuMakan
             If Double.TryParse(uangDiberikan, jumlahUang) Then
                 Uangbayar = jumlahUang
                 kembalian = jumlahUang - totalharga
-                If kembalian <= 0 Then
+                If kembalian < 0 Then
                     MessageBox.Show("Uang tidak mencukupi.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 Else
                     Dim pembayaranForm As New Pembayaran(pesanan, totalharga, Uangbayar, kembalian)

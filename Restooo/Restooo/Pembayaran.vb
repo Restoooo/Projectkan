@@ -2,6 +2,7 @@
 Imports System.Windows.Forms
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel
 Imports System.Globalization
+Imports System.Drawing.Printing
 
 Public Class Pembayaran
 
@@ -199,7 +200,7 @@ Public Class Pembayaran
             cmdUpdateStok.Transaction = transaction
             cmdUpdateStok.ExecuteNonQuery()
 
-            transaction.Commit()
+            'transaction.Commit()
 
 
             MessageBox.Show("Transaksi Berhasil")
@@ -215,9 +216,9 @@ Public Class Pembayaran
             MenuDuduk.LabelNomorMeja.Text = "Nomor Meja : "
             MenuDuduk.meja = 0
             MenuDuduk.selectedButtons.Clear()
-            Dim formLoading As New Loading()
-            formLoading.Show()
-            Me.Hide()
+            'Dim formLoading As New Loading()
+            'formLoading.Show()
+            'Me.Hide()
         Catch ex As Exception
 
             If transaction IsNot Nothing Then
@@ -227,9 +228,35 @@ Public Class Pembayaran
             MessageBox.Show("Terjadi kesalahan: " & ex.Message)
 
         Finally
+            Dim printDocument As New Printing.PrintDocument()
+
+
+            AddHandler printDocument.PrintPage, AddressOf PrintPageHandler
+            Dim printPreviewDialog As New PrintPreviewDialog()
+            printPreviewDialog.Document = printDocument
+            printPreviewDialog.ShowDialog()
+
+            'printDocument.Print()
             ' Tutup koneksi
             conn.Close()
         End Try
+    End Sub
+
+    Private Sub PrintPageHandler(sender As Object, e As PrintPageEventArgs)
+        Dim panelToPrint As Panel = PanelNota
+        Dim pageWidth As Integer = e.PageSettings.PrintableArea.Width
+        Dim pageHeight As Integer = e.PageSettings.PrintableArea.Height
+
+        Dim font As New Font("Arial", 12)
+        Dim brush As New SolidBrush(Color.Black)
+        Dim bmp As New Bitmap(panelToPrint.Width, panelToPrint.Height)
+        panelToPrint.DrawToBitmap(bmp, New Rectangle(0, 0, panelToPrint.Width, panelToPrint.Height))
+        Dim x As Integer = 0
+        Dim y As Integer = 0
+        e.Graphics.DrawImage(bmp, x, y, pageWidth, pageHeight)
+
+        ' Membersihkan sumber daya
+        bmp.Dispose()
     End Sub
     Private Sub LockTable(tableNumber As Integer)
         If MenuDuduk.lockedTables.ContainsKey(tableNumber) Then

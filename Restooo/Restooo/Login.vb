@@ -89,4 +89,7 @@ Public Class Login
         End If
     End Sub
 
+    Private Sub Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.AcceptButton = ButtonLog
+    End Sub
 End Class

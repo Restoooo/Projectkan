@@ -27,15 +27,15 @@ Partial Class Login
         Me.ButtonLog = New System.Windows.Forms.Button()
         Me.txtUsername = New System.Windows.Forms.TextBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.CbPass = New System.Windows.Forms.CheckBox()
-        Me.txtPass = New System.Windows.Forms.TextBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.txtPass = New System.Windows.Forms.TextBox()
         Me.Panel1.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -77,6 +77,16 @@ Partial Class Login
         Me.Panel1.Size = New System.Drawing.Size(341, 64)
         Me.Panel1.TabIndex = 4
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(18, 14)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(44, 34)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 4
+        Me.PictureBox1.TabStop = False
+        '
         'Panel2
         '
         Me.Panel2.Controls.Add(Me.CbPass)
@@ -97,17 +107,6 @@ Partial Class Login
         Me.CbPass.Text = "Show/Hide"
         Me.CbPass.UseVisualStyleBackColor = True
         '
-        'txtPass
-        '
-        Me.txtPass.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtPass.Font = New System.Drawing.Font("Times New Roman", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPass.Location = New System.Drawing.Point(80, 14)
-        Me.txtPass.Name = "txtPass"
-        Me.txtPass.Size = New System.Drawing.Size(238, 34)
-        Me.txtPass.TabIndex = 2
-        Me.txtPass.Text = "Password"
-        Me.txtPass.UseSystemPasswordChar = True
-        '
         'PictureBox2
         '
         Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
@@ -118,15 +117,16 @@ Partial Class Login
         Me.PictureBox2.TabIndex = 4
         Me.PictureBox2.TabStop = False
         '
-        'PictureBox1
+        'txtPass
         '
-        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(18, 14)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(44, 34)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 4
-        Me.PictureBox1.TabStop = False
+        Me.txtPass.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtPass.Font = New System.Drawing.Font("Times New Roman", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPass.Location = New System.Drawing.Point(80, 14)
+        Me.txtPass.Name = "txtPass"
+        Me.txtPass.Size = New System.Drawing.Size(238, 34)
+        Me.txtPass.TabIndex = 2
+        Me.txtPass.Text = "Password"
+        Me.txtPass.UseSystemPasswordChar = True
         '
         'Login
         '
@@ -142,10 +142,10 @@ Partial Class Login
         Me.Text = "Login"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

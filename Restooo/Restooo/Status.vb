@@ -77,12 +77,6 @@ Public Class Status
         Me.Hide()
     End Sub
 
-    Private Sub Status_Load(sender As Object, e As EventArgs) Handles MyBase.Load, ButtonStatus.Click
-        txtName.Text = "Name: " + Login.NamaKaryawan
-        txtUsername.Text = "Username: " + Login.Username
-
-
-    End Sub
 
     Private Sub TimerStatus_Tick(sender As Object, e As EventArgs) Handles TimerStatus.Tick
         WaktuOnline = WaktuOnline.Add(TimeSpan.FromSeconds(1))
