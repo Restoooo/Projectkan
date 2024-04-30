@@ -72,4 +72,21 @@ Public Class Login
         conn.Close()
     End Sub
 
+    Private Sub Login_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+
+        If e.CloseReason = CloseReason.UserClosing Then
+
+            Dim result As DialogResult = MessageBox.Show("Anda yakin ingin keluar dari aplikasi?", "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+
+
+            If result = DialogResult.Yes Then
+
+                Application.Exit()
+            Else
+
+                e.Cancel = True
+            End If
+        End If
+    End Sub
+
 End Class

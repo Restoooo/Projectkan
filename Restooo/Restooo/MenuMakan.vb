@@ -10,6 +10,8 @@ Public Class MenuMakan
 
     Public Shared pesanan As New List(Of String)()
     Public Shared totalharga As Integer = 0
+    Public Shared Uangbayar As Double = 0
+    Public Shared kembalian As Double = 0
 
     Private Sub ButtonDashboard_Click(sender As Object, e As EventArgs) Handles ButtonDashboard.Click
         Dashboard.Show()
@@ -251,8 +253,41 @@ Public Class MenuMakan
     End Sub
 
     Private Sub ButtonBayar_Click(sender As Object, e As EventArgs) Handles ButtonBayar.Click
-        Dim pembayaranForm As New Pembayaran(pesanan, totalharga)
-        pembayaranForm.Show()
-        Me.Hide()
+        Dim uangDiberikan As String = InputBox("Masukkan jumlah uang yang diberikan oleh pelanggan:", "Uang Diberikan", "")
+        If Not String.IsNullOrEmpty(uangDiberikan) Then
+            Dim jumlahUang As Double
+            If Double.TryParse(uangDiberikan, jumlahUang) Then
+                Uangbayar = jumlahUang
+                kembalian = jumlahUang - totalharga
+                If kembalian <= 0 Then
+                    MessageBox.Show("Uang tidak mencukupi.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Else
+                    Dim pembayaranForm As New Pembayaran(pesanan, totalharga, Uangbayar, kembalian)
+                    pembayaranForm.Show()
+                    Me.Hide()
+                End If
+
+            Else
+                MessageBox.Show("Masukkan jumlah uang yang valid.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            End If
+        End If
     End Sub
+    Private Sub MenuMakan_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+
+        If e.CloseReason = CloseReason.UserClosing Then
+
+            Dim result As DialogResult = MessageBox.Show("Anda yakin ingin keluar dari aplikasi?", "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+
+
+            If result = DialogResult.Yes Then
+
+                Application.Exit()
+            Else
+
+                e.Cancel = True
+            End If
+        End If
+    End Sub
+
+
 End Class

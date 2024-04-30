@@ -120,4 +120,20 @@ Public Class Report
     Private Sub ButtonRefresh_Click(sender As Object, e As EventArgs) Handles ButtonRefresh.Click
         LoadData()
     End Sub
+    Private Sub Report_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+
+        If e.CloseReason = CloseReason.UserClosing Then
+
+            Dim result As DialogResult = MessageBox.Show("Anda yakin ingin keluar dari aplikasi?", "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+
+
+            If result = DialogResult.Yes Then
+
+                Application.Exit()
+            Else
+
+                e.Cancel = True
+            End If
+        End If
+    End Sub
 End Class

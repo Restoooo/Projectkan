@@ -1,6 +1,7 @@
 ﻿Imports MySql.Data.MySqlClient
 Imports System.Windows.Forms
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel
+Imports System.Globalization
 
 Public Class Pembayaran
 
@@ -11,6 +12,8 @@ Public Class Pembayaran
     Dim countDictionary As New Dictionary(Of String, Integer)()
     Dim orderedItems As List(Of String)
     Dim totalharga As Integer
+    Dim Uangdibayar As Double
+    Dim kembalian As Double
 
     Private Sub ButtonStatus_Click(sender As Object, e As EventArgs) Handles ButtonStatus.Click
         Status.Show()
@@ -82,10 +85,12 @@ Public Class Pembayaran
 
 
 
-    Public Sub New(ByVal pesanan As List(Of String), ByVal totalharga As Integer)
+    Public Sub New(ByVal pesanan As List(Of String), ByVal totalharga As Integer, ByVal Uangdibayar As Double, ByVal kembalian As Double)
         InitializeComponent()
         orderedItems = pesanan
         Me.totalharga = totalharga
+        Me.Uangdibayar = Uangdibayar
+        Me.kembalian = kembalian
     End Sub
 
     Private Sub PembayaranForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -98,8 +103,16 @@ Public Class Pembayaran
         Else
             Label2.Text = "Meja: " + MenuDuduk.meja.ToString
         End If
+        Dim culture As CultureInfo = New CultureInfo("id-ID")
+        Dim formatMataUang As String = "Rp#,##0.00"
 
         LabelNamaPelayan.Text = "Nama Pelayan: " + Login.NamaKaryawan
+        Dim totalhargaRupiah As String = totalharga.ToString(formatMataUang)
+        Dim BayarRupiah As String = Uangdibayar.ToString(formatMataUang)
+        Dim KembalianRupiah As String = kembalian.ToString(formatMataUang)
+        lblKembalian.Text = "Kembalian : " & KembalianRupiah
+        lblTotal.Text = "Total : " & totalhargaRupiah
+        lblUang.Text = "Bayar : " & BayarRupiah
     End Sub
 
     Private Sub UpdatePanelPembayaran()
@@ -136,14 +149,14 @@ Public Class Pembayaran
         Next
 
 
-        Dim labelTotalHarga As New Label()
-        labelTotalHarga.Text = $"Total Harga: Rp. {totalharga.ToString()}"
-        labelTotalHarga.Size = New Size(300, 30)
-        labelTotalHarga.AutoSize = False
-        labelTotalHarga.Font = New Font(labelTotalHarga.Font.FontFamily, 12, FontStyle.Bold)
-        labelTotalHarga.TextAlign = ContentAlignment.MiddleLeft
-        labelTotalHarga.Location = New Point(0, posYpesanan + 20)
-        PanelPembayaran.Controls.Add(labelTotalHarga)
+        'Dim labelTotalHarga As New Label()
+        'labelTotalHarga.Text = $"Total Harga: Rp. {totalharga.ToString()}"
+        'labelTotalHarga.Size = New Size(300, 30)
+        'labelTotalHarga.AutoSize = False
+        'labelTotalHarga.Font = New Font(labelTotalHarga.Font.FontFamily, 12, FontStyle.Bold)
+        'labelTotalHarga.TextAlign = ContentAlignment.MiddleLeft
+        'labelTotalHarga.Location = New Point(0, posYpesanan + 20)
+        'PanelPembayaran.Controls.Add(labelTotalHarga)
     End Sub
 
     Private Sub btnDone_Click(sender As Object, e As EventArgs) Handles btnDone.Click
@@ -221,6 +234,23 @@ Public Class Pembayaran
     Private Sub LockTable(tableNumber As Integer)
         If MenuDuduk.lockedTables.ContainsKey(tableNumber) Then
             MenuDuduk.lockedTables(tableNumber) = True
+        End If
+    End Sub
+
+    Private Sub Pembayaran_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+
+        If e.CloseReason = CloseReason.UserClosing Then
+
+            Dim result As DialogResult = MessageBox.Show("Anda yakin ingin keluar dari aplikasi?", "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+
+
+            If result = DialogResult.Yes Then
+
+                Application.Exit()
+            Else
+
+                e.Cancel = True
+            End If
         End If
     End Sub
 End Class

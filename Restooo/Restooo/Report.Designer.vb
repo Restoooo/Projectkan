@@ -232,7 +232,7 @@ Partial Class Report
         Me.Controls.Add(Me.PanelLeft)
         Me.Name = "Report"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Report"
+        Me.Text = "  "
         Me.PanelLeft.ResumeLayout(False)
         Me.PanelTopLeft.ResumeLayout(False)
         CType(Me.DataGridViewReport, System.ComponentModel.ISupportInitialize).EndInit()

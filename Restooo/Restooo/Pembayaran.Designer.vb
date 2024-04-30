@@ -46,6 +46,10 @@ Partial Class Pembayaran
         Me.LabelNamaPelayan = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnDone = New System.Windows.Forms.Button()
+        Me.lblTotal = New System.Windows.Forms.Label()
+        Me.lblUang = New System.Windows.Forms.Label()
+        Me.MySqlCommand1 = New MySql.Data.MySqlClient.MySqlCommand()
+        Me.lblKembalian = New System.Windows.Forms.Label()
         Me.PanelTopLeft.SuspendLayout()
         Me.PanelLeft.SuspendLayout()
         Me.PanelNota.SuspendLayout()
@@ -195,6 +199,9 @@ Partial Class Pembayaran
         '
         Me.PanelNota.AllowDrop = True
         Me.PanelNota.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PanelNota.Controls.Add(Me.lblKembalian)
+        Me.PanelNota.Controls.Add(Me.lblUang)
+        Me.PanelNota.Controls.Add(Me.lblTotal)
         Me.PanelNota.Controls.Add(Me.Label3)
         Me.PanelNota.Controls.Add(Me.Label5)
         Me.PanelNota.Controls.Add(Me.Label4)
@@ -211,7 +218,7 @@ Partial Class Pembayaran
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(61, 561)
+        Me.Label3.Location = New System.Drawing.Point(60, 578)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(109, 13)
         Me.Label3.TabIndex = 29
@@ -220,7 +227,7 @@ Partial Class Pembayaran
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(151, 620)
+        Me.Label5.Location = New System.Drawing.Point(151, 630)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(77, 13)
         Me.Label5.TabIndex = 28
@@ -229,7 +236,7 @@ Partial Class Pembayaran
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(61, 590)
+        Me.Label4.Location = New System.Drawing.Point(60, 605)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(128, 13)
         Me.Label4.TabIndex = 27
@@ -281,6 +288,42 @@ Partial Class Pembayaran
         Me.btnDone.Text = "Selesai"
         Me.btnDone.UseVisualStyleBackColor = True
         '
+        'lblTotal
+        '
+        Me.lblTotal.AutoSize = True
+        Me.lblTotal.Location = New System.Drawing.Point(61, 483)
+        Me.lblTotal.Name = "lblTotal"
+        Me.lblTotal.Size = New System.Drawing.Size(68, 13)
+        Me.lblTotal.TabIndex = 30
+        Me.lblTotal.Text = "Total : XXXX"
+        '
+        'lblUang
+        '
+        Me.lblUang.AutoSize = True
+        Me.lblUang.Enabled = False
+        Me.lblUang.Location = New System.Drawing.Point(63, 506)
+        Me.lblUang.Name = "lblUang"
+        Me.lblUang.Size = New System.Drawing.Size(71, 13)
+        Me.lblUang.TabIndex = 31
+        Me.lblUang.Text = "Bayar : XXXX"
+        '
+        'MySqlCommand1
+        '
+        Me.MySqlCommand1.CacheAge = 0
+        Me.MySqlCommand1.Connection = Nothing
+        Me.MySqlCommand1.EnableCaching = False
+        Me.MySqlCommand1.Transaction = Nothing
+        '
+        'lblKembalian
+        '
+        Me.lblKembalian.AutoSize = True
+        Me.lblKembalian.Enabled = False
+        Me.lblKembalian.Location = New System.Drawing.Point(63, 528)
+        Me.lblKembalian.Name = "lblKembalian"
+        Me.lblKembalian.Size = New System.Drawing.Size(93, 13)
+        Me.lblKembalian.TabIndex = 32
+        Me.lblKembalian.Text = "Kembalian : XXXX"
+        '
         'Pembayaran
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -324,4 +367,8 @@ Partial Class Pembayaran
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents btnDone As Button
+    Friend WithEvents lblUang As Label
+    Friend WithEvents lblTotal As Label
+    Friend WithEvents lblKembalian As Label
+    Friend WithEvents MySqlCommand1 As MySql.Data.MySqlClient.MySqlCommand
 End Class
