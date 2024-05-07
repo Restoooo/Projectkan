@@ -176,7 +176,7 @@ Public Class MenuMakan
                     btn.Enabled = False
                 End If
             Else
-                MessageBox.Show("This menu item is out of stock!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                MessageBox.Show("Stok Menu Habis!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End If
         Else
             ''MsgBox(namaMenu & " " & hargaMenu)
@@ -288,6 +288,5 @@ Public Class MenuMakan
             End If
         End If
     End Sub
-
 
 End Class

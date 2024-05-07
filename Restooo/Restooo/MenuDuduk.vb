@@ -78,12 +78,15 @@ Public Class MenuDuduk
         Dim tableNumber As Integer = Integer.Parse(clickedButton.Text)
         If mouse.Button = MouseButtons.Left Then
             If StokModule.lockedTables(tableNumber) = False Then
-                Dim result As DialogResult = MessageBox.Show($"Meja {tableNumber} sedang terkunci. Apakah Anda yakin ingin membukanya?", "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
 
-                If result = DialogResult.Yes Then
-                    UnlockTable(tableNumber)
-                    clickedButton.BackColor = SystemColors.ButtonHighlight
-                End If
+                CustomMsgBox.Show()
+                CustomMsgBox.tableNumber = tableNumber
+                clickedButton.BackColor = SystemColors.ButtonHighlight
+                'Dim result As DialogResult = MessageBox.Show($"Meja {tableNumber} sedang terkunci. Apakah Anda yakin ingin membukanya?", "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+                'If result = DialogResult.Yes Then
+                'UnlockTable(tableNumber)
+                'End If
+                btnLoading()
             Else
                 If selectedButtons.Contains(clickedButton) Then
                     clickedButton.BackColor = SystemColors.ButtonHighlight
@@ -103,8 +106,8 @@ Public Class MenuDuduk
     End Sub
 
 
-    Private Sub UnlockTable(tableNumber As Integer)
-        StokModule.lockedTables(tableNumber) = False
+    Public Sub UnlockTable(tableNumber As Integer)
+        StokModule.lockedTables(tableNumber) = True
         Using conn As New MySqlConnection("server=localhost;database=restoooo;user=root;password=")
             conn.Open()
             Dim query As String = "UPDATE tempat_duduk SET status = @status WHERE nomor_meja = @meja"
@@ -133,7 +136,7 @@ Public Class MenuDuduk
         Me.Hide()
     End Sub
 
-    Private Sub MenuDuduk_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub btnLoading()
         For Each ctrl As Control In PanelMenuDudukTop.Controls
             If TypeOf ctrl Is Button Then
                 Dim button As Button = DirectCast(ctrl, Button)
@@ -145,7 +148,9 @@ Public Class MenuDuduk
                 End If
             End If
         Next
-
+    End Sub
+    Private Sub MenuDuduk_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        btnLoading()
     End Sub
     Private Sub Dashboard_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
 

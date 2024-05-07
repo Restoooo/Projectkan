@@ -143,3 +143,4 @@ D:\Kuliah\Semester 6\Prog Desk\kelompok\Projectkan\Restooo\Restooo\bin\Debug\Sys
 D:\Kuliah\Semester 6\Prog Desk\kelompok\Projectkan\Restooo\Restooo\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 D:\Kuliah\Semester 6\Prog Desk\kelompok\Projectkan\Restooo\Restooo\bin\Debug\System.Threading.Tasks.Extensions.xml
 D:\UKDW\Sem 6\Desktop\Projectkan\Restooo\Restooo\obj\Debug\Restooo.Loading.resources
+D:\UKDW\Sem 6\Desktop\Projectkan\Restooo\Restooo\obj\Debug\Restooo.CustomMsgBox.resources
