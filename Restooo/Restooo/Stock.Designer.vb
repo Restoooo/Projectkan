@@ -67,9 +67,9 @@ Partial Class Stock
         DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.DataGridViewStock.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
-        Me.DataGridViewStock.Enabled = False
         Me.DataGridViewStock.Location = New System.Drawing.Point(368, 112)
         Me.DataGridViewStock.Name = "DataGridViewStock"
+        Me.DataGridViewStock.ReadOnly = True
         Me.DataGridViewStock.Size = New System.Drawing.Size(705, 436)
         Me.DataGridViewStock.TabIndex = 6
         '

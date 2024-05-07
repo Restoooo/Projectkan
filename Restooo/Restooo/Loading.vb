@@ -13,6 +13,7 @@
 
             Dim stokModul As New StokModule()
             stokModul.InitializeMenu()
+            stokModul.InitializeLockedTables()
 
 
             Status.TimerStatus.Start()

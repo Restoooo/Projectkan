@@ -1,7 +1,8 @@
-﻿Public Class MenuDuduk
+﻿Imports MySql.Data.MySqlClient
+
+Public Class MenuDuduk
 
     Public Shared selectedButtons As New List(Of Button)
-    Public Shared lockedTables As New Dictionary(Of Integer, Boolean)()
     Private buttonClicked As Boolean = False
     Public Shared meja As Integer
     Private Sub ButtonDashboard_Click(sender As Object, e As EventArgs) Handles ButtonDashboard.Click
@@ -72,17 +73,11 @@
         End If
     End Sub
 
-    Private Sub InitializeLockedTables()
-        For i As Integer = 1 To 13
-            lockedTables.Add(i, False)
-        Next
-    End Sub
     Private Sub HandleButtonClick(sender As Object, mouse As MouseEventArgs) Handles ButtonMeja1.MouseClick, ButtonMeja2.MouseClick, ButtonMeja3.MouseClick, ButtonMeja4.MouseClick, ButtonMeja5.MouseClick, ButtonMeja6.MouseClick, ButtonMeja7.MouseClick, ButtonMeja8.MouseClick, ButtonMeja9.MouseClick, ButtonMeja10.MouseClick, ButtonMeja11.MouseClick, ButtonMeja12.MouseClick, ButtonMeja13.MouseClick
         Dim clickedButton As Button = DirectCast(sender, Button)
         Dim tableNumber As Integer = Integer.Parse(clickedButton.Text)
-
         If mouse.Button = MouseButtons.Left Then
-            If lockedTables(tableNumber) Then
+            If StokModule.lockedTables(tableNumber) = False Then
                 Dim result As DialogResult = MessageBox.Show($"Meja {tableNumber} sedang terkunci. Apakah Anda yakin ingin membukanya?", "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
 
                 If result = DialogResult.Yes Then
@@ -99,7 +94,6 @@
                         btn.BackColor = SystemColors.ButtonHighlight
                     Next
                     selectedButtons.Clear()
-
                     clickedButton.BackColor = SystemColors.ActiveCaption
                     selectedButtons.Add(clickedButton)
                     UpdateLabel(clickedButton.Text)
@@ -110,14 +104,17 @@
 
 
     Private Sub UnlockTable(tableNumber As Integer)
-        lockedTables(tableNumber) = False
-
+        StokModule.lockedTables(tableNumber) = False
+        Using conn As New MySqlConnection("server=localhost;database=restoooo;user=root;password=")
+            conn.Open()
+            Dim query As String = "UPDATE tempat_duduk SET status = @status WHERE nomor_meja = @meja"
+            Dim cmdUpdateDuduk As New MySqlCommand(query, conn)
+            cmdUpdateDuduk.Parameters.AddWithValue("@status", "Tersedia")
+            cmdUpdateDuduk.Parameters.AddWithValue("@meja", tableNumber)
+            Dim reader As MySqlDataReader = cmdUpdateDuduk.ExecuteReader()
+            reader.Close()
+        End Using
     End Sub
-    Private Sub MenuDuduk_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        InitializeLockedTables()
-    End Sub
-
-
 
     Private Sub UpdateLabel(clickedButtonText As String)
         LabelNomorMeja.Text = "Nomor Meja : " & clickedButtonText
@@ -136,6 +133,20 @@
         Me.Hide()
     End Sub
 
+    Private Sub MenuDuduk_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        For Each ctrl As Control In PanelMenuDudukTop.Controls
+            If TypeOf ctrl Is Button Then
+                Dim button As Button = DirectCast(ctrl, Button)
+                Dim tableNumber As Integer = Integer.Parse(button.Text)
+                If StokModule.lockedTables.ContainsKey(tableNumber) AndAlso Not StokModule.lockedTables(tableNumber) Then
+                    button.BackColor = SystemColors.ActiveCaption
+                Else
+                    button.BackColor = SystemColors.ButtonHighlight
+                End If
+            End If
+        Next
+
+    End Sub
     Private Sub Dashboard_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
 
         If e.CloseReason = CloseReason.UserClosing Then
@@ -152,7 +163,6 @@
             End If
         End If
     End Sub
-
 End Class
 
 

@@ -200,6 +200,12 @@ Public Class Pembayaran
             cmdUpdateStok.Transaction = transaction
             cmdUpdateStok.ExecuteNonQuery()
 
+            Dim cmdUpdateDuduk As New MySqlCommand($"UPDATE tempat_duduk SET status = @status WHERE nomor_meja = @meja ", conn)
+            cmdUpdateDuduk.Parameters.AddWithValue("@status", "Tidak")
+            cmdUpdateDuduk.Parameters.AddWithValue("@meja", MenuDuduk.meja)
+            cmdUpdateDuduk.Transaction = transaction
+            cmdUpdateDuduk.ExecuteNonQuery()
+
             transaction.Commit()
 
 
@@ -210,12 +216,20 @@ Public Class Pembayaran
             MenuMakan.totalharga = 0
             MenuMakan.tbHarga.Text = totalharga.ToString
             tanggalnow = DateTime.MinValue
-            If MenuDuduk.meja > 0 Then
-                LockTable(MenuDuduk.meja)
-            End If
+
             MenuDuduk.LabelNomorMeja.Text = "Nomor Meja : "
             MenuDuduk.meja = 0
             MenuDuduk.selectedButtons.Clear()
+
+            Dim printDocument As New Printing.PrintDocument()
+
+
+            AddHandler printDocument.PrintPage, AddressOf PrintPageHandler
+            Dim printPreviewDialog As New PrintPreviewDialog()
+            printPreviewDialog.Document = printDocument
+            printPreviewDialog.ShowDialog()
+
+            'printDocument.Print()
 
         Catch ex As Exception
 
@@ -226,15 +240,7 @@ Public Class Pembayaran
             MessageBox.Show("Terjadi kesalahan: " & ex.Message)
 
         Finally
-            Dim printDocument As New Printing.PrintDocument()
 
-
-            AddHandler printDocument.PrintPage, AddressOf PrintPageHandler
-            Dim printPreviewDialog As New PrintPreviewDialog()
-            'printPreviewDialog.Document = printDocument
-            'printPreviewDialog.ShowDialog()
-
-            printDocument.Print()
             ' Tutup koneksi
             conn.Close()
             Dim formLoading As New Loading()
@@ -260,8 +266,8 @@ Public Class Pembayaran
         bmp.Dispose()
     End Sub
     Private Sub LockTable(tableNumber As Integer)
-        If MenuDuduk.lockedTables.ContainsKey(tableNumber) Then
-            MenuDuduk.lockedTables(tableNumber) = True
+        If StokModule.lockedTables.ContainsKey(tableNumber) Then
+            StokModule.lockedTables(tableNumber) = True
         End If
     End Sub
 

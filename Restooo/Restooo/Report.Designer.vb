@@ -181,6 +181,7 @@ Partial Class Report
         Me.DataGridViewReport.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridViewReport.Location = New System.Drawing.Point(321, 112)
         Me.DataGridViewReport.Name = "DataGridViewReport"
+        Me.DataGridViewReport.ReadOnly = True
         Me.DataGridViewReport.Size = New System.Drawing.Size(796, 362)
         Me.DataGridViewReport.TabIndex = 3
         '
@@ -217,6 +218,7 @@ Partial Class Report
         Me.DataGridViewReportDetail.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.DataGridViewReportDetail.Location = New System.Drawing.Point(321, 494)
         Me.DataGridViewReportDetail.Name = "DataGridViewReportDetail"
+        Me.DataGridViewReportDetail.ReadOnly = True
         Me.DataGridViewReportDetail.Size = New System.Drawing.Size(796, 139)
         Me.DataGridViewReportDetail.TabIndex = 11
         '
