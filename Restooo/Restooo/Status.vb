@@ -1,4 +1,6 @@
-﻿Imports Org.BouncyCastle.Asn1.Cmp
+﻿Imports MySql.Data.MySqlClient
+Imports System.Diagnostics.Eventing
+Imports Org.BouncyCastle.Asn1.Cmp
 
 Public Class Status
 
@@ -97,6 +99,23 @@ Public Class Status
 
                 e.Cancel = True
             End If
+        End If
+    End Sub
+
+    Private Sub Status_Load(sender As Object, e As EventArgs) Handles MyBase.Load, ButtonStatus.Click
+        txtName.Text = "Name: " + Login.NamaKaryawan
+        txtUsername.Text = "Username: " + Login.Username
+        Dim conn = New MySqlConnection("server=localhost;database=restoooo;user=root;password=")
+        conn.Open()
+        Dim tgl = Date.Today
+        Dim formattedDate As String = tgl.ToString("yyyy-MM-dd")
+        Dim queery As String = $"SELECT COUNT(*) FROM pesanan where id_karyawan = {Login.idAkun} And tanggal_pesanan = '{formattedDate}'"
+        Dim cmd = New MySqlCommand(queery, conn)
+        MessageBox.Show(queery)
+        Dim Reader = cmd.ExecuteReader()
+        If Reader.Read() Then
+            Dim pesananCount As Integer = Reader.GetInt32(0)
+            LabelPesanan.Text = "Pesanan: " & pesananCount
         End If
     End Sub
 End Class

@@ -200,7 +200,7 @@ Public Class Pembayaran
             cmdUpdateStok.Transaction = transaction
             cmdUpdateStok.ExecuteNonQuery()
 
-            'transaction.Commit()
+            transaction.Commit()
 
 
             MessageBox.Show("Transaksi Berhasil")
@@ -216,9 +216,7 @@ Public Class Pembayaran
             MenuDuduk.LabelNomorMeja.Text = "Nomor Meja : "
             MenuDuduk.meja = 0
             MenuDuduk.selectedButtons.Clear()
-            'Dim formLoading As New Loading()
-            'formLoading.Show()
-            'Me.Hide()
+
         Catch ex As Exception
 
             If transaction IsNot Nothing Then
@@ -233,12 +231,15 @@ Public Class Pembayaran
 
             AddHandler printDocument.PrintPage, AddressOf PrintPageHandler
             Dim printPreviewDialog As New PrintPreviewDialog()
-            printPreviewDialog.Document = printDocument
-            printPreviewDialog.ShowDialog()
+            'printPreviewDialog.Document = printDocument
+            'printPreviewDialog.ShowDialog()
 
-            'printDocument.Print()
+            printDocument.Print()
             ' Tutup koneksi
             conn.Close()
+            Dim formLoading As New Loading()
+            formLoading.Show()
+            Me.Hide()
         End Try
     End Sub
 
