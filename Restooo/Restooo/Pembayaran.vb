@@ -15,6 +15,8 @@ Public Class Pembayaran
     Dim totalharga As Integer
     Dim Uangdibayar As Double
     Dim kembalian As Double
+    Private PrintPreviewDialog1 As New PrintPreviewDialog()
+    Private WithEvents PrintDocument1 As New PrintDocument()
 
     Private Sub ButtonStatus_Click(sender As Object, e As EventArgs) Handles ButtonStatus.Click
         Status.Show()
@@ -127,7 +129,6 @@ Public Class Pembayaran
                 countDictionary(item) = 1
             End If
         Next
-
 
 
         For Each kvp As KeyValuePair(Of String, Integer) In countDictionary
@@ -274,17 +275,70 @@ Public Class Pembayaran
     Private Sub Pembayaran_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
 
         If e.CloseReason = CloseReason.UserClosing Then
-
             Dim result As DialogResult = MessageBox.Show("Anda yakin ingin keluar dari aplikasi?", "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
-
-
             If result = DialogResult.Yes Then
-
                 Application.Exit()
             Else
-
                 e.Cancel = True
             End If
         End If
+    End Sub
+
+    Private Sub btnPrint_Click(sender As Object, e As EventArgs) Handles btnPrint.Click
+        PrintPreviewDialog1.Document = PrintDocument1
+        PrintPreviewDialog1.ShowDialog()
+    End Sub
+    Private Sub PrintDocument1_PrintPage(sender As Object, e As PrintPageEventArgs) Handles PrintDocument1.PrintPage
+        Dim printFont As New Font("Arial", 24)
+        Dim lineHeight As Single = printFont.GetHeight(e.Graphics)
+        Dim yPosition As Single = 0
+
+        Dim pageWidth As Single = e.PageBounds.Width
+        Dim format As New StringFormat()
+        format.Alignment = StringAlignment.Center
+
+        ' Print each label's text content
+
+
+        Dim labelResto As New Label
+        labelResto.Text = "-----RESTO RECEIPT-----"
+        PrintCenteredText(e.Graphics, labelResto.Text, New Font("Open Sans", 40), Brushes.Black, pageWidth / 2, yPosition)
+        yPosition += lineHeight * 2
+        PrintCenteredText(e.Graphics, LabelTanggal.Text, printFont, Brushes.Black, pageWidth, yPosition)
+        yPosition += lineHeight * 2
+        PrintCenteredText(e.Graphics, Label2.Text, printFont, Brushes.Black, 15, yPosition)
+        yPosition += lineHeight
+        PrintCenteredText(e.Graphics, LabelNamaPelayan.Text, printFont, Brushes.Black, 15, yPosition)
+        yPosition += lineHeight * 4
+        For Each kvp As KeyValuePair(Of String, Integer) In countDictionary
+            Dim labelbarang As New Label()
+
+            labelbarang.Size = New Size(300, 30)
+            labelbarang.AutoSize = False
+            labelbarang.TextAlign = ContentAlignment.MiddleLeft
+            labelbarang.Padding = New Padding(0, 0, 10, 0)
+
+            Dim parts() As String = kvp.Key.Split("|"c)
+            If parts.Length = 3 Then
+                labelbarang.Text = $"{parts(1).Trim()} - Rp. {parts(2).Trim()} - QTY. {kvp.Value}"
+            End If
+            PrintCenteredText(e.Graphics, labelbarang.Text, printFont, Brushes.Black, 15, yPosition)
+            yPosition += lineHeight
+        Next
+        PrintCenteredText(e.Graphics, lblTotal.Text, printFont, Brushes.Black, 15, yPosition)
+        yPosition += lineHeight
+        PrintCenteredText(e.Graphics, lblUang.Text, printFont, Brushes.Black, 15, yPosition)
+        yPosition += lineHeight
+        PrintCenteredText(e.Graphics, lblKembalian.Text, printFont, Brushes.Black, 15, yPosition)
+        yPosition += lineHeight * 13
+        PrintCenteredText(e.Graphics, Label3.Text, printFont, Brushes.Black, 15, yPosition)
+        yPosition += lineHeight
+        PrintCenteredText(e.Graphics, Label4.Text, printFont, Brushes.Black, 15, yPosition)
+        yPosition += lineHeight
+        PrintCenteredText(e.Graphics, Label5.Text, printFont, Brushes.Black, 15, yPosition)
+    End Sub
+
+    Private Sub PrintCenteredText(graphics As Graphics, text As String, font As Font, brush As Brush, pageWidth As Single, yPosition As Single)
+        graphics.DrawString(text, font, brush, pageWidth / 5, yPosition)
     End Sub
 End Class

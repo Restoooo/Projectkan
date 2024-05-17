@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Pembayaran
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class Pembayaran
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Pembayaran))
@@ -38,6 +38,9 @@ Partial Class Pembayaran
         Me.LabelStock = New System.Windows.Forms.Label()
         Me.PanelPembayaran = New System.Windows.Forms.Panel()
         Me.PanelNota = New System.Windows.Forms.Panel()
+        Me.lblKembalian = New System.Windows.Forms.Label()
+        Me.lblUang = New System.Windows.Forms.Label()
+        Me.lblTotal = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -46,10 +49,9 @@ Partial Class Pembayaran
         Me.LabelNamaPelayan = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnDone = New System.Windows.Forms.Button()
-        Me.lblTotal = New System.Windows.Forms.Label()
-        Me.lblUang = New System.Windows.Forms.Label()
         Me.MySqlCommand1 = New MySql.Data.MySqlClient.MySqlCommand()
-        Me.lblKembalian = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnPrint = New System.Windows.Forms.Button()
         Me.PanelTopLeft.SuspendLayout()
         Me.PanelLeft.SuspendLayout()
         Me.PanelNota.SuspendLayout()
@@ -215,6 +217,35 @@ Partial Class Pembayaran
         Me.PanelNota.Size = New System.Drawing.Size(373, 658)
         Me.PanelNota.TabIndex = 21
         '
+        'lblKembalian
+        '
+        Me.lblKembalian.AutoSize = True
+        Me.lblKembalian.Enabled = False
+        Me.lblKembalian.Location = New System.Drawing.Point(63, 528)
+        Me.lblKembalian.Name = "lblKembalian"
+        Me.lblKembalian.Size = New System.Drawing.Size(93, 13)
+        Me.lblKembalian.TabIndex = 32
+        Me.lblKembalian.Text = "Kembalian : XXXX"
+        '
+        'lblUang
+        '
+        Me.lblUang.AutoSize = True
+        Me.lblUang.Enabled = False
+        Me.lblUang.Location = New System.Drawing.Point(63, 506)
+        Me.lblUang.Name = "lblUang"
+        Me.lblUang.Size = New System.Drawing.Size(71, 13)
+        Me.lblUang.TabIndex = 31
+        Me.lblUang.Text = "Bayar : XXXX"
+        '
+        'lblTotal
+        '
+        Me.lblTotal.AutoSize = True
+        Me.lblTotal.Location = New System.Drawing.Point(61, 483)
+        Me.lblTotal.Name = "lblTotal"
+        Me.lblTotal.Size = New System.Drawing.Size(68, 13)
+        Me.lblTotal.TabIndex = 30
+        Me.lblTotal.Text = "Total : XXXX"
+        '
         'Label3
         '
         Me.Label3.AutoSize = True
@@ -288,25 +319,6 @@ Partial Class Pembayaran
         Me.btnDone.Text = "Selesai"
         Me.btnDone.UseVisualStyleBackColor = True
         '
-        'lblTotal
-        '
-        Me.lblTotal.AutoSize = True
-        Me.lblTotal.Location = New System.Drawing.Point(61, 483)
-        Me.lblTotal.Name = "lblTotal"
-        Me.lblTotal.Size = New System.Drawing.Size(68, 13)
-        Me.lblTotal.TabIndex = 30
-        Me.lblTotal.Text = "Total : XXXX"
-        '
-        'lblUang
-        '
-        Me.lblUang.AutoSize = True
-        Me.lblUang.Enabled = False
-        Me.lblUang.Location = New System.Drawing.Point(63, 506)
-        Me.lblUang.Name = "lblUang"
-        Me.lblUang.Size = New System.Drawing.Size(71, 13)
-        Me.lblUang.TabIndex = 31
-        Me.lblUang.Text = "Bayar : XXXX"
-        '
         'MySqlCommand1
         '
         Me.MySqlCommand1.CacheAge = 0
@@ -314,21 +326,33 @@ Partial Class Pembayaran
         Me.MySqlCommand1.EnableCaching = False
         Me.MySqlCommand1.Transaction = Nothing
         '
-        'lblKembalian
+        'Button1
         '
-        Me.lblKembalian.AutoSize = True
-        Me.lblKembalian.Enabled = False
-        Me.lblKembalian.Location = New System.Drawing.Point(63, 528)
-        Me.lblKembalian.Name = "lblKembalian"
-        Me.lblKembalian.Size = New System.Drawing.Size(93, 13)
-        Me.lblKembalian.TabIndex = 32
-        Me.lblKembalian.Text = "Kembalian : XXXX"
+        Me.Button1.Location = New System.Drawing.Point(0, 0)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 23
+        Me.Button1.Text = "Button1"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'btnPrint
+        '
+        Me.btnPrint.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnPrint.Image = CType(resources.GetObject("btnPrint.Image"), System.Drawing.Image)
+        Me.btnPrint.Location = New System.Drawing.Point(927, 153)
+        Me.btnPrint.Name = "btnPrint"
+        Me.btnPrint.Size = New System.Drawing.Size(126, 63)
+        Me.btnPrint.TabIndex = 24
+        Me.btnPrint.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.btnPrint.UseVisualStyleBackColor = True
         '
         'Pembayaran
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1264, 761)
+        Me.Controls.Add(Me.btnPrint)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.btnDone)
         Me.Controls.Add(Me.PanelNota)
         Me.Controls.Add(Me.LabelStock)
@@ -371,4 +395,6 @@ Partial Class Pembayaran
     Friend WithEvents lblTotal As Label
     Friend WithEvents lblKembalian As Label
     Friend WithEvents MySqlCommand1 As MySql.Data.MySqlClient.MySqlCommand
+    Friend WithEvents Button1 As Button
+    Friend WithEvents btnPrint As Button
 End Class
