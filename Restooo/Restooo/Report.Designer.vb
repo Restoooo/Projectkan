@@ -49,6 +49,7 @@ Partial Class Report
         '
         'PanelLeft
         '
+        Me.PanelLeft.BackColor = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(219, Byte), Integer), CType(CType(200, Byte), Integer))
         Me.PanelLeft.Controls.Add(Me.ButtonStatus)
         Me.PanelLeft.Controls.Add(Me.ButtonLogout)
         Me.PanelLeft.Controls.Add(Me.ButtonReport)
@@ -64,6 +65,7 @@ Partial Class Report
         '
         'ButtonStatus
         '
+        Me.ButtonStatus.BackColor = System.Drawing.Color.FromArgb(CType(CType(218, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(163, Byte), Integer))
         Me.ButtonStatus.Cursor = System.Windows.Forms.Cursors.Hand
         Me.ButtonStatus.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ButtonStatus.Image = Global.Restooo.My.Resources.Resources.Iconsmind_Outline_Profile_32
@@ -71,10 +73,11 @@ Partial Class Report
         Me.ButtonStatus.Name = "ButtonStatus"
         Me.ButtonStatus.Size = New System.Drawing.Size(50, 50)
         Me.ButtonStatus.TabIndex = 11
-        Me.ButtonStatus.UseVisualStyleBackColor = True
+        Me.ButtonStatus.UseVisualStyleBackColor = False
         '
         'ButtonLogout
         '
+        Me.ButtonLogout.BackColor = System.Drawing.Color.FromArgb(CType(CType(218, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(163, Byte), Integer))
         Me.ButtonLogout.Cursor = System.Windows.Forms.Cursors.Hand
         Me.ButtonLogout.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ButtonLogout.Image = Global.Restooo.My.Resources.Resources.Icons8_Windows_8_User_Interface_Logout_32
@@ -82,12 +85,14 @@ Partial Class Report
         Me.ButtonLogout.Name = "ButtonLogout"
         Me.ButtonLogout.Size = New System.Drawing.Size(50, 50)
         Me.ButtonLogout.TabIndex = 10
-        Me.ButtonLogout.UseVisualStyleBackColor = True
+        Me.ButtonLogout.UseVisualStyleBackColor = False
         '
         'ButtonReport
         '
+        Me.ButtonReport.BackColor = System.Drawing.Color.FromArgb(CType(CType(218, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(163, Byte), Integer))
         Me.ButtonReport.Cursor = System.Windows.Forms.Cursors.Hand
         Me.ButtonReport.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ButtonReport.ForeColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(44, Byte), Integer), CType(CType(87, Byte), Integer))
         Me.ButtonReport.Image = Global.Restooo.My.Resources.Resources.Icons8_Windows_8_Food_List_Ingredients_32
         Me.ButtonReport.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.ButtonReport.Location = New System.Drawing.Point(0, 244)
@@ -96,12 +101,14 @@ Partial Class Report
         Me.ButtonReport.TabIndex = 9
         Me.ButtonReport.Text = "Report"
         Me.ButtonReport.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.ButtonReport.UseVisualStyleBackColor = True
+        Me.ButtonReport.UseVisualStyleBackColor = False
         '
         'ButtonStock
         '
+        Me.ButtonStock.BackColor = System.Drawing.Color.FromArgb(CType(CType(218, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(163, Byte), Integer))
         Me.ButtonStock.Cursor = System.Windows.Forms.Cursors.Hand
         Me.ButtonStock.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ButtonStock.ForeColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(44, Byte), Integer), CType(CType(87, Byte), Integer))
         Me.ButtonStock.Image = Global.Restooo.My.Resources.Resources.Iconoir_Team_Iconoir_Packages_32
         Me.ButtonStock.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.ButtonStock.Location = New System.Drawing.Point(0, 184)
@@ -110,12 +117,14 @@ Partial Class Report
         Me.ButtonStock.TabIndex = 8
         Me.ButtonStock.Text = "Stock"
         Me.ButtonStock.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.ButtonStock.UseVisualStyleBackColor = True
+        Me.ButtonStock.UseVisualStyleBackColor = False
         '
         'ButtonMenu
         '
+        Me.ButtonMenu.BackColor = System.Drawing.Color.FromArgb(CType(CType(218, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(163, Byte), Integer))
         Me.ButtonMenu.Cursor = System.Windows.Forms.Cursors.Hand
         Me.ButtonMenu.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ButtonMenu.ForeColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(44, Byte), Integer), CType(CType(87, Byte), Integer))
         Me.ButtonMenu.Image = Global.Restooo.My.Resources.Resources.Aniket_Suvarna_Box_Regular_Bx_food_menu_32
         Me.ButtonMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.ButtonMenu.Location = New System.Drawing.Point(0, 124)
@@ -124,12 +133,14 @@ Partial Class Report
         Me.ButtonMenu.TabIndex = 7
         Me.ButtonMenu.Text = "Menu"
         Me.ButtonMenu.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.ButtonMenu.UseVisualStyleBackColor = True
+        Me.ButtonMenu.UseVisualStyleBackColor = False
         '
         'ButtonDashboard
         '
+        Me.ButtonDashboard.BackColor = System.Drawing.Color.FromArgb(CType(CType(218, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(163, Byte), Integer))
         Me.ButtonDashboard.Cursor = System.Windows.Forms.Cursors.Hand
         Me.ButtonDashboard.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ButtonDashboard.ForeColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(44, Byte), Integer), CType(CType(87, Byte), Integer))
         Me.ButtonDashboard.Image = Global.Restooo.My.Resources.Resources.Amitjakhu_Drip_Home_32
         Me.ButtonDashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.ButtonDashboard.Location = New System.Drawing.Point(0, 64)
@@ -138,10 +149,11 @@ Partial Class Report
         Me.ButtonDashboard.TabIndex = 6
         Me.ButtonDashboard.Text = "Dashboard"
         Me.ButtonDashboard.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.ButtonDashboard.UseVisualStyleBackColor = True
+        Me.ButtonDashboard.UseVisualStyleBackColor = False
         '
         'PanelTopLeft
         '
+        Me.PanelTopLeft.BackColor = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(219, Byte), Integer), CType(CType(200, Byte), Integer))
         Me.PanelTopLeft.Controls.Add(Me.ButtonMenuBurger)
         Me.PanelTopLeft.Dock = System.Windows.Forms.DockStyle.Top
         Me.PanelTopLeft.Location = New System.Drawing.Point(0, 0)
@@ -151,13 +163,14 @@ Partial Class Report
         '
         'ButtonMenuBurger
         '
+        Me.ButtonMenuBurger.BackColor = System.Drawing.Color.FromArgb(CType(CType(218, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(163, Byte), Integer))
         Me.ButtonMenuBurger.Dock = System.Windows.Forms.DockStyle.Right
         Me.ButtonMenuBurger.Image = CType(resources.GetObject("ButtonMenuBurger.Image"), System.Drawing.Image)
         Me.ButtonMenuBurger.Location = New System.Drawing.Point(147, 0)
         Me.ButtonMenuBurger.Name = "ButtonMenuBurger"
         Me.ButtonMenuBurger.Size = New System.Drawing.Size(53, 58)
         Me.ButtonMenuBurger.TabIndex = 1
-        Me.ButtonMenuBurger.UseVisualStyleBackColor = True
+        Me.ButtonMenuBurger.UseVisualStyleBackColor = False
         '
         'TimerPanelReduce
         '
@@ -170,6 +183,7 @@ Partial Class Report
         'DataGridViewReport
         '
         Me.DataGridViewReport.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DataGridViewReport.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(219, Byte), Integer), CType(CType(200, Byte), Integer))
         Me.DataGridViewReport.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
         DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
@@ -179,6 +193,7 @@ Partial Class Report
         DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.DataGridViewReport.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        Me.DataGridViewReport.GridColor = System.Drawing.Color.FromArgb(CType(CType(218, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(163, Byte), Integer))
         Me.DataGridViewReport.Location = New System.Drawing.Point(321, 112)
         Me.DataGridViewReport.Name = "DataGridViewReport"
         Me.DataGridViewReport.ReadOnly = True
@@ -189,6 +204,7 @@ Partial Class Report
         '
         Me.LabelReport.AutoSize = True
         Me.LabelReport.Font = New System.Drawing.Font("Microsoft Sans Serif", 32.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelReport.ForeColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(44, Byte), Integer), CType(CType(87, Byte), Integer))
         Me.LabelReport.Location = New System.Drawing.Point(639, 37)
         Me.LabelReport.Name = "LabelReport"
         Me.LabelReport.Size = New System.Drawing.Size(151, 51)
@@ -197,16 +213,18 @@ Partial Class Report
         '
         'ButtonRefresh
         '
+        Me.ButtonRefresh.BackColor = System.Drawing.Color.FromArgb(CType(CType(218, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(163, Byte), Integer))
         Me.ButtonRefresh.Image = CType(resources.GetObject("ButtonRefresh.Image"), System.Drawing.Image)
-        Me.ButtonRefresh.Location = New System.Drawing.Point(796, 50)
+        Me.ButtonRefresh.Location = New System.Drawing.Point(796, 47)
         Me.ButtonRefresh.Name = "ButtonRefresh"
         Me.ButtonRefresh.Size = New System.Drawing.Size(49, 38)
         Me.ButtonRefresh.TabIndex = 10
-        Me.ButtonRefresh.UseVisualStyleBackColor = True
+        Me.ButtonRefresh.UseVisualStyleBackColor = False
         '
         'DataGridViewReportDetail
         '
         Me.DataGridViewReportDetail.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DataGridViewReportDetail.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(219, Byte), Integer), CType(CType(200, Byte), Integer))
         Me.DataGridViewReportDetail.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
         DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
@@ -216,6 +234,7 @@ Partial Class Report
         DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.DataGridViewReportDetail.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        Me.DataGridViewReportDetail.GridColor = System.Drawing.Color.FromArgb(CType(CType(218, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(163, Byte), Integer))
         Me.DataGridViewReportDetail.Location = New System.Drawing.Point(321, 494)
         Me.DataGridViewReportDetail.Name = "DataGridViewReportDetail"
         Me.DataGridViewReportDetail.ReadOnly = True
@@ -226,6 +245,7 @@ Partial Class Report
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(248, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(229, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1264, 761)
         Me.Controls.Add(Me.DataGridViewReportDetail)
         Me.Controls.Add(Me.ButtonRefresh)

@@ -191,6 +191,7 @@
     <Compile Include="Report.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="RoundedRectangleControl.vb" />
     <Compile Include="Status.Designer.vb">
       <DependentUpon>Status.vb</DependentUpon>
     </Compile>

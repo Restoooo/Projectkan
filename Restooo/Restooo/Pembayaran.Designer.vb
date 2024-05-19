@@ -50,7 +50,6 @@ Partial Class Pembayaran
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnDone = New System.Windows.Forms.Button()
         Me.MySqlCommand1 = New MySql.Data.MySqlClient.MySqlCommand()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.btnPrint = New System.Windows.Forms.Button()
         Me.PanelTopLeft.SuspendLayout()
         Me.PanelLeft.SuspendLayout()
@@ -59,6 +58,7 @@ Partial Class Pembayaran
         '
         'PanelTopLeft
         '
+        Me.PanelTopLeft.BackColor = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(219, Byte), Integer), CType(CType(200, Byte), Integer))
         Me.PanelTopLeft.Controls.Add(Me.ButtonMenuBurger)
         Me.PanelTopLeft.Dock = System.Windows.Forms.DockStyle.Top
         Me.PanelTopLeft.Location = New System.Drawing.Point(0, 0)
@@ -68,18 +68,21 @@ Partial Class Pembayaran
         '
         'ButtonMenuBurger
         '
+        Me.ButtonMenuBurger.BackColor = System.Drawing.Color.FromArgb(CType(CType(218, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(163, Byte), Integer))
         Me.ButtonMenuBurger.Dock = System.Windows.Forms.DockStyle.Right
         Me.ButtonMenuBurger.Image = CType(resources.GetObject("ButtonMenuBurger.Image"), System.Drawing.Image)
         Me.ButtonMenuBurger.Location = New System.Drawing.Point(147, 0)
         Me.ButtonMenuBurger.Name = "ButtonMenuBurger"
         Me.ButtonMenuBurger.Size = New System.Drawing.Size(53, 58)
         Me.ButtonMenuBurger.TabIndex = 1
-        Me.ButtonMenuBurger.UseVisualStyleBackColor = True
+        Me.ButtonMenuBurger.UseVisualStyleBackColor = False
         '
         'ButtonReport
         '
+        Me.ButtonReport.BackColor = System.Drawing.Color.FromArgb(CType(CType(218, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(163, Byte), Integer))
         Me.ButtonReport.Cursor = System.Windows.Forms.Cursors.Hand
         Me.ButtonReport.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ButtonReport.ForeColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(44, Byte), Integer), CType(CType(87, Byte), Integer))
         Me.ButtonReport.Image = Global.Restooo.My.Resources.Resources.Icons8_Windows_8_Food_List_Ingredients_32
         Me.ButtonReport.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.ButtonReport.Location = New System.Drawing.Point(0, 244)
@@ -88,12 +91,14 @@ Partial Class Pembayaran
         Me.ButtonReport.TabIndex = 9
         Me.ButtonReport.Text = "Report"
         Me.ButtonReport.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.ButtonReport.UseVisualStyleBackColor = True
+        Me.ButtonReport.UseVisualStyleBackColor = False
         '
         'ButtonStock
         '
+        Me.ButtonStock.BackColor = System.Drawing.Color.FromArgb(CType(CType(218, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(163, Byte), Integer))
         Me.ButtonStock.Cursor = System.Windows.Forms.Cursors.Hand
         Me.ButtonStock.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ButtonStock.ForeColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(44, Byte), Integer), CType(CType(87, Byte), Integer))
         Me.ButtonStock.Image = Global.Restooo.My.Resources.Resources.Iconoir_Team_Iconoir_Packages_32
         Me.ButtonStock.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.ButtonStock.Location = New System.Drawing.Point(0, 184)
@@ -102,12 +107,14 @@ Partial Class Pembayaran
         Me.ButtonStock.TabIndex = 8
         Me.ButtonStock.Text = "Stock"
         Me.ButtonStock.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.ButtonStock.UseVisualStyleBackColor = True
+        Me.ButtonStock.UseVisualStyleBackColor = False
         '
         'ButtonMenu
         '
+        Me.ButtonMenu.BackColor = System.Drawing.Color.FromArgb(CType(CType(218, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(163, Byte), Integer))
         Me.ButtonMenu.Cursor = System.Windows.Forms.Cursors.Hand
         Me.ButtonMenu.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ButtonMenu.ForeColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(44, Byte), Integer), CType(CType(87, Byte), Integer))
         Me.ButtonMenu.Image = Global.Restooo.My.Resources.Resources.Aniket_Suvarna_Box_Regular_Bx_food_menu_32
         Me.ButtonMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.ButtonMenu.Location = New System.Drawing.Point(0, 124)
@@ -116,12 +123,14 @@ Partial Class Pembayaran
         Me.ButtonMenu.TabIndex = 7
         Me.ButtonMenu.Text = "Menu"
         Me.ButtonMenu.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.ButtonMenu.UseVisualStyleBackColor = True
+        Me.ButtonMenu.UseVisualStyleBackColor = False
         '
         'ButtonDashboard
         '
+        Me.ButtonDashboard.BackColor = System.Drawing.Color.FromArgb(CType(CType(218, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(163, Byte), Integer))
         Me.ButtonDashboard.Cursor = System.Windows.Forms.Cursors.Hand
         Me.ButtonDashboard.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ButtonDashboard.ForeColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(44, Byte), Integer), CType(CType(87, Byte), Integer))
         Me.ButtonDashboard.Image = Global.Restooo.My.Resources.Resources.Amitjakhu_Drip_Home_32
         Me.ButtonDashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.ButtonDashboard.Location = New System.Drawing.Point(0, 64)
@@ -130,10 +139,11 @@ Partial Class Pembayaran
         Me.ButtonDashboard.TabIndex = 6
         Me.ButtonDashboard.Text = "Dashboard"
         Me.ButtonDashboard.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.ButtonDashboard.UseVisualStyleBackColor = True
+        Me.ButtonDashboard.UseVisualStyleBackColor = False
         '
         'PanelLeft
         '
+        Me.PanelLeft.BackColor = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(219, Byte), Integer), CType(CType(200, Byte), Integer))
         Me.PanelLeft.Controls.Add(Me.ButtonStatus)
         Me.PanelLeft.Controls.Add(Me.ButtonLogout)
         Me.PanelLeft.Controls.Add(Me.ButtonReport)
@@ -149,6 +159,7 @@ Partial Class Pembayaran
         '
         'ButtonStatus
         '
+        Me.ButtonStatus.BackColor = System.Drawing.Color.FromArgb(CType(CType(218, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(163, Byte), Integer))
         Me.ButtonStatus.Cursor = System.Windows.Forms.Cursors.Hand
         Me.ButtonStatus.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ButtonStatus.Image = Global.Restooo.My.Resources.Resources.Iconsmind_Outline_Profile_32
@@ -156,10 +167,11 @@ Partial Class Pembayaran
         Me.ButtonStatus.Name = "ButtonStatus"
         Me.ButtonStatus.Size = New System.Drawing.Size(50, 50)
         Me.ButtonStatus.TabIndex = 13
-        Me.ButtonStatus.UseVisualStyleBackColor = True
+        Me.ButtonStatus.UseVisualStyleBackColor = False
         '
         'ButtonLogout
         '
+        Me.ButtonLogout.BackColor = System.Drawing.Color.FromArgb(CType(CType(218, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(163, Byte), Integer))
         Me.ButtonLogout.Cursor = System.Windows.Forms.Cursors.Hand
         Me.ButtonLogout.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ButtonLogout.Image = Global.Restooo.My.Resources.Resources.Icons8_Windows_8_User_Interface_Logout_32
@@ -167,7 +179,7 @@ Partial Class Pembayaran
         Me.ButtonLogout.Name = "ButtonLogout"
         Me.ButtonLogout.Size = New System.Drawing.Size(50, 50)
         Me.ButtonLogout.TabIndex = 12
-        Me.ButtonLogout.UseVisualStyleBackColor = True
+        Me.ButtonLogout.UseVisualStyleBackColor = False
         '
         'TimerPanelReduce
         '
@@ -181,6 +193,7 @@ Partial Class Pembayaran
         '
         Me.LabelStock.AutoSize = True
         Me.LabelStock.Font = New System.Drawing.Font("Microsoft Sans Serif", 32.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelStock.ForeColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(44, Byte), Integer), CType(CType(87, Byte), Integer))
         Me.LabelStock.Location = New System.Drawing.Point(591, 9)
         Me.LabelStock.Name = "LabelStock"
         Me.LabelStock.Size = New System.Drawing.Size(267, 51)
@@ -191,6 +204,7 @@ Partial Class Pembayaran
         '
         Me.PanelPembayaran.AutoScroll = True
         Me.PanelPembayaran.AutoSize = True
+        Me.PanelPembayaran.BackColor = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(219, Byte), Integer), CType(CType(200, Byte), Integer))
         Me.PanelPembayaran.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.PanelPembayaran.Location = New System.Drawing.Point(63, 111)
         Me.PanelPembayaran.Name = "PanelPembayaran"
@@ -200,6 +214,7 @@ Partial Class Pembayaran
         'PanelNota
         '
         Me.PanelNota.AllowDrop = True
+        Me.PanelNota.BackColor = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(219, Byte), Integer), CType(CType(200, Byte), Integer))
         Me.PanelNota.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.PanelNota.Controls.Add(Me.lblKembalian)
         Me.PanelNota.Controls.Add(Me.lblUang)
@@ -212,6 +227,7 @@ Partial Class Pembayaran
         Me.PanelNota.Controls.Add(Me.LabelNamaPelayan)
         Me.PanelNota.Controls.Add(Me.Label1)
         Me.PanelNota.Controls.Add(Me.PanelPembayaran)
+        Me.PanelNota.ForeColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(44, Byte), Integer), CType(CType(87, Byte), Integer))
         Me.PanelNota.Location = New System.Drawing.Point(536, 91)
         Me.PanelNota.Name = "PanelNota"
         Me.PanelNota.Size = New System.Drawing.Size(373, 658)
@@ -221,6 +237,7 @@ Partial Class Pembayaran
         '
         Me.lblKembalian.AutoSize = True
         Me.lblKembalian.Enabled = False
+        Me.lblKembalian.ForeColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(44, Byte), Integer), CType(CType(87, Byte), Integer))
         Me.lblKembalian.Location = New System.Drawing.Point(63, 528)
         Me.lblKembalian.Name = "lblKembalian"
         Me.lblKembalian.Size = New System.Drawing.Size(93, 13)
@@ -231,6 +248,7 @@ Partial Class Pembayaran
         '
         Me.lblUang.AutoSize = True
         Me.lblUang.Enabled = False
+        Me.lblUang.ForeColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(44, Byte), Integer), CType(CType(87, Byte), Integer))
         Me.lblUang.Location = New System.Drawing.Point(63, 506)
         Me.lblUang.Name = "lblUang"
         Me.lblUang.Size = New System.Drawing.Size(71, 13)
@@ -240,6 +258,7 @@ Partial Class Pembayaran
         'lblTotal
         '
         Me.lblTotal.AutoSize = True
+        Me.lblTotal.ForeColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(44, Byte), Integer), CType(CType(87, Byte), Integer))
         Me.lblTotal.Location = New System.Drawing.Point(61, 483)
         Me.lblTotal.Name = "lblTotal"
         Me.lblTotal.Size = New System.Drawing.Size(68, 13)
@@ -249,6 +268,7 @@ Partial Class Pembayaran
         'Label3
         '
         Me.Label3.AutoSize = True
+        Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(44, Byte), Integer), CType(CType(87, Byte), Integer))
         Me.Label3.Location = New System.Drawing.Point(60, 578)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(109, 13)
@@ -258,6 +278,7 @@ Partial Class Pembayaran
         'Label5
         '
         Me.Label5.AutoSize = True
+        Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(44, Byte), Integer), CType(CType(87, Byte), Integer))
         Me.Label5.Location = New System.Drawing.Point(151, 630)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(77, 13)
@@ -267,6 +288,7 @@ Partial Class Pembayaran
         'Label4
         '
         Me.Label4.AutoSize = True
+        Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(44, Byte), Integer), CType(CType(87, Byte), Integer))
         Me.Label4.Location = New System.Drawing.Point(60, 605)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(128, 13)
@@ -276,6 +298,7 @@ Partial Class Pembayaran
         'Label2
         '
         Me.Label2.AutoSize = True
+        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(44, Byte), Integer), CType(CType(87, Byte), Integer))
         Me.Label2.Location = New System.Drawing.Point(61, 74)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(70, 13)
@@ -285,6 +308,7 @@ Partial Class Pembayaran
         'LabelTanggal
         '
         Me.LabelTanggal.AutoSize = True
+        Me.LabelTanggal.ForeColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(44, Byte), Integer), CType(CType(87, Byte), Integer))
         Me.LabelTanggal.Location = New System.Drawing.Point(236, 47)
         Me.LabelTanggal.Name = "LabelTanggal"
         Me.LabelTanggal.Size = New System.Drawing.Size(49, 13)
@@ -294,6 +318,7 @@ Partial Class Pembayaran
         'LabelNamaPelayan
         '
         Me.LabelNamaPelayan.AutoSize = True
+        Me.LabelNamaPelayan.ForeColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(44, Byte), Integer), CType(CType(87, Byte), Integer))
         Me.LabelNamaPelayan.Location = New System.Drawing.Point(61, 47)
         Me.LabelNamaPelayan.Name = "LabelNamaPelayan"
         Me.LabelNamaPelayan.Size = New System.Drawing.Size(41, 13)
@@ -304,6 +329,7 @@ Partial Class Pembayaran
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(44, Byte), Integer), CType(CType(87, Byte), Integer))
         Me.Label1.Location = New System.Drawing.Point(151, 11)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(67, 16)
@@ -312,12 +338,14 @@ Partial Class Pembayaran
         '
         'btnDone
         '
+        Me.btnDone.BackColor = System.Drawing.Color.FromArgb(CType(CType(218, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(163, Byte), Integer))
+        Me.btnDone.ForeColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(44, Byte), Integer), CType(CType(87, Byte), Integer))
         Me.btnDone.Location = New System.Drawing.Point(927, 91)
         Me.btnDone.Name = "btnDone"
         Me.btnDone.Size = New System.Drawing.Size(126, 38)
         Me.btnDone.TabIndex = 22
         Me.btnDone.Text = "Selesai"
-        Me.btnDone.UseVisualStyleBackColor = True
+        Me.btnDone.UseVisualStyleBackColor = False
         '
         'MySqlCommand1
         '
@@ -326,17 +354,9 @@ Partial Class Pembayaran
         Me.MySqlCommand1.EnableCaching = False
         Me.MySqlCommand1.Transaction = Nothing
         '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(0, 0)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 23
-        Me.Button1.Text = "Button1"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
         'btnPrint
         '
+        Me.btnPrint.BackColor = System.Drawing.Color.FromArgb(CType(CType(218, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(163, Byte), Integer))
         Me.btnPrint.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnPrint.Image = CType(resources.GetObject("btnPrint.Image"), System.Drawing.Image)
         Me.btnPrint.Location = New System.Drawing.Point(927, 153)
@@ -344,15 +364,15 @@ Partial Class Pembayaran
         Me.btnPrint.Size = New System.Drawing.Size(126, 63)
         Me.btnPrint.TabIndex = 24
         Me.btnPrint.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.btnPrint.UseVisualStyleBackColor = True
+        Me.btnPrint.UseVisualStyleBackColor = False
         '
         'Pembayaran
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(248, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(229, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1264, 761)
         Me.Controls.Add(Me.btnPrint)
-        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.btnDone)
         Me.Controls.Add(Me.PanelNota)
         Me.Controls.Add(Me.LabelStock)
@@ -395,6 +415,5 @@ Partial Class Pembayaran
     Friend WithEvents lblTotal As Label
     Friend WithEvents lblKembalian As Label
     Friend WithEvents MySqlCommand1 As MySql.Data.MySqlClient.MySqlCommand
-    Friend WithEvents Button1 As Button
     Friend WithEvents btnPrint As Button
 End Class

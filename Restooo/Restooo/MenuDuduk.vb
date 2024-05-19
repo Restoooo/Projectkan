@@ -168,6 +168,254 @@ Public Class MenuDuduk
             End If
         End If
     End Sub
+
+    Private Sub Panel50_Paint(sender As Object, e As PaintEventArgs) Handles Panel50.Paint
+
+    End Sub
+
+    Private Sub Panel2_Paint(sender As Object, e As PaintEventArgs) Handles Panel2.Paint
+
+    End Sub
+
+    Private Sub Panel49_Paint(sender As Object, e As PaintEventArgs) Handles Panel49.Paint
+
+    End Sub
+
+    Private Sub ButtonMeja1_Click(sender As Object, e As EventArgs) Handles ButtonMeja1.Click
+
+    End Sub
+
+    Private Sub Panel47_Paint(sender As Object, e As PaintEventArgs) Handles Panel47.Paint
+
+    End Sub
+
+    Private Sub ButtonMeja5_Click(sender As Object, e As EventArgs) Handles ButtonMeja5.Click
+
+    End Sub
+
+    Private Sub Panel46_Paint(sender As Object, e As PaintEventArgs) Handles Panel46.Paint
+
+    End Sub
+
+    Private Sub ButtonMeja6_Click(sender As Object, e As EventArgs) Handles ButtonMeja6.Click
+
+    End Sub
+
+    Private Sub Panel42_Paint(sender As Object, e As PaintEventArgs) Handles Panel42.Paint
+
+    End Sub
+
+    Private Sub ButtonMeja7_Click(sender As Object, e As EventArgs) Handles ButtonMeja7.Click
+
+    End Sub
+
+    Private Sub Panel43_Paint(sender As Object, e As PaintEventArgs) Handles Panel43.Paint
+
+    End Sub
+
+    Private Sub ButtonMeja8_Click(sender As Object, e As EventArgs) Handles ButtonMeja8.Click
+
+    End Sub
+
+    Private Sub Panel44_Paint(sender As Object, e As PaintEventArgs) Handles Panel44.Paint
+
+    End Sub
+
+    Private Sub ButtonMeja3_Click(sender As Object, e As EventArgs) Handles ButtonMeja3.Click
+
+    End Sub
+
+    Private Sub Panel45_Paint(sender As Object, e As PaintEventArgs) Handles Panel45.Paint
+
+    End Sub
+
+    Private Sub ButtonMeja4_Click(sender As Object, e As EventArgs) Handles ButtonMeja4.Click
+
+    End Sub
+
+    Private Sub Panel38_Paint(sender As Object, e As PaintEventArgs) Handles Panel38.Paint
+
+    End Sub
+
+    Private Sub ButtonMeja2_Click(sender As Object, e As EventArgs) Handles ButtonMeja2.Click
+
+    End Sub
+
+    Private Sub Panel34_Paint(sender As Object, e As PaintEventArgs) Handles Panel34.Paint
+
+    End Sub
+
+    Private Sub ButtonMeja9_Click(sender As Object, e As EventArgs) Handles ButtonMeja9.Click
+
+    End Sub
+
+    Private Sub Panel39_Paint(sender As Object, e As PaintEventArgs) Handles Panel39.Paint
+
+    End Sub
+
+    Private Sub ButtonMeja10_Click(sender As Object, e As EventArgs) Handles ButtonMeja10.Click
+
+    End Sub
+
+    Private Sub Panel35_Paint(sender As Object, e As PaintEventArgs) Handles Panel35.Paint
+
+    End Sub
+
+    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
+
+    End Sub
+
+    Private Sub Panel40_Paint(sender As Object, e As PaintEventArgs) Handles Panel40.Paint
+
+    End Sub
+
+    Private Sub ButtonMeja12_Click(sender As Object, e As EventArgs) Handles ButtonMeja12.Click
+
+    End Sub
+
+    Private Sub Panel41_Paint(sender As Object, e As PaintEventArgs) Handles Panel41.Paint
+
+    End Sub
+
+    Private Sub ButtonMeja13_Click(sender As Object, e As EventArgs) Handles ButtonMeja13.Click
+
+    End Sub
+
+    Private Sub Panel36_Paint(sender As Object, e As PaintEventArgs) Handles Panel36.Paint
+
+    End Sub
+
+    Private Sub ButtonMeja11_Click(sender As Object, e As EventArgs) Handles ButtonMeja11.Click
+
+    End Sub
+
+    Private Sub Panel37_Paint(sender As Object, e As PaintEventArgs) Handles Panel37.Paint
+
+    End Sub
+
+    Private Sub Panel3_Paint(sender As Object, e As PaintEventArgs) Handles Panel3.Paint
+
+    End Sub
+
+    Private Sub Panel30_Paint(sender As Object, e As PaintEventArgs) Handles Panel30.Paint
+
+    End Sub
+
+    Private Sub Panel4_Paint(sender As Object, e As PaintEventArgs) Handles Panel4.Paint
+
+    End Sub
+
+    Private Sub Panel26_Paint(sender As Object, e As PaintEventArgs) Handles Panel26.Paint
+
+    End Sub
+
+    Private Sub Panel5_Paint(sender As Object, e As PaintEventArgs) Handles Panel5.Paint
+
+    End Sub
+
+    Private Sub Panel31_Paint(sender As Object, e As PaintEventArgs) Handles Panel31.Paint
+
+    End Sub
+
+    Private Sub Panel6_Paint(sender As Object, e As PaintEventArgs) Handles Panel6.Paint
+
+    End Sub
+
+    Private Sub Panel22_Paint(sender As Object, e As PaintEventArgs) Handles Panel22.Paint
+
+    End Sub
+
+    Private Sub Panel7_Paint(sender As Object, e As PaintEventArgs) Handles Panel7.Paint
+
+    End Sub
+
+    Private Sub Panel32_Paint(sender As Object, e As PaintEventArgs) Handles Panel32.Paint
+
+    End Sub
+
+    Private Sub Panel8_Paint(sender As Object, e As PaintEventArgs) Handles Panel8.Paint
+
+    End Sub
+
+    Private Sub Panel33_Paint(sender As Object, e As PaintEventArgs) Handles Panel33.Paint
+
+    End Sub
+
+    Private Sub Panel9_Paint(sender As Object, e As PaintEventArgs) Handles Panel9.Paint
+
+    End Sub
+
+    Private Sub Panel27_Paint(sender As Object, e As PaintEventArgs) Handles Panel27.Paint
+
+    End Sub
+
+    Private Sub Panel10_Paint(sender As Object, e As PaintEventArgs) Handles Panel10.Paint
+
+    End Sub
+
+    Private Sub Panel18_Paint(sender As Object, e As PaintEventArgs) Handles Panel18.Paint
+
+    End Sub
+
+    Private Sub Panel11_Paint(sender As Object, e As PaintEventArgs) Handles Panel11.Paint
+
+    End Sub
+
+    Private Sub Panel28_Paint(sender As Object, e As PaintEventArgs) Handles Panel28.Paint
+
+    End Sub
+
+    Private Sub Panel17_Paint(sender As Object, e As PaintEventArgs) Handles Panel17.Paint
+
+    End Sub
+
+    Private Sub Panel29_Paint(sender As Object, e As PaintEventArgs) Handles Panel29.Paint
+
+    End Sub
+
+    Private Sub Panel16_Paint(sender As Object, e As PaintEventArgs) Handles Panel16.Paint
+
+    End Sub
+
+    Private Sub Panel23_Paint(sender As Object, e As PaintEventArgs) Handles Panel23.Paint
+
+    End Sub
+
+    Private Sub Panel12_Paint(sender As Object, e As PaintEventArgs) Handles Panel12.Paint
+
+    End Sub
+
+    Private Sub Panel14_Paint(sender As Object, e As PaintEventArgs) Handles Panel14.Paint
+
+    End Sub
+
+    Private Sub Panel15_Paint(sender As Object, e As PaintEventArgs) Handles Panel15.Paint
+
+    End Sub
+
+    Private Sub Panel24_Paint(sender As Object, e As PaintEventArgs) Handles Panel24.Paint
+
+    End Sub
+
+    Private Sub Panel21_Paint(sender As Object, e As PaintEventArgs) Handles Panel21.Paint
+
+    End Sub
+
+    Private Sub Panel25_Paint(sender As Object, e As PaintEventArgs) Handles Panel25.Paint
+
+    End Sub
+
+    Private Sub Panel20_Paint(sender As Object, e As PaintEventArgs) Handles Panel20.Paint
+
+    End Sub
+
+    Private Sub Panel19_Paint(sender As Object, e As PaintEventArgs) Handles Panel19.Paint
+
+    End Sub
+
+    Private Sub Panel13_Paint(sender As Object, e As PaintEventArgs) Handles Panel13.Paint
+
+    End Sub
 End Class
 
 

@@ -13,7 +13,6 @@ Public Class Login
     Private Sub txtUsername_GotFocus(sender As Object, e As EventArgs) Handles txtUsername.GotFocus
         If txtUsername.Text = "Username" Then
             txtUsername.Text = ""
-            txtUsername.BackColor = Color.WhiteSmoke
 
         End If
     End Sub
@@ -21,21 +20,18 @@ Public Class Login
     Private Sub txtUsername_LostFocus(sender As Object, e As EventArgs) Handles txtUsername.LostFocus
         If txtUsername.Text = "" Then
             txtUsername.Text = "Username"
-            txtUsername.BackColor = Color.White
         End If
     End Sub
 
     Private Sub txtPass_LostFocus(sender As Object, e As EventArgs) Handles txtPass.LostFocus
         If txtPass.Text = "" Then
             txtPass.Text = "Password"
-            txtPass.BackColor = Color.White
         End If
     End Sub
 
     Private Sub txtPass_GotFocus(sender As Object, e As EventArgs) Handles txtPass.GotFocus
         If txtPass.Text = "Password" Then
             txtPass.Text = ""
-            txtPass.BackColor = Color.WhiteSmoke
         End If
     End Sub
 
@@ -91,5 +87,9 @@ Public Class Login
 
     Private Sub Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.AcceptButton = ButtonLog
+    End Sub
+
+    Private Sub txtUsername_TextChanged(sender As Object, e As EventArgs)
+
     End Sub
 End Class

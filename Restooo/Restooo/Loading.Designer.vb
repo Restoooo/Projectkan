@@ -31,10 +31,11 @@ Partial Class Loading
         'LabelLoadingMessage
         '
         Me.LabelLoadingMessage.AutoSize = True
-        Me.LabelLoadingMessage.Font = New System.Drawing.Font("Microsoft Sans Serif", 72.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelLoadingMessage.Font = New System.Drawing.Font("Microsoft Sans Serif", 72.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelLoadingMessage.ForeColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(44, Byte), Integer), CType(CType(87, Byte), Integer))
         Me.LabelLoadingMessage.Location = New System.Drawing.Point(449, 303)
         Me.LabelLoadingMessage.Name = "LabelLoadingMessage"
-        Me.LabelLoadingMessage.Size = New System.Drawing.Size(384, 108)
+        Me.LabelLoadingMessage.Size = New System.Drawing.Size(391, 108)
         Me.LabelLoadingMessage.TabIndex = 0
         Me.LabelLoadingMessage.Text = "Loading"
         '
@@ -55,6 +56,7 @@ Partial Class Loading
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(248, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(229, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1264, 761)
         Me.Controls.Add(Me.ProgressBarLoading)
         Me.Controls.Add(Me.LabelLoadingMessage)
