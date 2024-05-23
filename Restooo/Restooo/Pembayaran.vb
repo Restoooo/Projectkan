@@ -66,6 +66,8 @@ Public Class Pembayaran
             ButtonMenu.Text = ""
             ButtonStock.Text = ""
             ButtonReport.Text = ""
+            ButtonStatus.Visible = "False"
+            PictureBoxLogo.Visible = "False"
         Else
             TimerPanelReduce.Enabled = False
         End If
@@ -81,6 +83,8 @@ Public Class Pembayaran
             ButtonMenu.Text = "Menu"
             ButtonStock.Text = "Stock"
             ButtonReport.Text = "Report"
+            ButtonStatus.Visible = "True"
+            PictureBoxLogo.Visible = "True"
         Else
             TimerPanelIncrease.Enabled = False
         End If

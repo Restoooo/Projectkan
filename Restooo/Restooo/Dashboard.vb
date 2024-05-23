@@ -75,6 +75,7 @@ Public Class Dashboard
             ButtonMenu.Text = ""
             ButtonStock.Text = ""
             ButtonReport.Text = ""
+            ButtonStatus.Visible = "False"
         Else
             TimerPanelReduce.Enabled = False
         End If
@@ -90,6 +91,7 @@ Public Class Dashboard
             ButtonMenu.Text = "Menu"
             ButtonStock.Text = "Stock"
             ButtonReport.Text = "Report"
+            ButtonStatus.Visible = "True"
         Else
             TimerPanelIncrease.Enabled = False
         End If
@@ -112,4 +114,27 @@ Public Class Dashboard
         End If
     End Sub
 
+    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
+
+    End Sub
+
+    Private Sub PanelLeft_Paint(sender As Object, e As PaintEventArgs) Handles PanelLeft.Paint
+
+    End Sub
+
+    Private Sub ButtonDashboard_Click(sender As Object, e As EventArgs) Handles ButtonDashboard.Click
+
+    End Sub
+
+    Private Sub PanelTopLeft_Paint(sender As Object, e As PaintEventArgs) Handles PanelTopLeft.Paint
+
+    End Sub
+
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
+
+    End Sub
+
+    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
+
+    End Sub
 End Class

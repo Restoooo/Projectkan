@@ -23,7 +23,7 @@ Partial Class Stock
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Stock))
         Me.LabelStock = New System.Windows.Forms.Label()
         Me.DataGridViewStock = New System.Windows.Forms.DataGridView()
@@ -40,13 +40,16 @@ Partial Class Stock
         Me.ButtonDashboard = New System.Windows.Forms.Button()
         Me.ButtonUpdate = New System.Windows.Forms.Button()
         Me.ButtonRefresh = New System.Windows.Forms.Button()
+        Me.PictureBoxLogo = New System.Windows.Forms.PictureBox()
         CType(Me.DataGridViewStock, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelTopLeft.SuspendLayout()
         Me.PanelLeft.SuspendLayout()
+        CType(Me.PictureBoxLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'LabelStock
         '
+        Me.LabelStock.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.LabelStock.AutoSize = True
         Me.LabelStock.Font = New System.Drawing.Font("Microsoft Sans Serif", 32.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelStock.ForeColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(44, Byte), Integer), CType(CType(87, Byte), Integer))
@@ -58,17 +61,18 @@ Partial Class Stock
         '
         'DataGridViewStock
         '
+        Me.DataGridViewStock.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.DataGridViewStock.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridViewStock.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(219, Byte), Integer), CType(CType(200, Byte), Integer))
         Me.DataGridViewStock.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridViewStock.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridViewStock.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.DataGridViewStock.GridColor = System.Drawing.Color.FromArgb(CType(CType(218, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(163, Byte), Integer))
         Me.DataGridViewStock.Location = New System.Drawing.Point(368, 112)
         Me.DataGridViewStock.Name = "DataGridViewStock"
@@ -108,6 +112,7 @@ Partial Class Stock
         'PanelLeft
         '
         Me.PanelLeft.BackColor = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(219, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.PanelLeft.Controls.Add(Me.PictureBoxLogo)
         Me.PanelLeft.Controls.Add(Me.ButtonStatus)
         Me.PanelLeft.Controls.Add(Me.ButtonLogout)
         Me.PanelLeft.Controls.Add(Me.ButtonReport)
@@ -123,6 +128,7 @@ Partial Class Stock
         '
         'ButtonStatus
         '
+        Me.ButtonStatus.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.ButtonStatus.BackColor = System.Drawing.Color.FromArgb(CType(CType(218, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(163, Byte), Integer))
         Me.ButtonStatus.Cursor = System.Windows.Forms.Cursors.Hand
         Me.ButtonStatus.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -135,6 +141,7 @@ Partial Class Stock
         '
         'ButtonLogout
         '
+        Me.ButtonLogout.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.ButtonLogout.BackColor = System.Drawing.Color.FromArgb(CType(CType(218, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(163, Byte), Integer))
         Me.ButtonLogout.Cursor = System.Windows.Forms.Cursors.Hand
         Me.ButtonLogout.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -211,6 +218,7 @@ Partial Class Stock
         '
         'ButtonUpdate
         '
+        Me.ButtonUpdate.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.ButtonUpdate.BackColor = System.Drawing.Color.FromArgb(CType(CType(218, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(163, Byte), Integer))
         Me.ButtonUpdate.ForeColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(44, Byte), Integer), CType(CType(87, Byte), Integer))
         Me.ButtonUpdate.Location = New System.Drawing.Point(896, 36)
@@ -222,6 +230,7 @@ Partial Class Stock
         '
         'ButtonRefresh
         '
+        Me.ButtonRefresh.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.ButtonRefresh.BackColor = System.Drawing.Color.FromArgb(CType(CType(218, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(163, Byte), Integer))
         Me.ButtonRefresh.ForeColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(44, Byte), Integer), CType(CType(87, Byte), Integer))
         Me.ButtonRefresh.Image = CType(resources.GetObject("ButtonRefresh.Image"), System.Drawing.Image)
@@ -230,6 +239,16 @@ Partial Class Stock
         Me.ButtonRefresh.Size = New System.Drawing.Size(49, 38)
         Me.ButtonRefresh.TabIndex = 9
         Me.ButtonRefresh.UseVisualStyleBackColor = False
+        '
+        'PictureBoxLogo
+        '
+        Me.PictureBoxLogo.Image = Global.Restooo.My.Resources.Resources.RESTOOOO__5_
+        Me.PictureBoxLogo.Location = New System.Drawing.Point(0, 304)
+        Me.PictureBoxLogo.Name = "PictureBoxLogo"
+        Me.PictureBoxLogo.Size = New System.Drawing.Size(200, 225)
+        Me.PictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBoxLogo.TabIndex = 311
+        Me.PictureBoxLogo.TabStop = False
         '
         'Stock
         '
@@ -248,6 +267,7 @@ Partial Class Stock
         CType(Me.DataGridViewStock, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelTopLeft.ResumeLayout(False)
         Me.PanelLeft.ResumeLayout(False)
+        CType(Me.PictureBoxLogo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -267,4 +287,5 @@ Partial Class Stock
     Friend WithEvents ButtonDashboard As Button
     Friend WithEvents ButtonStatus As Button
     Friend WithEvents ButtonLogout As Button
+    Friend WithEvents PictureBoxLogo As PictureBox
 End Class

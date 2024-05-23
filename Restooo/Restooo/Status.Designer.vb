@@ -48,17 +48,20 @@ Partial Class Status
         Me.RoundedRectangleControlPanel2 = New Restooo.RoundedRectangleControlPanel()
         Me.RoundedRectangleControlPanel3 = New Restooo.RoundedRectangleControlPanel()
         Me.RoundedRectangleControlPanel4 = New Restooo.RoundedRectangleControlPanel()
+        Me.PictureBoxLogo = New System.Windows.Forms.PictureBox()
         Me.PanelLeft.SuspendLayout()
         Me.PanelTopLeft.SuspendLayout()
         Me.RoundedRectangleControlPanel1.SuspendLayout()
         Me.RoundedRectangleControlPanel2.SuspendLayout()
         Me.RoundedRectangleControlPanel3.SuspendLayout()
         Me.RoundedRectangleControlPanel4.SuspendLayout()
+        CType(Me.PictureBoxLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PanelLeft
         '
         Me.PanelLeft.BackColor = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(219, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.PanelLeft.Controls.Add(Me.PictureBoxLogo)
         Me.PanelLeft.Controls.Add(Me.ButtonStatus)
         Me.PanelLeft.Controls.Add(Me.ButtonLogout)
         Me.PanelLeft.Controls.Add(Me.ButtonReport)
@@ -74,6 +77,7 @@ Partial Class Status
         '
         'ButtonStatus
         '
+        Me.ButtonStatus.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.ButtonStatus.BackColor = System.Drawing.Color.FromArgb(CType(CType(218, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(163, Byte), Integer))
         Me.ButtonStatus.Cursor = System.Windows.Forms.Cursors.Hand
         Me.ButtonStatus.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -86,6 +90,7 @@ Partial Class Status
         '
         'ButtonLogout
         '
+        Me.ButtonLogout.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.ButtonLogout.BackColor = System.Drawing.Color.FromArgb(CType(CType(218, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(163, Byte), Integer))
         Me.ButtonLogout.Cursor = System.Windows.Forms.Cursors.Hand
         Me.ButtonLogout.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -275,6 +280,7 @@ Partial Class Status
         '
         'Label3
         '
+        Me.Label3.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 32.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(44, Byte), Integer), CType(CType(87, Byte), Integer))
@@ -290,6 +296,7 @@ Partial Class Status
         '
         'RoundedRectangleControlPanel1
         '
+        Me.RoundedRectangleControlPanel1.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.RoundedRectangleControlPanel1.BackgroundColor = System.Drawing.Color.Transparent
         Me.RoundedRectangleControlPanel1.BorderColor = System.Drawing.Color.Black
         Me.RoundedRectangleControlPanel1.BorderWidth = 1
@@ -303,6 +310,7 @@ Partial Class Status
         '
         'RoundedRectangleControlPanel2
         '
+        Me.RoundedRectangleControlPanel2.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.RoundedRectangleControlPanel2.BackgroundColor = System.Drawing.Color.Transparent
         Me.RoundedRectangleControlPanel2.BorderColor = System.Drawing.Color.Black
         Me.RoundedRectangleControlPanel2.BorderWidth = 1
@@ -317,6 +325,7 @@ Partial Class Status
         '
         'RoundedRectangleControlPanel3
         '
+        Me.RoundedRectangleControlPanel3.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.RoundedRectangleControlPanel3.BackgroundColor = System.Drawing.Color.Transparent
         Me.RoundedRectangleControlPanel3.BorderColor = System.Drawing.Color.Black
         Me.RoundedRectangleControlPanel3.BorderWidth = 1
@@ -332,6 +341,7 @@ Partial Class Status
         '
         'RoundedRectangleControlPanel4
         '
+        Me.RoundedRectangleControlPanel4.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.RoundedRectangleControlPanel4.BackgroundColor = System.Drawing.Color.Transparent
         Me.RoundedRectangleControlPanel4.BorderColor = System.Drawing.Color.Black
         Me.RoundedRectangleControlPanel4.BorderWidth = 1
@@ -342,6 +352,16 @@ Partial Class Status
         Me.RoundedRectangleControlPanel4.Name = "RoundedRectangleControlPanel4"
         Me.RoundedRectangleControlPanel4.Size = New System.Drawing.Size(546, 62)
         Me.RoundedRectangleControlPanel4.TabIndex = 8
+        '
+        'PictureBoxLogo
+        '
+        Me.PictureBoxLogo.Image = Global.Restooo.My.Resources.Resources.RESTOOOO__5_
+        Me.PictureBoxLogo.Location = New System.Drawing.Point(0, 304)
+        Me.PictureBoxLogo.Name = "PictureBoxLogo"
+        Me.PictureBoxLogo.Size = New System.Drawing.Size(200, 225)
+        Me.PictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBoxLogo.TabIndex = 310
+        Me.PictureBoxLogo.TabStop = False
         '
         'Status
         '
@@ -368,6 +388,7 @@ Partial Class Status
         Me.RoundedRectangleControlPanel3.PerformLayout()
         Me.RoundedRectangleControlPanel4.ResumeLayout(False)
         Me.RoundedRectangleControlPanel4.PerformLayout()
+        CType(Me.PictureBoxLogo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -397,4 +418,5 @@ Partial Class Status
     Friend WithEvents RoundedRectangleControlPanel1 As RoundedRectangleControlPanel
     Friend WithEvents RoundedRectangleControlPanel3 As RoundedRectangleControlPanel
     Friend WithEvents RoundedRectangleControlPanel4 As RoundedRectangleControlPanel
+    Friend WithEvents PictureBoxLogo As PictureBox
 End Class

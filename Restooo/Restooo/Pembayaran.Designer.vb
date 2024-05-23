@@ -51,9 +51,11 @@ Partial Class Pembayaran
         Me.btnDone = New System.Windows.Forms.Button()
         Me.MySqlCommand1 = New MySql.Data.MySqlClient.MySqlCommand()
         Me.btnPrint = New System.Windows.Forms.Button()
+        Me.PictureBoxLogo = New System.Windows.Forms.PictureBox()
         Me.PanelTopLeft.SuspendLayout()
         Me.PanelLeft.SuspendLayout()
         Me.PanelNota.SuspendLayout()
+        CType(Me.PictureBoxLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PanelTopLeft
@@ -144,6 +146,7 @@ Partial Class Pembayaran
         'PanelLeft
         '
         Me.PanelLeft.BackColor = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(219, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.PanelLeft.Controls.Add(Me.PictureBoxLogo)
         Me.PanelLeft.Controls.Add(Me.ButtonStatus)
         Me.PanelLeft.Controls.Add(Me.ButtonLogout)
         Me.PanelLeft.Controls.Add(Me.ButtonReport)
@@ -159,6 +162,7 @@ Partial Class Pembayaran
         '
         'ButtonStatus
         '
+        Me.ButtonStatus.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.ButtonStatus.BackColor = System.Drawing.Color.FromArgb(CType(CType(218, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(163, Byte), Integer))
         Me.ButtonStatus.Cursor = System.Windows.Forms.Cursors.Hand
         Me.ButtonStatus.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -171,6 +175,7 @@ Partial Class Pembayaran
         '
         'ButtonLogout
         '
+        Me.ButtonLogout.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.ButtonLogout.BackColor = System.Drawing.Color.FromArgb(CType(CType(218, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(163, Byte), Integer))
         Me.ButtonLogout.Cursor = System.Windows.Forms.Cursors.Hand
         Me.ButtonLogout.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -191,6 +196,7 @@ Partial Class Pembayaran
         '
         'LabelStock
         '
+        Me.LabelStock.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.LabelStock.AutoSize = True
         Me.LabelStock.Font = New System.Drawing.Font("Microsoft Sans Serif", 32.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelStock.ForeColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(44, Byte), Integer), CType(CType(87, Byte), Integer))
@@ -214,6 +220,7 @@ Partial Class Pembayaran
         'PanelNota
         '
         Me.PanelNota.AllowDrop = True
+        Me.PanelNota.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.PanelNota.BackColor = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(219, Byte), Integer), CType(CType(200, Byte), Integer))
         Me.PanelNota.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.PanelNota.Controls.Add(Me.lblKembalian)
@@ -338,6 +345,7 @@ Partial Class Pembayaran
         '
         'btnDone
         '
+        Me.btnDone.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.btnDone.BackColor = System.Drawing.Color.FromArgb(CType(CType(218, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(163, Byte), Integer))
         Me.btnDone.ForeColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(44, Byte), Integer), CType(CType(87, Byte), Integer))
         Me.btnDone.Location = New System.Drawing.Point(927, 91)
@@ -356,6 +364,7 @@ Partial Class Pembayaran
         '
         'btnPrint
         '
+        Me.btnPrint.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.btnPrint.BackColor = System.Drawing.Color.FromArgb(CType(CType(218, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(163, Byte), Integer))
         Me.btnPrint.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnPrint.Image = CType(resources.GetObject("btnPrint.Image"), System.Drawing.Image)
@@ -365,6 +374,16 @@ Partial Class Pembayaran
         Me.btnPrint.TabIndex = 24
         Me.btnPrint.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.btnPrint.UseVisualStyleBackColor = False
+        '
+        'PictureBoxLogo
+        '
+        Me.PictureBoxLogo.Image = Global.Restooo.My.Resources.Resources.RESTOOOO__5_
+        Me.PictureBoxLogo.Location = New System.Drawing.Point(0, 304)
+        Me.PictureBoxLogo.Name = "PictureBoxLogo"
+        Me.PictureBoxLogo.Size = New System.Drawing.Size(200, 225)
+        Me.PictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBoxLogo.TabIndex = 308
+        Me.PictureBoxLogo.TabStop = False
         '
         'Pembayaran
         '
@@ -384,6 +403,7 @@ Partial Class Pembayaran
         Me.PanelLeft.ResumeLayout(False)
         Me.PanelNota.ResumeLayout(False)
         Me.PanelNota.PerformLayout()
+        CType(Me.PictureBoxLogo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -416,4 +436,5 @@ Partial Class Pembayaran
     Friend WithEvents lblKembalian As Label
     Friend WithEvents MySqlCommand1 As MySql.Data.MySqlClient.MySqlCommand
     Friend WithEvents btnPrint As Button
+    Friend WithEvents PictureBoxLogo As PictureBox
 End Class

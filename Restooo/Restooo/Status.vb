@@ -47,6 +47,8 @@ Public Class Status
             ButtonMenu.Text = ""
             ButtonStock.Text = ""
             ButtonReport.Text = ""
+            ButtonStatus.Visible = "False"
+            PictureBoxLogo.Visible = "False"
         Else
             TimerPanelReduce.Enabled = False
         End If
@@ -62,6 +64,8 @@ Public Class Status
             ButtonMenu.Text = "Menu"
             ButtonStock.Text = "Stock"
             ButtonReport.Text = "Report"
+            ButtonStatus.Visible = "True"
+            PictureBoxLogo.Visible = "True"
         Else
             TimerPanelIncrease.Enabled = False
         End If
@@ -111,7 +115,7 @@ Public Class Status
         Dim formattedDate As String = tgl.ToString("yyyy-MM-dd")
         Dim queery As String = $"SELECT COUNT(*) FROM pesanan where id_karyawan = {Login.idAkun} And tanggal_pesanan = '{formattedDate}'"
         Dim cmd = New MySqlCommand(queery, conn)
-        MessageBox.Show(queery)
+        'MessageBox.Show(queery)
         Dim Reader = cmd.ExecuteReader()
         If Reader.Read() Then
             Dim pesananCount As Integer = Reader.GetInt32(0)

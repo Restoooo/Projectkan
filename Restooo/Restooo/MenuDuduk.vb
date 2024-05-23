@@ -53,6 +53,8 @@ Public Class MenuDuduk
             ButtonMenu.Text = ""
             ButtonStock.Text = ""
             ButtonReport.Text = ""
+            ButtonStatus.Visible = "False"
+            PictureBoxLogo.Visible = "False"
         Else
             TimerPanelReduce.Enabled = False
         End If
@@ -68,6 +70,8 @@ Public Class MenuDuduk
             ButtonMenu.Text = "Menu"
             ButtonStock.Text = "Stock"
             ButtonReport.Text = "Report"
+            ButtonStatus.Visible = "True"
+            PictureBoxLogo.Visible = "True"
         Else
             TimerPanelIncrease.Enabled = False
         End If
@@ -416,6 +420,8 @@ Public Class MenuDuduk
     Private Sub Panel13_Paint(sender As Object, e As PaintEventArgs) Handles Panel13.Paint
 
     End Sub
+
+
 End Class
 
 

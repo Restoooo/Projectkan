@@ -47,16 +47,19 @@ Partial Class MenuMakan
         Me.PanelMakanan = New System.Windows.Forms.Panel()
         Me.PanelMinuman = New System.Windows.Forms.Panel()
         Me.PanelList = New System.Windows.Forms.Panel()
+        Me.PictureBoxLogo = New System.Windows.Forms.PictureBox()
         LabelReport = New System.Windows.Forms.Label()
         Label1 = New System.Windows.Forms.Label()
         Label2 = New System.Windows.Forms.Label()
         Label3 = New System.Windows.Forms.Label()
         Me.PanelTopLeft.SuspendLayout()
         Me.PanelLeft.SuspendLayout()
+        CType(Me.PictureBoxLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'LabelReport
         '
+        LabelReport.Anchor = System.Windows.Forms.AnchorStyles.None
         LabelReport.AutoSize = True
         LabelReport.Font = New System.Drawing.Font("Microsoft Sans Serif", 32.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         LabelReport.ForeColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(44, Byte), Integer), CType(CType(87, Byte), Integer))
@@ -68,6 +71,7 @@ Partial Class MenuMakan
         '
         'Label1
         '
+        Label1.Anchor = System.Windows.Forms.AnchorStyles.None
         Label1.AutoSize = True
         Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 32.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(44, Byte), Integer), CType(CType(87, Byte), Integer))
@@ -79,6 +83,7 @@ Partial Class MenuMakan
         '
         'Label2
         '
+        Label2.Anchor = System.Windows.Forms.AnchorStyles.None
         Label2.AutoSize = True
         Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 32.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(44, Byte), Integer), CType(CType(87, Byte), Integer))
@@ -90,6 +95,7 @@ Partial Class MenuMakan
         '
         'Label3
         '
+        Label3.Anchor = System.Windows.Forms.AnchorStyles.None
         Label3.AutoSize = True
         Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 32.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(44, Byte), Integer), CType(CType(87, Byte), Integer))
@@ -123,6 +129,7 @@ Partial Class MenuMakan
         'PanelLeft
         '
         Me.PanelLeft.BackColor = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(219, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.PanelLeft.Controls.Add(Me.PictureBoxLogo)
         Me.PanelLeft.Controls.Add(Me.ButtonStatus)
         Me.PanelLeft.Controls.Add(Me.ButtonLogout)
         Me.PanelLeft.Controls.Add(Me.ButtonReport)
@@ -138,6 +145,7 @@ Partial Class MenuMakan
         '
         'ButtonStatus
         '
+        Me.ButtonStatus.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.ButtonStatus.BackColor = System.Drawing.Color.FromArgb(CType(CType(218, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(163, Byte), Integer))
         Me.ButtonStatus.Cursor = System.Windows.Forms.Cursors.Hand
         Me.ButtonStatus.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -150,6 +158,7 @@ Partial Class MenuMakan
         '
         'ButtonLogout
         '
+        Me.ButtonLogout.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.ButtonLogout.BackColor = System.Drawing.Color.FromArgb(CType(CType(218, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(163, Byte), Integer))
         Me.ButtonLogout.Cursor = System.Windows.Forms.Cursors.Hand
         Me.ButtonLogout.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -234,6 +243,7 @@ Partial Class MenuMakan
         '
         'ButtonBayar
         '
+        Me.ButtonBayar.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.ButtonBayar.BackColor = System.Drawing.Color.FromArgb(CType(CType(218, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(163, Byte), Integer))
         Me.ButtonBayar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ButtonBayar.ForeColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(44, Byte), Integer), CType(CType(87, Byte), Integer))
@@ -251,6 +261,7 @@ Partial Class MenuMakan
         '
         'Label4
         '
+        Me.Label4.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(44, Byte), Integer), CType(CType(87, Byte), Integer))
@@ -262,6 +273,7 @@ Partial Class MenuMakan
         '
         'tbHarga
         '
+        Me.tbHarga.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.tbHarga.BackColor = System.Drawing.Color.FromArgb(CType(CType(218, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(163, Byte), Integer))
         Me.tbHarga.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tbHarga.ForeColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(44, Byte), Integer), CType(CType(87, Byte), Integer))
@@ -274,6 +286,7 @@ Partial Class MenuMakan
         '
         'btnResetList
         '
+        Me.btnResetList.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.btnResetList.BackColor = System.Drawing.Color.FromArgb(CType(CType(218, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(163, Byte), Integer))
         Me.btnResetList.Image = CType(resources.GetObject("btnResetList.Image"), System.Drawing.Image)
         Me.btnResetList.Location = New System.Drawing.Point(1129, 54)
@@ -284,6 +297,7 @@ Partial Class MenuMakan
         '
         'PanelMakanan
         '
+        Me.PanelMakanan.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.PanelMakanan.AutoScroll = True
         Me.PanelMakanan.BackColor = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(219, Byte), Integer), CType(CType(200, Byte), Integer))
         Me.PanelMakanan.Location = New System.Drawing.Point(292, 174)
@@ -293,6 +307,7 @@ Partial Class MenuMakan
         '
         'PanelMinuman
         '
+        Me.PanelMinuman.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.PanelMinuman.AutoScroll = True
         Me.PanelMinuman.BackColor = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(219, Byte), Integer), CType(CType(200, Byte), Integer))
         Me.PanelMinuman.Location = New System.Drawing.Point(640, 174)
@@ -302,12 +317,23 @@ Partial Class MenuMakan
         '
         'PanelList
         '
+        Me.PanelList.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.PanelList.AutoScroll = True
         Me.PanelList.BackColor = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(219, Byte), Integer), CType(CType(200, Byte), Integer))
         Me.PanelList.Location = New System.Drawing.Point(961, 120)
         Me.PanelList.Name = "PanelList"
         Me.PanelList.Size = New System.Drawing.Size(267, 476)
         Me.PanelList.TabIndex = 23
+        '
+        'PictureBoxLogo
+        '
+        Me.PictureBoxLogo.Image = Global.Restooo.My.Resources.Resources.RESTOOOO__5_
+        Me.PictureBoxLogo.Location = New System.Drawing.Point(0, 304)
+        Me.PictureBoxLogo.Name = "PictureBoxLogo"
+        Me.PictureBoxLogo.Size = New System.Drawing.Size(200, 225)
+        Me.PictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBoxLogo.TabIndex = 307
+        Me.PictureBoxLogo.TabStop = False
         '
         'MenuMakan
         '
@@ -332,6 +358,7 @@ Partial Class MenuMakan
         Me.Text = "Menu"
         Me.PanelTopLeft.ResumeLayout(False)
         Me.PanelLeft.ResumeLayout(False)
+        CType(Me.PictureBoxLogo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -355,4 +382,5 @@ Partial Class MenuMakan
     Friend WithEvents PanelMakanan As Panel
     Friend WithEvents PanelMinuman As Panel
     Friend WithEvents PanelList As Panel
+    Friend WithEvents PictureBoxLogo As PictureBox
 End Class

@@ -299,5 +299,8 @@
   <ItemGroup>
     <None Include="Resources\4105938-account-card-id-identification-identity-card-profile-user-profile_113929.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RESTOOOO %285%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

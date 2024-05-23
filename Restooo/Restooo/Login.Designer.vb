@@ -23,6 +23,7 @@ Partial Class Login
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Login))
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.RoundedRectangleControlPanel2 = New Restooo.RoundedRectangleControlPanel()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
@@ -32,6 +33,7 @@ Partial Class Login
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.txtPass = New System.Windows.Forms.TextBox()
         Me.ButtonLog = New System.Windows.Forms.Button()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RoundedRectangleControlPanel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -39,8 +41,20 @@ Partial Class Login
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
+        'PictureBox3
+        '
+        Me.PictureBox3.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
+        Me.PictureBox3.Location = New System.Drawing.Point(438, 30)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(379, 321)
+        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
+        Me.PictureBox3.TabIndex = 9
+        Me.PictureBox3.TabStop = False
+        '
         'RoundedRectangleControlPanel2
         '
+        Me.RoundedRectangleControlPanel2.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.RoundedRectangleControlPanel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(248, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(229, Byte), Integer))
         Me.RoundedRectangleControlPanel2.BackgroundColor = System.Drawing.Color.Transparent
         Me.RoundedRectangleControlPanel2.BorderColor = System.Drawing.Color.Black
@@ -50,7 +64,7 @@ Partial Class Login
         Me.RoundedRectangleControlPanel2.Controls.Add(Me.ButtonLog)
         Me.RoundedRectangleControlPanel2.CornerRadius = 20
         Me.RoundedRectangleControlPanel2.FillColor = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(219, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.RoundedRectangleControlPanel2.Location = New System.Drawing.Point(391, 224)
+        Me.RoundedRectangleControlPanel2.Location = New System.Drawing.Point(370, 357)
         Me.RoundedRectangleControlPanel2.Name = "RoundedRectangleControlPanel2"
         Me.RoundedRectangleControlPanel2.Size = New System.Drawing.Size(512, 280)
         Me.RoundedRectangleControlPanel2.TabIndex = 8
@@ -153,9 +167,11 @@ Partial Class Login
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(248, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(229, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1264, 761)
         Me.Controls.Add(Me.RoundedRectangleControlPanel2)
+        Me.Controls.Add(Me.PictureBox3)
         Me.Name = "Login"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Login"
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RoundedRectangleControlPanel2.ResumeLayout(False)
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
@@ -175,4 +191,5 @@ Partial Class Login
     Friend WithEvents txtPass As TextBox
     Friend WithEvents CbPass As CheckBox
     Friend WithEvents RoundedRectangleControlPanel2 As RoundedRectangleControlPanel
+    Friend WithEvents PictureBox3 As PictureBox
 End Class
