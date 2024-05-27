@@ -226,13 +226,15 @@ Public Class Pembayaran
             MenuDuduk.meja = 0
             MenuDuduk.selectedButtons.Clear()
 
-            Dim printDocument As New Printing.PrintDocument()
+            PrintPreviewDialog1.Document = PrintDocument1
+            PrintPreviewDialog1.ShowDialog()
+            'Dim printDocument As New Printing.PrintDocument()
 
 
-            AddHandler printDocument.PrintPage, AddressOf PrintPageHandler
-            Dim printPreviewDialog As New PrintPreviewDialog()
-            printPreviewDialog.Document = printDocument
-            printPreviewDialog.ShowDialog()
+            'AddHandler PrintDocument.PrintPage, AddressOf PrintPageHandler
+            'Dim printPreviewDialog As New PrintPreviewDialog()
+            'PrintPreviewDialog.Document = printDocument
+            'PrintPreviewDialog.ShowDialog()
 
             'printDocument.Print()
 
@@ -288,10 +290,6 @@ Public Class Pembayaran
         End If
     End Sub
 
-    Private Sub btnPrint_Click(sender As Object, e As EventArgs) Handles btnPrint.Click
-        PrintPreviewDialog1.Document = PrintDocument1
-        PrintPreviewDialog1.ShowDialog()
-    End Sub
     Private Sub PrintDocument1_PrintPage(sender As Object, e As PrintPageEventArgs) Handles PrintDocument1.PrintPage
         Dim printFont As New Font("Arial", 24)
         Dim lineHeight As Single = printFont.GetHeight(e.Graphics)

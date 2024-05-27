@@ -31,6 +31,7 @@ Partial Class Pembayaran
         Me.ButtonMenu = New System.Windows.Forms.Button()
         Me.ButtonDashboard = New System.Windows.Forms.Button()
         Me.PanelLeft = New System.Windows.Forms.Panel()
+        Me.PictureBoxLogo = New System.Windows.Forms.PictureBox()
         Me.ButtonStatus = New System.Windows.Forms.Button()
         Me.ButtonLogout = New System.Windows.Forms.Button()
         Me.TimerPanelReduce = New System.Windows.Forms.Timer(Me.components)
@@ -50,12 +51,10 @@ Partial Class Pembayaran
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnDone = New System.Windows.Forms.Button()
         Me.MySqlCommand1 = New MySql.Data.MySqlClient.MySqlCommand()
-        Me.btnPrint = New System.Windows.Forms.Button()
-        Me.PictureBoxLogo = New System.Windows.Forms.PictureBox()
         Me.PanelTopLeft.SuspendLayout()
         Me.PanelLeft.SuspendLayout()
-        Me.PanelNota.SuspendLayout()
         CType(Me.PictureBoxLogo, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PanelNota.SuspendLayout()
         Me.SuspendLayout()
         '
         'PanelTopLeft
@@ -159,6 +158,16 @@ Partial Class Pembayaran
         Me.PanelLeft.Name = "PanelLeft"
         Me.PanelLeft.Size = New System.Drawing.Size(200, 761)
         Me.PanelLeft.TabIndex = 7
+        '
+        'PictureBoxLogo
+        '
+        Me.PictureBoxLogo.Image = Global.Restooo.My.Resources.Resources.RESTOOOO__5_
+        Me.PictureBoxLogo.Location = New System.Drawing.Point(0, 304)
+        Me.PictureBoxLogo.Name = "PictureBoxLogo"
+        Me.PictureBoxLogo.Size = New System.Drawing.Size(200, 225)
+        Me.PictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBoxLogo.TabIndex = 308
+        Me.PictureBoxLogo.TabStop = False
         '
         'ButtonStatus
         '
@@ -348,7 +357,7 @@ Partial Class Pembayaran
         Me.btnDone.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.btnDone.BackColor = System.Drawing.Color.FromArgb(CType(CType(218, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(163, Byte), Integer))
         Me.btnDone.ForeColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(44, Byte), Integer), CType(CType(87, Byte), Integer))
-        Me.btnDone.Location = New System.Drawing.Point(927, 91)
+        Me.btnDone.Location = New System.Drawing.Point(952, 90)
         Me.btnDone.Name = "btnDone"
         Me.btnDone.Size = New System.Drawing.Size(126, 38)
         Me.btnDone.TabIndex = 22
@@ -362,36 +371,12 @@ Partial Class Pembayaran
         Me.MySqlCommand1.EnableCaching = False
         Me.MySqlCommand1.Transaction = Nothing
         '
-        'btnPrint
-        '
-        Me.btnPrint.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.btnPrint.BackColor = System.Drawing.Color.FromArgb(CType(CType(218, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(163, Byte), Integer))
-        Me.btnPrint.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnPrint.Image = CType(resources.GetObject("btnPrint.Image"), System.Drawing.Image)
-        Me.btnPrint.Location = New System.Drawing.Point(927, 153)
-        Me.btnPrint.Name = "btnPrint"
-        Me.btnPrint.Size = New System.Drawing.Size(126, 63)
-        Me.btnPrint.TabIndex = 24
-        Me.btnPrint.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.btnPrint.UseVisualStyleBackColor = False
-        '
-        'PictureBoxLogo
-        '
-        Me.PictureBoxLogo.Image = Global.Restooo.My.Resources.Resources.RESTOOOO__5_
-        Me.PictureBoxLogo.Location = New System.Drawing.Point(0, 304)
-        Me.PictureBoxLogo.Name = "PictureBoxLogo"
-        Me.PictureBoxLogo.Size = New System.Drawing.Size(200, 225)
-        Me.PictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBoxLogo.TabIndex = 308
-        Me.PictureBoxLogo.TabStop = False
-        '
         'Pembayaran
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(248, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(229, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1264, 761)
-        Me.Controls.Add(Me.btnPrint)
         Me.Controls.Add(Me.btnDone)
         Me.Controls.Add(Me.PanelNota)
         Me.Controls.Add(Me.LabelStock)
@@ -401,9 +386,9 @@ Partial Class Pembayaran
         Me.Text = "Pembayaran"
         Me.PanelTopLeft.ResumeLayout(False)
         Me.PanelLeft.ResumeLayout(False)
+        CType(Me.PictureBoxLogo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelNota.ResumeLayout(False)
         Me.PanelNota.PerformLayout()
-        CType(Me.PictureBoxLogo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -435,6 +420,5 @@ Partial Class Pembayaran
     Friend WithEvents lblTotal As Label
     Friend WithEvents lblKembalian As Label
     Friend WithEvents MySqlCommand1 As MySql.Data.MySqlClient.MySqlCommand
-    Friend WithEvents btnPrint As Button
     Friend WithEvents PictureBoxLogo As PictureBox
 End Class

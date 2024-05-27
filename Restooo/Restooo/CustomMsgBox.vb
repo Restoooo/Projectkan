@@ -15,4 +15,5 @@
     Private Sub btnBatal_Click(sender As Object, e As EventArgs) Handles btnBatal.Click
         Me.Hide()
     End Sub
+
 End Class

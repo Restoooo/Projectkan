@@ -104,7 +104,7 @@ Public Class MenuMakan
         PanelMakanan.Controls.Clear()
         conn = New MySqlConnection("server=localhost;database=restoooo;user=root;password=")
         conn.Open()
-        cmd = New MySqlCommand("SELECT m.id_menu, m.Nama, m.harga, stok - COALESCE((SELECT SUM(jumlah_pesanan) FROM detail_pesanan WHERE id_menu = m.id_menu), 0) AS remaining_stock FROM Menu m WHERE m.jenis = 'makanan';", conn)
+        cmd = New MySqlCommand("SELECT m.id_menu, m.Nama, m.harga, stok - COALESCE((SELECT SUM(jumlah_pesanan) FROM detail_pesanan WHERE id_menu = m.id_menu), 0) AS remaining_stock FROM menu m WHERE m.jenis = 'makanan';", conn)
         reader = cmd.ExecuteReader
         Dim posXMak As Integer = 25
         Dim posYMak As Integer = 0
@@ -129,7 +129,7 @@ Public Class MenuMakan
         reader.Close()
         conn.Close()
         conn.Open()
-        cmd2 = New MySqlCommand("SELECT m.id_menu, m.Nama, m.harga, stok - COALESCE((SELECT SUM(jumlah_pesanan) FROM detail_pesanan WHERE id_menu = m.id_menu), 0) AS remaining_stock FROM Menu m WHERE m.jenis = 'minuman';", conn)
+        cmd2 = New MySqlCommand("SELECT m.id_menu, m.Nama, m.harga, stok - COALESCE((SELECT SUM(jumlah_pesanan) FROM detail_pesanan WHERE id_menu = m.id_menu), 0) AS remaining_stock FROM menu m WHERE m.jenis = 'minuman';", conn)
         reader2 = cmd2.ExecuteReader
         While reader2.Read()
             Dim btn As New Button()
